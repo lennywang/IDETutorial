@@ -16,5 +16,5 @@ VSCode 打开终端 查看-集成终端 Ctrl+Shift+`
 
 打开命令面板	Ctrl+ Shift+ p / F1
 
-
+拆分编辑器 	Ctrl + \
 
