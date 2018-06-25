@@ -9,3 +9,7 @@ Eclipse倒退：Alt + ←
 向左缩进：Shift+Tab
 
 复制上面一行代码 ctrl+alt+↓
+
+代码对齐：Ctrl + Shift + F
+
+向上复制一行 Ctrl + Alt + ↑

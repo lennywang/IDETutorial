@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Git 常见问题
 
 一、git提交异常 fatal: LF would be replaced by..
@@ -9,4 +10,14 @@ autocrlf = false
 safecrlf = false
 
 
+=======
+## 问题
+
+github push 提交代码时停止在writing objects怎么办
+
+```
+git config --global http.postBuffer 524288000
+参考链接：https://blog.csdn.net/smart_graphics/article/details/78475735
+```
+>>>>>>> 8779517e1c1244ba79fc4d93c0a37dde4db48c2a
 
