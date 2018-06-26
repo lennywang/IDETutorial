@@ -4,13 +4,16 @@ Ctrl+P 显示方法参数
 Alt+Insert 生成代码，生成 Getter、Setter、构造器等
 Ctrl+Alt+L 格式化代码
 Ctrl+C or Ctrl+Insert 复制代码，未选择代码时复制当前行
-Ctrl+K Commit
+Ctrl+K  Commit Changes
 
 ## IDEA操作
 
 IDEA中打开Terminal窗口 
 1、View→ Tool Windows→ Terminal
 2、Alt+F12
+
+水平分屏
+Window → Editor Tabs → Split Vertically
 
 ## IDEA打开工具栏
 
