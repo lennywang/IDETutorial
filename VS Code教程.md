@@ -19,3 +19,5 @@ VSCode 打开终端 查看-集成终端 Ctrl+Shift+`
 拆分编辑器 	Ctrl + \
 
 选择相同内容 Ctrl + D
+
+格式化代码	 Alt+Shift+F
