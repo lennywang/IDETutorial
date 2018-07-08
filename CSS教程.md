@@ -10,7 +10,7 @@ break-all：对于 Non-CJK 文本允许在任意字符内发生换行。该值�
 
 break-word：与break-all相同，不同的地方在于它要求一个没有断行破发点的词必须保持为一个整体单位。
 
-
+ ![break-all与break-word对比](https://github.com/lennywang/Img/raw/master/wordbreak.png)
 
 
 
