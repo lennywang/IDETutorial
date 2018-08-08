@@ -62,3 +62,17 @@ safecrlf = false
 
 
 
+
+
+## Git 命令
+
+ git pull <远程库名> <远程分支名>:<本地分支名> 
+
+取回远程库中的online分支，与本地的online分支进行merge
+
+```
+git pull origin online:online
+```
+
+
+

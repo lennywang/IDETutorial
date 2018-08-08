@@ -73,9 +73,7 @@ VS Code Emmet
 
 
 
+> VsCode快捷键：https://blog.csdn.net/p358278505/article/details/74221214
 
 
-
-
-> 参考地址：VsCode 快捷键 	https://blog.csdn.net/p358278505/article/details/74221214
 

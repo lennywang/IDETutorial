@@ -120,3 +120,5 @@ p.box:before {
 
 
 
+
+ ![break-all与break-word区别](https://github.com/lennywang/Img/raw/master/wordbreak.png)
