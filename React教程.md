@@ -210,6 +210,10 @@ var reducer = function(state, action){
 store.dispatch(action) --> reducer(state, action) --> final state
 ```
 
+> 参考网址：https://blog.csdn.net/juzipchy/article/details/73295078
+
+
+
 **redux使用套路** 
 
 ```jsx
