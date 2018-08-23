@@ -1,0 +1,3 @@
+JS 
+ES5中新增的Array方法详细说明https://www.zhangxinxu.com/wordpress/2013/04/es5%E6%96%B0%E5%A2%9E%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/#map
+理解js中bind方法的使用https://www.cnblogs.com/rain-null/p/7462146.html

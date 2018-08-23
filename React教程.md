@@ -1,7 +1,6 @@
 ## 第一阶段
 
 ### 1.1  React 简介
-
 React.js 是一个UI 库。
 
 注: 1、它不是一个框架
@@ -10,10 +9,169 @@ React.js 是一个UI 库。
 
  React.js 提供了一种非常高效的方式做到了数据和组件显示形态之间的同步。
 
+### 1.2 JSX
+
+JSX 其实就是 JavaScript 对象。
+
+react-dom 负责把 JSX 变成 DOM 元素，并且渲染到页面上。
+
+JSX 到页面的过程
+
+![jsx到页面过程](https://github.com/lennywang/Img/raw/master/reactdom.png)
 
 
-### 1.1 React SetState的回调函数
 
+### 1.3 render方法
+
+必须要用一个外层的 JSX 元素把所有内容包裹起来。
+
+```jsx
+render () {
+  return (
+    <div>
+      <div>第一个</div>
+      <div>第二个</div>
+    </div>
+  )
+}
+```
+
+表达式插入
+
+表达式用 `{}` 包裹，`{}` 内可以放任何 JavaScript 的代码，包括变量、表达式计算、函数执行等等。
+
+```jsx
+const word= ' is good ! '
+const className = 'header'
+render () {
+  return (
+    <div className={className}>
+      <h1>React 小书 {word}</h1>
+    </div>
+  )
+}
+```
+
+特殊属性
+
+| 属性名           | 不合法用法                          | 原因                      | 正确用法                 |
+| ------------- | ------------------------------ | ----------------------- | -------------------- |
+| class         | <div class=“xxx”>              | class 是 JavaScript 的关键字 | className            |
+| for           | <label for='male'>Male</label> | for 是 JavaScript 的关键字   | htmlFor              |
+| style 、data-* |                                |                         | 像普通的 HTML 属性那样直接添加上去 |
+
+条件返回
+
+```jsx
+render () {
+  const isGoodWord = true
+  return (
+    <div>
+      <h1>
+        React 小书
+        {isGoodWord
+          ? <strong> is good</strong>
+          : null
+        }
+      </h1>
+    </div>
+  )
+}
+```
+
+表达式插入里面返回 `null` ，那么 React.js 会什么都不显示，相当于忽略了该表达式。
+
+JSX元素变量
+
+JSX 元素其实可以像 JavaScript 对象那样自由地赋值给变量，或者作为函数参数传递、或者作为函数的返回值。
+
+JSX 元素变量
+
+```jsx
+//变量
+render () {
+  const isGoodWord = true
+  const goodWord = <strong> is good</strong>
+  const badWord = <span> is not good</span>
+  return (
+    <div>
+      <h1>
+        React 小书
+        {isGoodWord ? goodWord : badWord}
+      </h1>
+    </div>
+  )
+}
+//函数
+renderGoodWord (goodWord, badWord) {
+  const isGoodWord = true
+  return isGoodWord ? goodWord : badWord
+}
+
+render () {
+  return (
+    <div>
+      <h1>
+        React 小书
+        {this.renderGoodWord(
+          <strong> is good</strong>,
+          <span> is not good</span>
+        )}
+      </h1>
+    </div>
+  )
+}
+```
+
+
+
+###  1.4事件监听 
+
+ on* 的事件监听只能用在普通的 HTML 的标签上，而不能用在组件标签上
+
+```jsx
+class Title extends Component {
+  handleClickOnTitle () {
+    console.log('Click on title.')
+  }
+
+  render () {
+    return (
+      <h1 onClick={this.handleClickOnTitle}>React 小书</h1>
+    )
+  }
+}
+```
+
+**event 对象**
+
+事件监听函数会被自动传入一个 `event` 对象，这个对象和普通的浏览器 `event` 对象所包含的方法和属性都基本一致。
+
+常用属性：e.target.innerHTML
+
+常用方法：event.stopPropagation、event.preventDefault
+
+事件中的this
+
+如果你想在事件函数当中使用当前的实例，你需要手动地将实例方法 `bind` 到当前实例上再传入给 React.js
+
+```jsx
+class Title extends Component {
+  handleClickOnTitle (e) {
+    console.log(this)
+  }
+
+  render () {
+    return (
+      <h1 onClick={this.handleClickOnTitle.bind(this)}>React 小书</h1>
+    )
+  }
+}
+```
+
+
+
+### 1.5 React SetState的回调函数
 **setState()的参数**
 
 1、this.setState(obj)
@@ -52,7 +210,7 @@ keyUp = (e) => {
 
 > 参考网址：https://blog.csdn.net/juzipchy/article/details/73425070
 
-### 1.2 React创建组件的方式及区别
+### 1.3 React创建组件的方式及区别
 
 1. 函数式定义的无状态组件
 2. es5原生方式React.createClass定义的组件
@@ -60,7 +218,7 @@ keyUp = (e) => {
 
 > 参考网址：https://www.cnblogs.com/wonyun/p/5930333.html
 
-### 1.3 受控组件和非受控组件
+### 1.4 受控组件和非受控组件
 
 受控组件就形式上来说，受控组件就是为某个form表单组件添加value属性
 
@@ -103,6 +261,64 @@ import React,{Component} from 'react';
 导入‘react’文件里export的一个默认的组件，将其命名为React以及Component这个非默认组件
 
 > 参考网址：https://blog.csdn.net/naxieren1992/article/details/79582484
+
+### 2.2 props.children和容器类组件
+
+使用自定义组件的时候，可以在其中嵌套 JSX 结构。嵌套的结构在组件内部都可以通过 `props.children` 获取到，这种组件编写方式在编写容器类型的组件当中非常有用。
+
+
+
+```jsx
+ReactDOM.render(
+  <Card>
+    <h2>React.js 小书</h2>
+    <div>开源、免费、专业、简单</div>
+    订阅：<input />
+  </Card>,
+  document.getElementById('root')
+)
+```
+
+在组件内部通过 `props.children` 获取嵌套在组件中的 JSX 结构
+
+```jsx
+class Card extends Component {
+  render () {
+    return (
+      <div className='card'>
+        <div className='card-content'>
+          {this.props.children}
+        </div>
+      </div>
+    )
+  }
+}
+```
+
+在组件内部把数组中的 JSX 元素安置在不同的地方
+
+```jsx
+class Layout extends Component {
+  render () {
+    return (
+      <div className='two-cols-layout'>
+        <div className='sidebar'>
+          {this.props.children[0]}
+        </div>
+        <div className='main'>
+          {this.props.children[1]}
+        </div>
+      </div>
+    )
+  }
+}
+```
+
+
+
+
+
+
 
 ## 第三阶段
 
@@ -155,6 +371,8 @@ counter.x // => 2
 
 
 
+高阶组件的形式
+
 ```jsx
 import React, { Component } from 'react'
 
@@ -171,7 +389,63 @@ export default (WrappedComponent) => {
 
 
 
-### 3.3 Redux
+### 3.3 context
+
+context 打破了组件和组件之间通过 props 传递数据的规范，极大地增强了组件之间的耦合性。
+
+context 里面的数据能被随意接触就能被随意修改，每个组件都能够改 context 里面的内容会导致程序的运行不可预料。
+
+在Index的 context 里面放一个 themeColor
+
+```jsx
+class Index extends Component {
+  static childContextTypes = {
+    themeColor: PropTypes.string
+  }
+
+  constructor () {
+    super()
+    this.state = { themeColor: 'red' }
+  }
+
+  getChildContext () {
+    return { themeColor: this.state.themeColor }
+  }
+
+  render () {
+    return (
+      <div>
+        <Header />
+        <Main />
+      </div>
+    )
+  }
+}
+```
+
+子组件怎么获取这个状态
+
+```jsx
+class Title extends Component {
+  static contextTypes = {
+    themeColor: PropTypes.string
+  }
+
+  render () {
+    return (
+      <h1 style={{ color: this.context.themeColor }}>React.js 小书标题</h1>
+    )
+  }
+}
+```
+
+组件树
+
+![组件树](https://github.com/lennywang/Img/raw/master/componenttree.png)
+
+
+
+### 3.4 Redux
 
 **store**：store在这里代表的是数据模型，内部维护了一个state变量，用例描述应用的状态。store有两个核心方法，分别是getState、dispatch。前者用来获取store的状态（state），后者用来修改store的状态。
 
