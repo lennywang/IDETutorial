@@ -1,3 +1,13 @@
+需要做的事儿
+
+1、点赞案例
+
+2、评论案例
+
+
+
+
+
 ## 第一阶段
 
 ### 1.1  React 简介
@@ -210,6 +220,97 @@ keyUp = (e) => {
 
 > 参考网址：https://blog.csdn.net/juzipchy/article/details/73425070
 
+### 1.6 配置组件的props
+
+一个组件的显示形态、行为都可以用 props 来控制
+
+```jsx
+class Index extends Component {
+  render () {
+    return (
+      <div>
+        <LikeButton wordings={{likedText: '已赞', unlikedText: '赞'}} />
+      </div>
+    )
+  }
+}
+```
+
+
+
+```jsx
+class Index extends Component {
+  render () {
+    return (
+      <div>
+        <LikeButton
+          wordings={{likedText: '已赞', unlikedText: '赞'}}
+          onClick={() => console.log('Click on like button!')}/>
+      </div>
+    )
+  }
+}
+```
+
+**默认配置 defaultProps**
+
+给组件添加类属性 `defaultProps` 来配置默认参数
+
+```jsx
+  static defaultProps = {
+    likedText: '取消',
+    unlikedText: '点赞'
+  }
+```
+
+**props 不可变**
+
+`props` 一旦传入，你就不可以在组件内部对它进行修改。
+
+props 错误的修改方式
+
+```jsx
+handleClickOnLikeButton () {
+    this.props.likedText = '取消'
+    this.setState({
+      isLiked: !this.state.isLiked
+    })
+  }
+```
+
+可以通过父组件主动重新渲染的方式来传入新的 `props`
+
+### 1.7 state 与 props
+
+state 是让组件控制自己的状态，props 是让外部对组件自己进行配置
+
+**尽量写无状态组件**
+
+尽量少地用 `state`，尽量多地用 `props` 
+
+React 在 0.14 版本引入了函数式组件——一种定义不能使用 `state` 组件
+
+```jsx
+ const HelloWorld = (props) => {
+  const sayHi = (event) => alert('Hello World')
+  return (
+    <div onClick={sayHi}>Hello World</div>
+  )
+} 
+```
+
+
+
+### 1.8 渲染列表数据
+
+```jsx
+{users.map((user) => <User user={user} />)}
+```
+
+对于用表达式套数组罗列到页面上的元素，都要为每个元素加上 key 属性，这个 key 必须是每个元素唯一的标识。一般来说，`key` 的值是后台数据返回的 `id`，因为后台的 `id` 都是唯一的。
+
+
+
 ### 1.3 React创建组件的方式及区别
 
 1. 函数式定义的无状态组件
@@ -218,7 +319,9 @@ keyUp = (e) => {
 
 > 参考网址：https://www.cnblogs.com/wonyun/p/5930333.html
 
-### 1.4 受控组件和非受控组件
+### 1.4  组件分类
+
+####  1.4.1 受控组件和非受控组件
 
 受控组件就形式上来说，受控组件就是为某个form表单组件添加value属性
 
@@ -235,6 +338,16 @@ render: function() {
 ```
 
 > 参考网址：https://www.cnblogs.com/wonyun/p/6023363.html
+
+#### 1.4.2 无状态组件与有状态组件
+
+没有 `state` 的组件叫无状态组件（stateless component）
+
+有 state 的组件叫做有状态组件（stateful component）
+
+因为状态会带来管理的复杂性，我们尽量多地写无状态组件，尽量少地写有状态的组件。这样会降低代码维护的难度，也会在一定程度上增强组件的可复用性。
+
+
 
 ## 第二阶段
 
@@ -520,10 +633,6 @@ renderApp(store.getState())
 // 后面可以随意 dispatch 了，页面自动更新
 store.dispatch(...)
 ```
-
-
-
-
 
 
 
