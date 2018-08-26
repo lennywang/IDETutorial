@@ -375,7 +375,38 @@ import React,{Component} from 'react';
 
 > 参考网址：https://blog.csdn.net/naxieren1992/article/details/79582484
 
-### 2.2 props.children和容器类组件
+### 2.2 ref 和 React.js 中的DOM操作
+
+ref 属性：获取已经挂载的元素的 DOM 节点
+
+```jsx
+class AutoFocusInput extends Component {
+  componentDidMount () {
+    this.input.focus()
+  }
+
+  render () {
+    return (
+      <input ref={(input) => this.input = input} />
+    )
+  }
+}
+
+ReactDOM.render(
+  <AutoFocusInput />,
+  document.getElementById('root')
+)
+```
+
+可以给组件标签也加上 ref
+
+```jsx
+<Clock ref={(clock) => this.clock = clock} />
+```
+
+
+
+### 2.3 props.children和容器类组件
 
 使用自定义组件的时候，可以在其中嵌套 JSX 结构。嵌套的结构在组件内部都可以通过 `props.children` 获取到，这种组件编写方式在编写容器类型的组件当中非常有用。
 
@@ -429,9 +460,78 @@ class Layout extends Component {
 
 
 
+### 2.4 dangerouslySetHTML 和 style 属性 
 
+**dangerouslySetHTML**
 
+出于安全考虑的原因（XSS 攻击），在 React.js 当中所有的表达式插入的内容都会被自动转义。React.js 提供了一个属性 `dangerouslySetInnerHTML` 来设置动态 HTML 结构的效果。
 
+```jsx
+render () {
+    return (
+      <div
+        className='editor-wrapper'
+        dangerouslySetInnerHTML={{__html: this.state.content}} />
+    )
+  }
+```
+
+`__html` 属性值就相当于元素的 `innerHTML`
+
+**style**
+
+React.js 中你需要把 CSS 属性变成一个对象再传给元素
+
+CSS 属性中带 `-` 的元素都必须要去掉 `-` 换成驼峰命名，如 `font-size` 换成 `fontSize`，`text-align` 换成 `textAlign`。
+
+```jsx
+<h1 style={{fontSize: '12px', color: 'red'}}>React.js 小书</h1>
+```
+
+可以用 `props` 或者 `state`中的数据生成样式对象再传给元素，然后用 `setState` 就可以修改样式
+
+```jsx
+<h1 style={{fontSize: '12px', color: this.state.color}}>React.js 小书</h1>
+setState({color: 'blue'})    {/* 修改元素的颜色成蓝色 */}
+```
+
+### 2.5 PropTypes 和组件参数验证   
+
+```jsx
+npm install --save prop-types
+
+import PropTypes from 'prop-types'
+
+//设置组件参数类型
+static propTypes = {
+    comment: PropTypes.object
+}
+
+//设置组件参数必选
+static propTypes = {
+    comment: PropTypes.object.isRequired
+}
+
+//设置组件参数默认值
+static defaultProps = {
+    comments: []
+}
+```
+
+`PropTypes` 数据类型
+
+```jsx
+PropTypes.array
+PropTypes.bool
+PropTypes.func
+PropTypes.number
+PropTypes.object
+PropTypes.string
+PropTypes.node
+PropTypes.element
+```
+
+PropTypes 给组件的参数做类型限制，可以在帮助我们迅速定位错误，这在构建大型应用程序的时候特别有用；另外，给组件加上 propTypes，也让组件的开发、使用更加规范清晰。
 
 ## 第三阶段
 

@@ -1,0 +1,2 @@
+store.subscribe
+mapStateToProps(store.getState(), this.props) 
