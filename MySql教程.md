@@ -8,6 +8,27 @@ select date_format(birthday,'%Y-%m-%d')  from score;
 
 
 
+## 常用函数
+
+### IFNULL
+
+IFNULL(expression_1,expression_2);
+
+expression_1不为NULL，则IFNULL函数返回expression_1; 否则返回expression_2的结果。
+
+IFNULL(NULL，'IFNULL function')		返回IFNULL
+
+
+
+
+
+REPLACE
+limit
+
+
+
+
+
 
 
 ## 数据类型
