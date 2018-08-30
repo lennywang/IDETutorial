@@ -2,7 +2,7 @@
 
 
 
-### IntelliJ IDEA 破解激活教程
+### IntelliJ IDEA 激活
 
 http://baijiahao.baidu.com/s?id=1585530607645308087&wfr=spider&for=pc
 
@@ -10,13 +10,14 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 
 
-Idea 使用
+###  Idea快捷键
 
 - Idea 调试时 跳到当前位置前面
 
 
 
-### 快捷键
+
+**快捷键**
 
 | 快捷键            | 功能             | 说明                                |
 | :------------- | -------------- | --------------------------------- |
@@ -25,21 +26,58 @@ Idea 使用
 | Alt + 7        | Structure      | View \| Tool Windows \| Structure |
 | Ctrl + F11     | Bookmark       |                                   |
 | Ctrl + Alt + H | Call Hierarchy |                                   |
+| Ctrl+Alt+L     | 格式化代码          |                                   |
+|                |                |                                   |
+|                |                |                                   |
+|                |                |                                   |
 
 
 
+**搜索** 
 
+| 快捷键          | 功能               | 说明   |
+| ------------ | ---------------- | ---- |
+| Ctrl＋Shift＋N | 快速搜索文件           |      |
+| Ctrl+Shift+F | 快速搜索字符串          |      |
+| Alt+F3       | 逐个往下查找相同文本，并高亮显示 |      |
+
+
+
+### 调试
+
+| 快捷键       | 功能           | 说明                |
+| --------- | ------------ | ----------------- |
+| Shift+F8  | 跳出该方法        |                   |
+| Alt+Click | 查看断点处的某个对象的值 | 按住alter，然后点击想看的变量 |
+
+
+
+**查看断点处的某个对象的值**
+
+Evaluate Expression (Ctrl +U )
+
+**在调试代码的时候，实时的修改，运行状态的代码变量的值**
+
+Watches
+
+**设置运行时的参数**
+
+Run → Edit Configurations
+
+**keymap**
+
+File → Settings |  keymap
 
 
 
 Search Everywhere 	Double Shift
-Go to File 		Ctrl+Shift+N
-Recent Files 		Ctrl+E
+Go to File 		        Ctrl+Shift+N
+Recent Files 		         Ctrl+E
 Navigation Bar 		Alt+Home
 
- 格式化代码	Ctrl+Alt+L
 
-跳出该方法 Shift+F8
+
+
 
 View → Enter Distraction Free Mode
 
