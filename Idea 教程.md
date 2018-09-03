@@ -50,13 +50,6 @@ File | Settings | 搜索keymap | 搜索Split Vertically （水平分屏）或 Sp
 > 参考：[idea分屏](https://blog.csdn.net/sinat_32034679/article/details/72621671)
 
 
-搜索
-
-| 快捷键          | 功能      | 说明   |
-| ------------ | ------- | ---- |
-| Ctrl+Shift+F | 快速搜索字符串 |      |
-
-
 
 ### 调试
 | 快捷键       | 功能           | 说明                |

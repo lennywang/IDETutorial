@@ -1,8 +1,10 @@
-swagger2 常用注解
+# swagger2 教程
 
 > [swagger2常用注解说明](https://blog.csdn.net/u014231523/article/details/76522486)
 
+## Swagger2 常见注解
 
+### Api
 
 **@Api()** 
 用于类；表示标识这个类是swagger的资源 
@@ -17,6 +19,8 @@ public class UserController {
 
 }
 ```
+
+### ApiOperation
 
 **@ApiOperation()** 用于方法；表示一个http请求的操作 
 value用于方法描述 
@@ -41,4 +45,31 @@ public User getUserInfo(@ApiParam(name="id",value="用户id",required=true) Long
   }
 }
 ```
+
+
+
+## Swagger 常见问题
+
+### no response from server错误
+
+```java
+ public Docket init() {
+        Docket docket = new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.didi.km.x.api.controller"))
+                .paths(PathSelectors.any())
+                .build();
+        docket.host("localhost:8080");
+        return docket;
+    }
+```
+
+> 参考：[swagger出现no response from server错误的解决办法](https://blog.csdn.net/razeSpirit/article/details/78908366)
+
+
+
+
+
+
 
