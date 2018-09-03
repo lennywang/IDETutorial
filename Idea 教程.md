@@ -41,6 +41,18 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 | Ctrl+Shift+F | 快速搜索字符串          |      |
 | Alt+F3       | 逐个往下查找相同文本，并高亮显示 |      |
 
+idea分屏
+
+File | Settings | 搜索keymap | 搜索Split Vertically （水平分屏）或 Split Horizontally（垂直分屏）
+
+| 右键点击split vertically | 设置水平分屏快捷键
+
+> 参考：[idea分屏](https://blog.csdn.net/sinat_32034679/article/details/72621671)
+
+
+
+
+
 
 
 ### 调试
@@ -86,9 +98,6 @@ https://www.cnblogs.com/clwydjgs/p/9390488.html
 
 Intellij IDEA 2017 debug断点调试技巧与总结详解篇
 https://blog.csdn.net/qq_27093465/article/details/64124330
-
-idea分屏
-https://blog.csdn.net/sinat_32034679/article/details/72621671
 
 浅析Java中的final关键字
 http://www.cnblogs.com/dolphin0520/p/3736238.html
