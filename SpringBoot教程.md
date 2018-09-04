@@ -45,5 +45,78 @@ ConfigurableApplicationContext context = app.run(args);
 
 > 参考 [@getMapping和@postMapping，@RestController](https://www.cnblogs.com/ghc666/p/8657526.html)
 
+## SpringBoot启动banner
 
+**第一种方式：修改的时候，进行设置,在Application的main方法中**
+
+关闭banner：Banner.Mode.OFF
+
+```java
+public static void main(String[] args) {
+        SpringApplication application = new SpringApplication(LogbackApplication.class);
+        /*
+         * Banner.Mode.OFF:关闭;
+         * Banner.Mode.CONSOLE:控制台输出，默认方式;
+         * Banner.Mode.LOG:日志输出方式;
+         */
+        application.setBannerMode(Banner.Mode.OFF);
+        application.run(args);
+}
+```
+
+**第二种方式：修改banner.txt配置文件 (推荐)**
+
+1. banner生成网址：http://patorjk.com/software/taag/#p=display&f=Doom&t=java
+
+2. 修改颜色：${AnsiColor.BRIGHT_RED} 
+
+   * 如果颜色没有变，那么还需要设置：spring.output.ansi.enabled=ALWAYS
+
+
+3. 文件描述、springboot描述
+
+   | 代码                               | 描述                    |
+   | -------------------------------- | --------------------- |
+   | ${application.version}           | 这个是MANIFEST.MF文件中的版本号 |
+   | ${application.formatted-version} | 这个是上面的的版本号前面加v后上括号    |
+   | ${spring-boot.version}           | 这个是springboot的版本号     |
+   | ${spring-boot.formatted-version} | 这个是springboot的版本号     |
+
+   ​
+
+   [佛祖保佑 永无bug 代码注释](https://www.cnblogs.com/wangjunwei/p/6995467.html)
+
+```
+${AnsiColor.BRIGHT_RED}                    _oo0oo_
+${AnsiColor.BRIGHT_RED}                   o8888888o
+${AnsiColor.BRIGHT_RED}                   88" . "88
+${AnsiColor.BRIGHT_RED}                   (| -_- |)
+${AnsiColor.BRIGHT_RED}                   0\  =  /0
+${AnsiColor.BRIGHT_RED}                 ___/`---'\___
+${AnsiColor.BRIGHT_RED}               .' \\|     |// '.
+${AnsiColor.BRIGHT_RED}              / \\|||  :  |||// \
+${AnsiColor.BRIGHT_RED}             / _||||| -:- |||||- \
+${AnsiColor.BRIGHT_RED}            |   | \\\  -  /// |   |
+${AnsiColor.BRIGHT_RED}            | \_|  ''\---/''  |_/ |
+${AnsiColor.BRIGHT_RED}            \  .-\__  '-'  ___/-. /
+${AnsiColor.BRIGHT_RED}          ___'. .'  /--.--\  `. .'___
+${AnsiColor.BRIGHT_RED}       ."" '<  `.___\_<|>_/___.' >' "".
+${AnsiColor.BRIGHT_RED}      | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+${AnsiColor.BRIGHT_RED}      \  \ `_.   \_ __\ /__ _/   .-` /  /
+${AnsiColor.BRIGHT_RED}  =====`-.____`.___ \_____/___.-`___.-'=====
+${AnsiColor.BRIGHT_RED}                    `=---='
+${AnsiColor.BRIGHT_RED}  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+${AnsiColor.BRIGHT_RED}            佛祖保佑         永无BUG
+${AnsiColor.BRIGHT_RED} MANIFEST.MF文件中的版本号: version:${application.version}   ${AnsiColor.BRIGHT_RED} springboot的版本号: Spring-Boot ${spring-boot.version}
+```
+
+**第三种方式：重写接口Banner实现**
+
+SpringBoot提供了一个接口org.springframework.boot.Banner，他的实例可以被传给SpringApplication的setBanner(banner)方法。如果你闲得不行非要着重美化这个命令行输出的话，可以重写Banner接口的printBanner方法。
+
+**第四种方式：在application.properties进行配置**
+
+在application.proerpties进行banner的显示和关闭：spring.main.banner-mode=off
+
+> 适用于Spring-Boot 2.0.4.RELEASE
 
