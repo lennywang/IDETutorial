@@ -33,6 +33,16 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 
 
+**视图**
+
+| 快捷键           | 功能                                 | 说明                       |
+| ---------------- | ------------------------------------ | -------------------------- |
+| Ctrl＋Alt+H      | 查看方法调用层次                     | Navigate \| Call Hierarchy |
+| Ctrl+shift+Alt+U | 查看maven依赖类图                    |                            |
+| Ctrl+F12         | 查看file，method结构图、类继承机构图 |                            |
+
+
+
 **搜索** 
 
 | 快捷键          | 功能               | 说明   |

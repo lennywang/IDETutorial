@@ -35,15 +35,45 @@ ConfigurableApplicationContext context = app.run(args);
 
 ## java注解
 
-@getMapping和@postMapping
+### @getMapping和@postMapping
 @GetMapping是一个组合注解，是@RequestMapping(method = RequestMethod.GET)的缩写。
+
 @PostMapping是一个组合注解，是@RequestMapping(method = RequestMethod.POST)的缩写。
 
-@RestController
-@RestController注解相当于@ResponseBody ＋ @Controller合在一起的作用。
-注：如果只是使用@RestController注解Controller，则Controller中的方法无法返回jsp页面，配置的视图解析器InternalResourceViewResolver不起作用，返回的内容就是Return 里的内容。
-
 > 参考 [@getMapping和@postMapping，@RestController](https://www.cnblogs.com/ghc666/p/8657526.html)
+
+### @RestController
+@RestController注解相当于@ResponseBody ＋ @Controller合在一起的作用。
+
+注：如果只是使用@RestController注解Controller，则Controller中的方法无法返回jsp页面，配置的视图解析器
+
+InternalResourceViewResolver不起作用，返回的内容就是Return 里的内容。
+
+### @MapperScan
+@MapperScan可以指定要扫描的Mapper类的包的路径
+
+```java
+@SpringBootApplication
+@MapperScan("com.lz.water.monitor.mapper")
+// 添加对mapper包扫描
+public class Application {
+	
+}
+```
+
+@使用@MapperScan注解多个包
+
+```java
+@SpringBootApplication  
+@MapperScan({"com.kfit.demo","com.kfit.user"})  
+public class App {  
+    public static void main(String[] args) {  
+       SpringApplication.run(App.class, args);  
+    }  
+}
+```
+
+
 
 ## SpringBoot启动banner
 
