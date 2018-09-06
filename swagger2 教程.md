@@ -2,6 +2,12 @@
 
 > [swagger2常用注解说明](https://blog.csdn.net/u014231523/article/details/76522486)
 
+## springboot项目中使用Swagger2 步骤
+
+> https://blog.csdn.net/heping_csdn/article/details/79104927
+
+
+
 ## Swagger2 常见注解
 
 ### Api
