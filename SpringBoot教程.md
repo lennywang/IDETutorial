@@ -103,7 +103,7 @@ public static void main(String[] args) {
    * 如果颜色没有变，那么还需要设置：spring.output.ansi.enabled=ALWAYS
 
 
-3. 文件描述、springboot描述
+1. 文件描述、springboot描述
 
    | 代码                               | 描述                    |
    | -------------------------------- | --------------------- |
@@ -149,4 +149,20 @@ SpringBoot提供了一个接口org.springframework.boot.Banner，他的实例可
 在application.proerpties进行banner的显示和关闭：spring.main.banner-mode=off
 
 > 适用于Spring-Boot 2.0.4.RELEASE
+
+## SpringBoot自定义favicon.ico
+
+**自定义Favicon**
+
+将favicon.ico放置在src/main/resources/static下
+
+**关闭Favicon**
+
+在application.properties中设置关闭Favicon，默认为开启。
+
+```
+spring.mvc.favicon.enabled=false
+```
+
+
 
