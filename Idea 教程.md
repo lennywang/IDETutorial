@@ -35,10 +35,10 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 **视图**
 
-| 快捷键           | 功能                                 | 说明                       |
-| ---------------- | ------------------------------------ | -------------------------- |
-| Ctrl＋Alt+H      | 查看方法调用层次                     | Navigate \| Call Hierarchy |
-| Ctrl+shift+Alt+U | 查看maven依赖类图                    |                            |
+| 快捷键              | 功能                      | 说明                         |
+| ---------------- | ----------------------- | -------------------------- |
+| Ctrl＋Alt+H       | 查看方法调用层次                | Navigate \| Call Hierarchy |
+| Ctrl+shift+Alt+U | 查看maven依赖类图             |                            |
 | Ctrl+F12         | 查看file，method结构图、类继承机构图 |                            |
 
 
@@ -97,6 +97,27 @@ Navigation Bar 		Alt+Home
 
 
 View → Enter Distraction Free Mode
+
+idea在选中文本段中做替换 CTRL + R
+
+https://blog.csdn.net/matrix_google/article/details/80934169
+
+IntelliJ IDEA 忽略大小写设置
+
+https://blog.csdn.net/u012934325/article/details/70755539/
+
+Ctrl + Shift + R：根据输入内容替换对应内容，范围为整个项目或指定目录内文件。
+
+Settings —>Console Font
+
+terminal
+view--》tool window--》terminal
+
+version control
+
+
+
+
 
 你们都在用IntelliJ IDEA吗？或许你们需要看一下这篇博文
 https://www.cnblogs.com/clwydjgs/p/9390488.html
