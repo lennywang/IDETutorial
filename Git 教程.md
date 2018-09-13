@@ -48,7 +48,7 @@ git log 命令显示从最近到最远的提交日志
 
 ## Git 实战
 
-拉取远程指定分支
+### **1. 拉取远程指定分支**
 
     git checkout -b feature_v4-0_zouzhili_1 origin/feature_v4-0_zouzhili_1 
 
@@ -60,28 +60,26 @@ git log 命令显示从最近到最远的提交日志
 
 参考：git 拉取远程指定分支
 
-提交并创建CR
+### **2. 推送本地分支到远程仓库**
+
+```
+git branch –-set-upstream feature_v4-0_wll_1 origin/feature_v4-0_wanglulu_v_1
+```
+
+### **3. 提交并创建CR**
 
     git push origin feature_v4-0_wanglulu_v_1:refs/for/feature_v4-0_wanglulu_v_1
 
 说明：此命令只适用于 Didi
 
-推送本地分支到远程仓库
-
-    git branch –-set-upstream feature_v4-0_wll_1 origin/feature_v4-0_wanglulu_v_1
-
-使用git push
+### **4. 使用git push**
 
     1、git push -u origin master#如果当前分支和多个主机之间存在追踪关系，使用这个命令来设置默认的主机
     2、git push
 
-git回滚到指定版本
+### **5. git回滚到指定版本**
 
     git reset --hard 版本号                                       # git log -3 看3次提交
-
-
-
-
 
 
 
