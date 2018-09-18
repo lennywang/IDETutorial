@@ -104,21 +104,25 @@ logback当前分成三个模块：logback-core,logback-classic和logback-access�
 
 
 
-备：<pattern>%d{HH:mm:ss.SSS}[%thread] %highlight(%-5level) %cyan(%logger{15}) - %msg %c:%L%n</pattern> 
+1、<pattern>%d{HH:mm:ss.SSS}[%thread] %highlight(%-5level) %cyan(%logger{15}) - %msg %c:%L%n</pattern> 
 
-| 格式字符       | 含义   |
-| ---------- | ---- |
-| %d         |      |
-| %thread    |      |
-| %highlight |      |
-| %cyan      |      |
-| %logger    |      |
-| %msg       |      |
-| %c         |      |
-| %L         |      |
-| %n         |      |
+| 格式字符          | 含义                                 |
+| ----------------- | ------------------------------------ |
+| %d                | 时间日期格式                         |
+| %thread           | 调用的线程                           |
+| %-5level          | 日志界别                             |
+| %logger           | 调用对象                             |
+| %msg              | 日志信息                             |
+| %n                | 换行                                 |
+| %highlight、%cyan | 高亮 ；语法：%highlight(sub-pattern) |
 
+> 参考：[Chapter 6: Layouts](https://logback.qos.ch/manual/layouts.html#conversionWord)
 
+2、打印方法与基本的选择规则
+
+记录请求级别为 p，其 logger的有效级别为 q，只有则当 p>=q时，该请求才会被执行。该规则是 logback 的核心。
+
+级别排序为： TRACE < DEBUG < INFO < WARN < ERROR
 
 > 参考：[logback的使用和logback.xml详解](https://www.cnblogs.com/warking/p/5710303.html)
 
