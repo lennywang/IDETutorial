@@ -33,7 +33,7 @@ ConfigurableApplicationContext context = app.run(args);
 
 > 参考：[Spring Boot运行流程分析](https://blog.csdn.net/heimabb/article/details/80419003)
 
-## java注解
+## 注解
 
 ### @getMapping和@postMapping
 @GetMapping是一个组合注解，是@RequestMapping(method = RequestMethod.GET)的缩写。

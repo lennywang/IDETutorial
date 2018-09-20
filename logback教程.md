@@ -126,5 +126,9 @@ logback当前分成三个模块：logback-core,logback-classic和logback-access�
 
 > 参考：[logback的使用和logback.xml详解](https://www.cnblogs.com/warking/p/5710303.html)
 
+3、创建logger对象
 
+```java
+private Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
+```
 

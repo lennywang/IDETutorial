@@ -59,6 +59,14 @@ File | Settings | 搜索keymap | 搜索Split Vertically （水平分屏）或 Sp
 
 > 参考：[idea分屏](https://blog.csdn.net/sinat_32034679/article/details/72621671)
 
+**编码**
+
+| 快捷键     | 功能            | 说明 |
+| ---------- | --------------- | ---- |
+| Alt+Insert | 生成set,get方法 |      |
+
+
+
 
 
 ### 调试
