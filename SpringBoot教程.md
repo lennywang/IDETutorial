@@ -203,5 +203,57 @@ SpringBoot提供了一个接口org.springframework.boot.Banner，他的实例可
 spring.mvc.favicon.enabled=false
 ```
 
+## SpringBoo实践
 
+**conflicts with existing, non-compatible bean definition of same name and class 的解决办法**
+
+**原因：**spring管理bean大概类似把bean实例化放到map中，而当中的键，默认是用的是类名，这样，如果项目中
+
+两个Contoller/Service 重名的话，就会导致管理bean的map中的key重复。本例中didi-km-x-service中有两个
+
+MailService.java文件。
+
+**解决办法：**重命名键值。给其中一个文件添加``@Service("mailsend")`` 注解
+
+**场景还原：**
+
+MailService.java
+
+```java
+package com.didi.km.x.service;
+@Service("mailsend")
+public class MailService {
+  
+}
+```
+
+MailService.java
+
+```java
+package com.didi.km.x.service.mail;
+@Service
+public class MailService {
+  
+}
+```
+
+> 参考：[SpringMVC conflicts with existing, non-compatible bean definition of same name and class 的解决办法](https://www.cnblogs.com/a2211009/p/4534215.html)
+
+**springboot 启动报错Field XXX required a bean of type XXX that could not be found.**
+
+原因：service类上面没有@service注解
+
+解决办法：sp添加@Service注解。
+
+场景还原：
+
+```java
+package com.didi.km.x.service;
+@Service("mailsend")
+public class MailService {
+  
+}
+```
+
+> 参考：[springboot 启动报错Field XXX required a bean of type XXX that could not be found.](https://blog.csdn.net/Julycaka/article/details/80622754)
 
