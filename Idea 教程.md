@@ -61,8 +61,8 @@ File | Settings | 搜索keymap | 搜索Split Vertically （水平分屏）或 Sp
 
 **编码**
 
-| 快捷键     | 功能            | 说明 |
-| ---------- | --------------- | ---- |
+| 快捷键        | 功能          | 说明   |
+| ---------- | ----------- | ---- |
 | Alt+Insert | 生成set,get方法 |      |
 
 
@@ -126,6 +126,9 @@ version control
 
 
 
+
+IDEA的查询引用、调用关系图的功能
+https://www.cnblogs.com/ghj1976/p/5382455.html
 
 你们都在用IntelliJ IDEA吗？或许你们需要看一下这篇博文
 https://www.cnblogs.com/clwydjgs/p/9390488.html

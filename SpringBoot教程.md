@@ -73,6 +73,45 @@ public class App {
 }
 ```
 
+### @Param
+
+```java
+public interface Mapper {
+
+  @Select("select s_id id,s_name name,class_id classid from student where  s_name= #{aaaa} and class_id = #{bbbb}") 
+  public Student select(@Param("aaaa") String name,@Param("bbbb")int class_id);
+  
+}
+```
+
+1.@Select(....)注解的作用就是告诉mybatis框架,执行括号内的sql语句
+
+2.s_id id,s_name name,class_id classid  格式是 字段名+属性名,例如s_id是数据库中的字段名,id是类中的属性名
+
+这段代码的作用就是实现数据库字段名和实体类属性的一一映射,不然数据库不知道如何匹配
+
+3.where  s_name= #{aaaa} and class_id = #{bbbb} 表示sql语句要接受2个参数,一个参数名是aaaa,一个参数名是
+
+bbbb,如果要正确的传入参数,那么就要给参数命名,因为不用xml配置文件,那么我们就要用别的方式来给参数命名,
+
+这个方式就是@Param注解
+
+4.在方法参数的前面写上@Param("参数名"),表示给参数命名,名称就是括号中的内容
+
+public Student select(@Param("aaaa") String name,@Param("bbbb")int class_id); 
+
+给入参 String name 命名为aaaa,然后sql语句....where  s_name= #{aaaa} 中就可以根据aaaa得到参数值了
+
+> 拓展：[@Param注解的用法解析](https://blog.csdn.net/u012031380/article/details/54924641/)
+
+
+
+
+
+
+
+
+
 
 
 ## SpringBoot启动banner
@@ -164,5 +203,57 @@ SpringBoot提供了一个接口org.springframework.boot.Banner，他的实例可
 spring.mvc.favicon.enabled=false
 ```
 
+## SpringBoo实践
 
+**conflicts with existing, non-compatible bean definition of same name and class 的解决办法**
+
+**原因：**spring管理bean大概类似把bean实例化放到map中，而当中的键，默认是用的是类名，这样，如果项目中
+
+两个Contoller/Service 重名的话，就会导致管理bean的map中的key重复。本例中didi-km-x-service中有两个
+
+MailService.java文件。
+
+**解决办法：**重命名键值。给其中一个文件添加``@Service("mailsend")`` 注解
+
+**场景还原：**
+
+MailService.java
+
+```java
+package com.didi.km.x.service;
+@Service("mailsend")
+public class MailService {
+  
+}
+```
+
+MailService.java
+
+```java
+package com.didi.km.x.service.mail;
+@Service
+public class MailService {
+  
+}
+```
+
+> 参考：[SpringMVC conflicts with existing, non-compatible bean definition of same name and class 的解决办法](https://www.cnblogs.com/a2211009/p/4534215.html)
+
+**springboot 启动报错Field XXX required a bean of type XXX that could not be found.**
+
+原因：service类上面没有@service注解
+
+解决办法：sp添加@Service注解。
+
+场景还原：
+
+```java
+package com.didi.km.x.service;
+@Service("mailsend")
+public class MailService {
+  
+}
+```
+
+> 参考：[springboot 启动报错Field XXX required a bean of type XXX that could not be found.](https://blog.csdn.net/Julycaka/article/details/80622754)
 
