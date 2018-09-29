@@ -6,9 +6,8 @@
 
 ![Linux目录结构](https://github.com/lennywang/Img/raw/master/linux.png)
 
-* home:创建admin用户，就会在home目录下对应admin目录。创建vsftp用户，就会在home目录下对应vsftp目
+* home:创建admin用户，就会在home目录下对应admin目录。创建vsftp用户，就会在home目录下对应vsftp目录
 
-  录
 
 * usr：通常将软件安装在/usr/local目录下面。安装jdk   /usr/local/jdk/….（安装的jdk）
 
@@ -119,7 +118,7 @@ nohup command &
 | shutdown -r 20:35 | 在时间为20:35时候重启(root用户使用) |      |
 | shutdown -c       | 取消重启                    |      |
 
-**关机 **
+**关机**
 
 | 命令              | 作用             | 备注   |
 | --------------- | -------------- | ---- |
@@ -136,12 +135,12 @@ nohup command &
 
 **退出**
 
-| 命令                                       | 作用    | 备注   |
-| ---------------------------------------- | ----- | ---- |
-| 1. ESC \| : \| WQ(x) 回车<br />2. ESC \| Shift+zz | 保存退出  |      |
-| ESC \| : \| q                            | 正常退出  |      |
-| ESC \| : \| q!                           | 不保存退出 |      |
-| ESC \| : \| !                            | 强制退出  |      |
+| 命令                                       | 作用    | 备注               |
+| ---------------------------------------- | ----- | ---------------- |
+| 1. ESC \| : \| WQ(x) 回车<br />2. ESC \| Shift+zz | 保存退出  | w:write   q:quit |
+| ESC \| : \| q                            | 正常退出  |                  |
+| ESC \| : \| q!                           | 不保存退出 |                  |
+| ESC \| : \| !                            | 强制退出  |                  |
 
 
 
