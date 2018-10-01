@@ -104,7 +104,39 @@ public Student select(@Param("aaaa") String name,@Param("bbbb")int class_id); 
 
 > 拓展：[@Param注解的用法解析](https://blog.csdn.net/u012031380/article/details/54924641/)
 
+### @PathVariable
 
+将 URL 中占位符参数绑定到控制器处理方法的入参中:URL 中的 {xxx} 占位符可以通过@PathVariable("xxx") 绑定到操作方法的入参中。
+
+```java
+@RequestMapping("/users/{username}")
+@ResponseBody
+public String userProfile(@PathVariable("username") String username){
+	return "user" + username; 
+}
+```
+
+> 參考：[SpringBoot-@PathVariable](https://www.cnblogs.com/fangpengchengbupter/p/7823493.html)
+
+@RequestParams
+
+获取请求参数的值
+
+```java
+@RestControllerpublic 
+class HelloController { 
+    
+@RequestMapping(value="/hello",method= RequestMethod.GET)    
+//required=false 表示url中可以不穿入id参数，此时就使用默认参数    
+public String sayHello(@RequestParam(value="id",required = false,defaultValue = "1") Integer id){   
+    return "id:"+id;    
+}}
+
+localhost:8080/hello
+id:1
+```
+
+> 参考：[SpringBoot中常用注解@ PathVaribale / @ RequestParam / @ GetMapping](https://blog.csdn.net/u010753907/article/details/75006256)
 
 
 
@@ -307,4 +339,6 @@ $.ajax({
         }
 });
 ```
+
+> 參考：[前端人员必须会的jsonp!](https://blog.csdn.net/Summer_water/article/details/52740953)
 
