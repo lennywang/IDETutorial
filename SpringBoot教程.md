@@ -118,7 +118,7 @@ public String userProfile(@PathVariable("username") String username){
 
 > 參考：[SpringBoot-@PathVariable](https://www.cnblogs.com/fangpengchengbupter/p/7823493.html)
 
-@RequestParams
+###@RequestParams
 
 获取请求参数的值
 
@@ -127,7 +127,7 @@ public String userProfile(@PathVariable("username") String username){
 class HelloController { 
     
 @RequestMapping(value="/hello",method= RequestMethod.GET)    
-//required=false 表示url中可以不穿入id参数，此时就使用默认参数    
+//required=false 表示url中可以不传入id参数，此时就使用默认参数
 public String sayHello(@RequestParam(value="id",required = false,defaultValue = "1") Integer id){   
     return "id:"+id;    
 }}
