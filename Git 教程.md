@@ -31,6 +31,15 @@ https://blog.csdn.net/iefreer/article/details/7679631
 Error when changing to master branch: my local changes would be overwritten by checkout
 https://stackoverflow.com/questions/22424142/error-when-changing-to-master-branch-my-local-changes-would-be-overwritten-by-c
 
+git diff 四种比较方式	
+https://blog.csdn.net/catchertherye/article/details/49834705
+
+
+
+
+
+
+
 ## Git 命令
 
  git pull <远程库名> <远程分支名>:<本地分支名> 
