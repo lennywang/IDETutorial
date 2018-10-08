@@ -104,7 +104,39 @@ public Student select(@Param("aaaa") String name,@Param("bbbb")int class_id); 
 
 > 拓展：[@Param注解的用法解析](https://blog.csdn.net/u012031380/article/details/54924641/)
 
+### @PathVariable
 
+将 URL 中占位符参数绑定到控制器处理方法的入参中:URL 中的 {xxx} 占位符可以通过@PathVariable("xxx") 绑定到操作方法的入参中。
+
+```java
+@RequestMapping("/users/{username}")
+@ResponseBody
+public String userProfile(@PathVariable("username") String username){
+	return "user" + username; 
+}
+```
+
+> 參考：[SpringBoot-@PathVariable](https://www.cnblogs.com/fangpengchengbupter/p/7823493.html)
+
+###@RequestParams
+
+获取请求参数的值
+
+```java
+@RestControllerpublic 
+class HelloController { 
+    
+@RequestMapping(value="/hello",method= RequestMethod.GET)    
+//required=false 表示url中可以不传入id参数，此时就使用默认参数
+public String sayHello(@RequestParam(value="id",required = false,defaultValue = "1") Integer id){   
+    return "id:"+id;    
+}}
+
+localhost:8080/hello
+id:1
+```
+
+> 参考：[SpringBoot中常用注解@ PathVaribale / @ RequestParam / @ GetMapping](https://blog.csdn.net/u010753907/article/details/75006256)
 
 
 
@@ -256,4 +288,57 @@ public class MailService {
 ```
 
 > 参考：[springboot 启动报错Field XXX required a bean of type XXX that could not be found.](https://blog.csdn.net/Julycaka/article/details/80622754)
+
+**“No 'Access-Control-Allow-Origin' header is present on the requested resource.”**
+
+**同源策略**(Same origin Policy)
+浏览器出于安全方面的考虑，只允许与同域下的接口交互。同域指的是？
+同协议：如都是http或者https
+同域名：如都是<http://jirengu.com/a> 和<http://jirengu.com/b> 
+同端口：如都是80端口
+
+**解决方案**
+**1.代理服务器** 					**2.JSONP** 				**3.CORS**
+
+**CORS**全称Cross-Origin Resource Sharing
+
+**JSONP**(JSON with padding)
+通过 script 标签加载数据的方式去获取数据当做 JS 代码来执行
+
+```javascript
+showData({“city”: “hangzhou”, “weather”: “晴天”})
+
+function showData(ret){ 
+	console.log(ret); 
+}
+```
+
+**示例代码**
+
+```
+@ResponseBody
+@RequestMapping("/getMySeat")
+public String getMySeatSuccess(@RequestParam("callback") String callback){
+        Gson gson=new Gson();
+        Map<String,String> map=new HashMap<>();
+        map.put("seat","1_2_06_12");
+        logger.info(callback);
+        return callback+"("+gson.toJson(map)+")";
+}
+
+$.ajax({
+        type:"GET",
+        url:"http://www.deardull.com:9090/getMySeat", //访问的链接
+        dataType:"jsonp",  //数据格式设置为jsonp
+        jsonp:"callback",  //Jquery生成验证参数的名称
+        success:function(data){  //成功的回调函数
+            alert(data);
+        },
+        error: function (e) {
+            alert("error");
+        }
+});
+```
+
+> 參考：[前端人员必须会的jsonp!](https://blog.csdn.net/Summer_water/article/details/52740953)
 

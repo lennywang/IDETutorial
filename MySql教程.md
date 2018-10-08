@@ -23,7 +23,8 @@ IFNULL(NULL，'IFNULL function')		返回IFNULL
 
 
 REPLACE
-limit
+
+limit 0,20 
 
 
 

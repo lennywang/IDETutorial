@@ -90,6 +90,14 @@ git branch –-set-upstream feature_v4-0_wll_1 origin/feature_v4-0_wanglulu_v_1
 
     git reset --hard 版本号                                       # git log -3 看3次提交
 
+### 6.比较两个提交之间的差异
+
+```shell
+git diff commit1 commit2 
+```
+
+> 参考：[git diff 四种比较方式](https://blog.csdn.net/catchertherye/article/details/49834705)
+
 
 
 
