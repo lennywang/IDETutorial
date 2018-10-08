@@ -106,14 +106,14 @@ logback当前分成三个模块：logback-core,logback-classic和logback-access�
 
 1、<pattern>%d{HH:mm:ss.SSS}[%thread] %highlight(%-5level) %cyan(%logger{15}) - %msg %c:%L%n</pattern> 
 
-| 格式字符          | 含义                                 |
-| ----------------- | ------------------------------------ |
-| %d                | 时间日期格式                         |
-| %thread           | 调用的线程                           |
-| %-5level          | 日志界别                             |
-| %logger           | 调用对象                             |
-| %msg              | 日志信息                             |
-| %n                | 换行                                 |
+| 格式字符             | 含义                             |
+| ---------------- | ------------------------------ |
+| %d               | 时间日期格式                         |
+| %thread          | 调用的线程                          |
+| %-5level         | 日志界别                           |
+| %logger          | 调用对象                           |
+| %msg             | 日志信息                           |
+| %n               | 换行                             |
 | %highlight、%cyan | 高亮 ；语法：%highlight(sub-pattern) |
 
 > 参考：[Chapter 6: Layouts](https://logback.qos.ch/manual/layouts.html#conversionWord)
