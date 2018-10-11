@@ -33,7 +33,59 @@ ConfigurableApplicationContext context = app.run(args);
 
 > 参考：[Spring Boot运行流程分析](https://blog.csdn.net/heimabb/article/details/80419003)
 
-## 注解
+## 常用注解
+
+### @Controller
+
+@Controller注解在类上，表名这个类是Spring MVC里的Controller ，将其声明为Spring 的一个Bean，Dispatcher Servlet会自动扫描注解了解次注解的类，并将Web请求映射到注解了@RequestMapping的方法上。这里特别指出，在声明普通Bean的时候，使用@Component、@Service、@Repository和@Controller是等同的，因为@Service、@Repository、@Controller都组合了@Component元注解；但在Spring MVC 声明控制器Bean的时候，只能使用@Controller。
+
+### @RequestMapping
+
+@RequestMapping 注解是用来映射Web请求（访问路径和参数）、处理类和方法的。
+
+**常用属性**
+
+**value**：     指定请求的实际地址，指定的地址可以是URI Template 模式；
+
+```java
+value="/getgoup"
+```
+
+**method**： 指定请求的method类型， GET、POST、PUT、DELETE等；
+
+```java
+method = RequestMethod.GET
+```
+
+**consumes**： 指定处理请求的提交内容类型（Content-Type），例如application/json, text/html;
+
+```java
+//方法仅处理request Content-Type为“application/json”类型的请求
+@Controller  
+@RequestMapping(value = "/pets", method = RequestMethod.POST, consumes="application/json")  
+public void addPet(@RequestBody Pet pet, Model model) {      
+    // implementation omitted  
+}
+```
+
+**produces**:    指定返回的内容类型，仅当request请求头中的(Accept)类型中包含该指定类型才返回；
+
+ ```java
+//1.返回json数据，下边的代码可以省略produces属性，因为注解@responseBody就是返回值是json数据
+@Controller  
+@RequestMapping(value = "/pets/{petId}", method = RequestMethod.GET, produces="application/json")  
+@ResponseBody
+public Pet getPet(@PathVariable String petId, Model model) {         
+    // implementation omitted  
+} 
+
+//2.返回json数据的字符编码为utf-8
+@Controller  @RequestMapping(value = "/pets/{petId}", produces="MediaType.APPLICATION_JSON_VALUE"+";charset=utf-8")  
+@ResponseBody  
+public Pet getPet(@PathVariable String petId, Model model) {          
+    // implementation omitted  
+}
+ ```
 
 ### @getMapping和@postMapping
 @GetMapping是一个组合注解，是@RequestMapping(method = RequestMethod.GET)的缩写。
@@ -42,36 +94,31 @@ ConfigurableApplicationContext context = app.run(args);
 
 > 参考 [@getMapping和@postMapping，@RestController](https://www.cnblogs.com/ghc666/p/8657526.html)
 
-### @RestController
-@RestController注解相当于@ResponseBody ＋ @Controller合在一起的作用。
+### @ResponseBody
 
-注：如果只是使用@RestController注解Controller，则Controller中的方法无法返回jsp页面，配置的视图解析器
-
-InternalResourceViewResolver不起作用，返回的内容就是Return 里的内容。
-
-### @MapperScan
-@MapperScan可以指定要扫描的Mapper类的包的路径
+@ResponseBody 支持将返回值放在 response 体内，而不是返回一个页面。我们在很多基于 Ajax 的程序的时候，可以以此注解返回数据而不是页面；次注解可放置在返回值前或者方法上。
 
 ```java
-@SpringBootApplication
-@MapperScan("com.lz.water.monitor.mapper")
-// 添加对mapper包扫描
-public class Application {
-	
+@RequestMapping(value = "/requestParam", produces = "text/plain;chartset=UTF-8")
+public @ResponseBody  String passRequestParam(Long id, HttpServletRequest request) {
+        return "url: " + request.getRequestURL() + " can access,id: " + id;
 }
 ```
 
-@使用@MapperScan注解多个包
+### @RequestBody
+
+@RequestBody 允许 request 的参数在 request 体中，而不是直接链接在地址后面。次注解放置在参数前。
 
 ```java
-@SpringBootApplication  
-@MapperScan({"com.kfit.demo","com.kfit.user"})  
-public class App {  
-    public static void main(String[] args) {  
-       SpringApplication.run(App.class, args);  
-    }  
+@requestMapping("/login")
+public void login(@requestBody User user){
+　　System.out.println(user.userName +" : "+ user.pwd);
 }
 ```
+
+
+
+
 
 ### @Param
 
@@ -140,7 +187,46 @@ id:1
 
 
 
+### @RestController
 
+@RestController注解相当于@ResponseBody ＋ @Controller合在一起的作用。
+
+注：如果只是使用@RestController注解Controller，则Controller中的方法无法返回jsp页面，配置的视图解析器
+
+InternalResourceViewResolver不起作用，返回的内容就是Return 里的内容。
+
+### @MapperScan
+
+@MapperScan可以指定要扫描的Mapper类的包的路径
+
+```java
+@SpringBootApplication
+@MapperScan("com.lz.water.monitor.mapper")
+// 添加对mapper包扫描
+public class Application {
+	
+}
+```
+
+@使用@MapperScan注解多个包
+
+```java
+@SpringBootApplication  
+@MapperScan({"com.kfit.demo","com.kfit.user"})  
+public class App {  
+    public static void main(String[] args) {  
+       SpringApplication.run(App.class, args);  
+    }  
+}
+```
+
+
+
+## 原理
+
+###spring如何通过注解注入？
+
+> [spring如何通过注解注入](https://blog.csdn.net/colton_null/article/details/79187414) 
 
 
 
