@@ -738,3 +738,54 @@ store.dispatch(...)
 
 
 
+## 实战
+
+### 1. antd Form 
+
+**错误描述** Warning: `getFieldDecorator` will override `value`, so please don't set `value` directly and use `setFieldsValue` to set it.  "antd": "^2.13.2"
+
+**错误原因**
+
+1. antd中 select 控件的 defaultValue 被 getfieldDecorator 重写
+2. antd中为表单元素设置 initialValue 数据类型不正确
+
+```react
+错误代码：
+
+<FormItem {...formItemLayout} label="Select">
+    {getFieldDecorator('select', {
+        rules: [
+            { required: true, message: 'Please select your country!' }
+        ],
+        initialValue:2
+    })(
+        <Select defaultValue="2" placeholder="Please select a country">
+            <Option value="1">China</Option>
+            <Option value="2">U.S.A</Option>
+        </Select>
+    )}
+</FormItem>
+```
+
+**解决办法** 
+
+```react
+initialValue: details && details.deptId + ''
+```
+
+**知识拓展**
+
+```javascript
+1. 判断变量类型
+let a=1;
+typeof a;									//number
+
+2. a && b
+如果a是false，那么b不管是true还是false，都返回false，因此不用判断b了，这个时候刚好判断到a，因此返回a。
+如果a是true，那么就要在判断b，和刚刚一样，不管b是true是false，都返回b。
+```
+
+
+
+
+

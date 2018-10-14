@@ -136,6 +136,15 @@ https://www.cnblogs.com/clwydjgs/p/9390488.html
 Intellij IDEA 2017 debug断点调试技巧与总结详解篇
 https://blog.csdn.net/qq_27093465/article/details/64124330
 
+idea 关闭重复代码检查
+https://blog.csdn.net/sunrainamazing/article/details/71357979?locationNum=2&fps=1
+
+intellij idea 提示不区分大小写
+ctrl+alt+s →  s: sensitive →  case sensitive completion: NONE
+参考：https://blog.csdn.net/assassinsshadow/article/details/73526667
+
+
+
 浅析Java中的final关键字
 http://www.cnblogs.com/dolphin0520/p/3736238.html
 

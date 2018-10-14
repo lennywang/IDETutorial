@@ -33,7 +33,7 @@ ConfigurableApplicationContext context = app.run(args);
 
 > 参考：[Spring Boot运行流程分析](https://blog.csdn.net/heimabb/article/details/80419003)
 
-## 常用注解
+## Spring MVC 常用注解
 
 ### @Controller
 

@@ -21,3 +21,8 @@ final
 
 
 
+java hashmap的使用
+https://www.cnblogs.com/liujinhong/p/6113183.html
+
+java中，一个类实现某个接口，必须重写接口中的所有方法吗？
+
