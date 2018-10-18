@@ -26,6 +26,15 @@ REPLACE
 
 limit 0,20 
 
+## 常用操作
+
+**cmd连接mysql连接**
+
+```
+mysql -h 主机地址 -u 用户名 -p 用户密码（注:u与root可以不用加) 
+mysql -h 10.96.238.10 -P 10349 -u user_kmtest -p odgbcalehdefplbo
+```
+
 
 
 

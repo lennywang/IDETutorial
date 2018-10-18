@@ -142,7 +142,48 @@ nohup command &
 | ESC \| : \| q!                           | 不保存退出 |                  |
 | ESC \| : \| !                            | 强制退出  |                  |
 
+### 4.安装Nginx
 
+**操作教程**
+
+> 参考：[CentOS 7 下安装Nginx](https://www.cnblogs.com/zhoading/p/8514050.html)
+
+**centos 如何查看操作系统版本**
+
+cat /etc/redhat-release
+
+**查找文件**
+
+find / -name *文件名*
+
+**移动文件**
+
+mv 文件名 另一个目录
+
+**查看虚拟机里的Centos7的IP**
+
+ ip addr
+
+> 参考：[查看虚拟机里的Centos7的IP](https://blog.csdn.net/dancheren/article/details/73611878)
+
+
+
+**防火墙**
+
+| 操作名         | 命令                                         | 说明                                           |
+| -------------- | -------------------------------------------- | ---------------------------------------------- |
+| 允许某端口放行 | firewall-cmd --permanent --add-port=3389/tcp | 命令：--permanent 永久添加端口，去除则表示临时 |
+| 查看防火墙状态 | firewall-cmd --state                         |                                                |
+| 重新加载       | firewall-cmd --reload                        |                                                |
+| 关闭防火墙     | service iptables stop                        |                                                |
+
+**问题**
+
+nginx公网IP无法访问浏览器
+https://blog.csdn.net/LJFPHP/article/details/78670459?utm_source=blogxgwz0
+
+command not found
+yum -y install wget
 
 
 
