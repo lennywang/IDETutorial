@@ -148,10 +148,6 @@ nohup command &
 
 > 参考：[CentOS 7 下安装Nginx](https://www.cnblogs.com/zhoading/p/8514050.html)
 
-**centos 如何查看操作系统版本**
-
-cat /etc/redhat-release
-
 **查找文件**
 
 find / -name *文件名*
@@ -165,6 +161,10 @@ mv 文件名 另一个目录
  ip addr
 
 > 参考：[查看虚拟机里的Centos7的IP](https://blog.csdn.net/dancheren/article/details/73611878)
+
+**centos 如何查看操作系统版本**
+
+cat /etc/redhat-release
 
 
 
