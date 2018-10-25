@@ -222,6 +222,50 @@ public class App {
 
 
 
+### Spring Boot 注解
+
+#### @SpringBootApplication
+
+**@SpringBootApplication** 是 Spring Boot的核心注解，它是一个组合注解，源码如下：
+
+```java
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Inherited
+@SpringBootConfiguration
+@EnableAutoConfiguration
+@ComponentScan
+public @interface SpringBootApplication {
+	Class<?>[] exclude() default {};
+	String[] excludeName() default {};
+}
+```
+
+@SpringBootApplication 注解主要组合了 @SpringBootConfiguration、@EnableAutoConfiguration、@ComponentScan。
+
+关闭特定的自动配置
+
+```java
+
+@SpringBootApplication( exclude= { CodecsAutoConfiguration.class} )
+```
+
+**实践：**关闭多个自动配置
+
+```java
+关闭多个自动配置
+@SpringBootApplication( exclude= { CodecsAutoConfiguration.class, DataSourceAutoConfiguration.class } )
+
+控制台输出
+    Exclusions:
+    -----------
+    org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration
+    org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+```
+
+
+
 ## 原理
 
 ###spring如何通过注解注入？
