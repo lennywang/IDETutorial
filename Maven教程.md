@@ -22,3 +22,26 @@ mvn clean
 
 > 参考：[Maven常用命令]((https://www.cnblogs.com/wkrbky/p/6352188.html))
 
+## 实践
+
+### 1.maven打包加时间戳
+
+```xml
+<properties>
+	<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+</properties>
+<build>
+    <finalName>
+      	${project.artifactId}-${project.version}_${maven.build.timestamp}
+    </finalName>
+</build>	
+```
+
+> 参考：[maven打包加时间戳](https://blog.csdn.net/z410970953/article/details/50680603)
+
+### 2.maven打包时跳过测试
+
+```shell
+mvn clean package -Dmaven.test.skip=true
+```
+
