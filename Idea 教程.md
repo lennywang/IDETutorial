@@ -20,17 +20,18 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 **快捷键**
 
-| 快捷键         | 功能           | 说明                              |
-| :------------- | -------------- | --------------------------------- |
-| Alt + 1        | Project        |                                   |
-| Alt + 2        | Favorites      |                                   |
-| Alt + 7        | Structure      | View \| Tool Windows \| Structure |
-| Ctrl + F11     | Bookmark       |                                   |
-| Ctrl + Alt + H | Call Hierarchy |                                   |
-| Ctrl+Alt+L     | 格式化代码     |                                   |
-| Shift+Click    | 关闭文件       |                                   |
-| Alt+Home       | Navigation Bar |                                   |
-|                |                |                                   |
+| 快捷键         | 功能           | 说明                                                         |
+| :------------- | -------------- | ------------------------------------------------------------ |
+| Alt + 1        | Project        |                                                              |
+| Alt + 2        | Favorites      |                                                              |
+| Alt + 7        | Structure      | View \| Tool Windows \| Structure                            |
+| Ctrl + F11     | Bookmark       |                                                              |
+| Ctrl + Alt + H | Call Hierarchy |                                                              |
+| Ctrl+Alt+L     | 格式化代码     |                                                              |
+| Shift+Click    | 关闭文件       |                                                              |
+| Alt+Home       | Navigation Bar |                                                              |
+| Alt+6          | TODO           | [如何在idea中高效地使用和查找TODO标签](
+https://jingyan.baidu.com/album/ff42efa9c25811c19e2202ef.html?picindex=1) |
 
 
 

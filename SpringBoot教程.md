@@ -7,7 +7,7 @@ SpringApplication app = new SpringApplication(App.class);
 ConfigurableApplicationContext context = app.run(args);
 ```
 
-1. 判断是否是web环境 
+1. 判断是否是web环境
 2. 加载所有calsspath下面的META-INF/spring.factories ApplicationContextInitializer
 3. 加载所有calsspath下面的META-INF/spring.factories  ApplicationListener
 4. 推断main方法所在的类
@@ -266,13 +266,45 @@ public @interface SpringBootApplication {
 
 
 
+## SpringBoot 常用应用属性配置列表
+
+**日志配置**
+
+```yaml
+logging:
+  level.org.springframework.web: warn #配置日志级别
+  file: ./logs/log.log #配置日志文件
+```
+
+**Profile配置**
+
+```yaml
+spring:
+  profiles:
+    active: wll 	#即application-{profile}.properties 中的 {profile}
+```
+
+**查看当前项目中已启用和未启用的自动配置报告**
+
+```yaml
+debug: true
+```
+
+
+
+
+
 ## 原理
 
 ###spring如何通过注解注入？
 
 > [spring如何通过注解注入](https://blog.csdn.net/colton_null/article/details/79187414) 
 
+1、@EnableAutoConfiguration
 
+2、@ConditonalOnWebApplication
+
+3、
 
 
 
@@ -367,7 +399,25 @@ spring.mvc.favicon.enabled=false
 
 ## SpringBoo实践
 
-**conflicts with existing, non-compatible bean definition of same name and class 的解决办法**
+###1、启动jar包
+
+1、打包
+
+```
+//maven跳过单元测试
+mvn package -Dmaven.test.skip=true
+
+```
+
+2、启动jar包
+
+```shell
+//java -jar启动jar包时携带参数
+java -Dspring.profiles.active=dev -jar ch6_springbootcore-0.0.1-SNAPSHOT.jar
+```
+
+###2、non-compatible bean definition of same name  ...
+**问题描述**：conflicts with existing, non-compatible bean definition of same name and class 
 
 **原因：**spring管理bean大概类似把bean实例化放到map中，而当中的键，默认是用的是类名，这样，如果项目中
 
@@ -401,9 +451,11 @@ public class MailService {
 
 > 参考：[SpringMVC conflicts with existing, non-compatible bean definition of same name and class 的解决办法](https://www.cnblogs.com/a2211009/p/4534215.html)
 
-**springboot 启动报错Field XXX required a bean of type XXX that could not be found.**
+###3、a bean of type XXX that could not be found ...
 
-原因：service类上面没有@service注解
+**问题描述：**springboot 启动报错Field XXX required a bean of type XXX that could not be found.
+
+**原因：**service类上面没有@service注解
 
 解决办法：sp添加@Service注解。
 
@@ -419,7 +471,9 @@ public class MailService {
 
 > 参考：[springboot 启动报错Field XXX required a bean of type XXX that could not be found.](https://blog.csdn.net/Julycaka/article/details/80622754)
 
-**“No 'Access-Control-Allow-Origin' header is present on the requested resource.”**
+###4、跨域
+
+**问题描述：** “No 'Access-Control-Allow-Origin' header is present on the requested resource.”
 
 **同源策略**(Same origin Policy)
 浏览器出于安全方面的考虑，只允许与同域下的接口交互。同域指的是？
