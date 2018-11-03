@@ -45,3 +45,11 @@ mvn clean
 mvn clean package -Dmaven.test.skip=true
 ```
 
+### 3.查看本地maven仓库地址
+
+```shell
+mvn help:effective-settings
+```
+
+默认地址为 ${user.home}/ .m2 /repository
+

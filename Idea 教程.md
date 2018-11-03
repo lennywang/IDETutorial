@@ -1,6 +1,4 @@
-# Idea 教程
-
-
+##Idea 教程
 
 ### IntelliJ IDEA 激活
 
@@ -20,20 +18,19 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 **快捷键**
 
-| 快捷键         | 功能           | 说明                                                         |
-| :------------- | -------------- | ------------------------------------------------------------ |
-| Alt + 1        | Project        |                                                              |
-| Alt + 2        | Favorites      |                                                              |
-| Alt + 7        | Structure      | View \| Tool Windows \| Structure                            |
-| Ctrl + F11     | Bookmark       |                                                              |
-| Ctrl + Alt + H | Call Hierarchy |                                                              |
-| Ctrl+Alt+L     | 格式化代码     |                                                              |
-| Shift+Click    | 关闭文件       |                                                              |
-| Alt+Home       | Navigation Bar |                                                              |
-| Alt+6          | TODO           | [如何在idea中高效地使用和查找TODO标签](
-https://jingyan.baidu.com/album/ff42efa9c25811c19e2202ef.html?picindex=1) |
-
-
+| 快捷键          | 功能           | 说明                                                         |
+| :-------------- | -------------- | ------------------------------------------------------------ |
+| Alt + 1         | Project        |                                                              |
+| Alt + 2         | Favorites      |                                                              |
+| Alt + 7         | Structure      | View \| Tool Windows \| Structure                            |
+| Ctrl + F11      | Bookmark       |                                                              |
+| Ctrl + Alt + H  | Call Hierarchy |                                                              |
+| Ctrl+Alt+L      | 格式化代码     |                                                              |
+| Shift+Click     | 关闭文件       |                                                              |
+| Alt+Home        | Navigation Bar |                                                              |
+| Alt+6           | TODO           | [如何在idea中高效地使用和查找TODO标签](<br/>https://jingyan.baidu.com/album/ff42efa9c25811c19e2202ef.html?picindex=1) |
+| Ctrl+Shift+等号 | 展开           | Expand All                                                   |
+| Ctrl+Shift+减号 | 折叠           | Collapse All                                                 |
 
 **调试**
 
@@ -129,10 +126,6 @@ View → Enter Distraction Free Mode
 
 
 
-
-
-
-
 IDEA的查询引用、调用关系图的功能
 https://www.cnblogs.com/ghj1976/p/5382455.html
 
@@ -173,5 +166,11 @@ https://www.cnblogs.com/caolei1108/p/6214091.html
 
 
 
+##Idea 实践
 
+### 1.调试 Mute Breakpoints
+
+![mute breakpoint](https://github.com/lennywang/Img/raw/master/mutebreakpoint.png)
+
+注：断点失效。如果只想使某一个断点失效，可以在断点上右键取消Enabled
 

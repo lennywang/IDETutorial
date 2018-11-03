@@ -142,48 +142,28 @@ nohup command &
 | ESC \| : \| q!                           | 不保存退出 |                  |
 | ESC \| : \| !                            | 强制退出  |                  |
 
-### 4.安装Nginx
+### 4.ps -ef | grep nginx
 
-**操作教程**
+解释：ps -ef的意思是以长格式显示所有进程；“|”是管道，意思是前面ps的输出做为后面的输入，即—grep命令所检索的文本源；grep tomcat是在所有进程里查找与字符nginx有关的进程，并显示出来。
+<font face="微软雅黑" color="red" size="5">ps</font>命令：某个进程显示出来。ps 全称是 Process Status 。
+<font face="微软雅黑" color="red" size="5">grep</font>命令是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹 配的行打印出来。grep全称是Global Regular Expression Print，表示全局正则表达式版本。
 
-> 参考：[CentOS 7 下安装Nginx](https://www.cnblogs.com/zhoading/p/8514050.html)
+ps[选项]
 
-**查找文件**
+| 选项 | 含义                                    |
+| ---- | --------------------------------------- |
+| -e   | 显示所有进程,环境变量                   |
+| -f   | 全格式                                  |
+| -h   | 不显示标题                              |
+| -l   | 长格式                                  |
+| -w   | 宽输出                                  |
+| -a   | 显示终端上地所有进程,包括其他用户地进程 |
+| -r   | 只显示正在运行地进程                    |
+| -x   | 显示没有控制终端地进程                  |
 
-find / -name *文件名*
+结果说明
 
-**移动文件**
-
-mv 文件名 另一个目录
-
-**查看虚拟机里的Centos7的IP**
-
- ip addr
-
-> 参考：[查看虚拟机里的Centos7的IP](https://blog.csdn.net/dancheren/article/details/73611878)
-
-**centos 如何查看操作系统版本**
-
-cat /etc/redhat-release
-
-
-
-**防火墙**
-
-| 操作名         | 命令                                         | 说明                                           |
-| -------------- | -------------------------------------------- | ---------------------------------------------- |
-| 允许某端口放行 | firewall-cmd --permanent --add-port=3389/tcp | 命令：--permanent 永久添加端口，去除则表示临时 |
-| 查看防火墙状态 | firewall-cmd --state                         |                                                |
-| 重新加载       | firewall-cmd --reload                        |                                                |
-| 关闭防火墙     | service iptables stop                        |                                                |
-
-**问题**
-
-nginx公网IP无法访问浏览器
-https://blog.csdn.net/LJFPHP/article/details/78670459?utm_source=blogxgwz0
-
-command not found
-yum -y install wget
+![查询结果(网络配图)](https://github.com/lennywang/Img/raw/master/psparameterexplain.png)
 
 
 
