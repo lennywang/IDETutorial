@@ -4,6 +4,20 @@
 
 > 参考：[CentOS 7 下安装Nginx](https://www.cnblogs.com/zhoading/p/8514050.html)
 
+**启动、停止nginx**
+
+```shell
+#启动
+/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+#停止
+./nginx -s stop #此方式停止步骤是待nginx进程处理任务完毕进行停止。
+./nginx -s quit #此方式相当于先查出nginx进程id再使用kill命令强制杀掉进程。
+#重启
+./nginx -s reload
+#查询nginx进程
+ps -ef | grep nginx
+```
+
 
 
 ##Nginx 配置文件
