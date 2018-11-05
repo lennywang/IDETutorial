@@ -8,10 +8,10 @@
 
 方便
 
-| 使用Spring搭建项目                                           |
-| ------------------------------------------------------------ |
+| 使用Spring搭建项目                             |
+| ---------------------------------------- |
 | 1、新建一个maven 项目<br />2、加入相关依赖，spring-core,spring-bean,spring-context,spring-Expression<br />3、编译，运行 |
-| 使用SpringBoot搭建项目                                       |
+| 使用SpringBoot搭建项目                         |
 | 步骤同上<br />在第2个步骤中，添加spring-boot-starter-web依赖即可 |
 
 **SpringBoot Hello world**
@@ -94,7 +94,7 @@ public void addPet(@RequestBody Pet pet, Model model) {      
 
 **produces**:    指定返回的内容类型，仅当request请求头中的(Accept)类型中包含该指定类型才返回；
 
- ```java
+```java
 //1.返回json数据，下边的代码可以省略produces属性，因为注解@responseBody就是返回值是json数据
 @Controller  
 @RequestMapping(value = "/pets/{petId}", method = RequestMethod.GET, produces="application/json")  
@@ -109,7 +109,7 @@ public Pet getPet(@PathVariable String petId, Model model) {
 public Pet getPet(@PathVariable String petId, Model model) {          
     // implementation omitted  
 }
- ```
+```
 
 ### @getMapping和@postMapping
 @GetMapping是一个组合注解，是@RequestMapping(method = RequestMethod.GET)的缩写。
@@ -440,7 +440,10 @@ mvn package -Dmaven.test.skip=true
 java -Dspring.profiles.active=dev -jar ch6_springbootcore-0.0.1-SNAPSHOT.jar
 ```
 
+
+
 ###2、non-compatible bean definition of same name  ...
+
 **问题描述**：conflicts with existing, non-compatible bean definition of same name and class 
 
 **原因：**spring管理bean大概类似把bean实例化放到map中，而当中的键，默认是用的是类名，这样，如果项目中

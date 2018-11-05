@@ -11,14 +11,14 @@
 
 #### 1.2 目录切换
 
-| 操作                 | 命令      | 说明                    |
-| :------------------- | :-------- | ----------------------- |
-| 打印当前目录         | pwd       | print working directory |
-| 进入某个目录         | cd 目录名 |                         |
-| 回到上一层目录       | cd ..     |                         |
-| 切换到系统根目录     | cd /      |                         |
-| 切换到用户主目录     | cd ~      |                         |
-| 切换到上一个所在目录 | cd -      |                         |
+| 操作         | 命令     | 说明                      |
+| :--------- | :----- | ----------------------- |
+| 打印当前目录     | pwd    | print working directory |
+| 进入某个目录     | cd 目录名 |                         |
+| 回到上一层目录    | cd ..  |                         |
+| 切换到系统根目录   | cd /   |                         |
+| 切换到用户主目录   | cd ~   |                         |
+| 切换到上一个所在目录 | cd -   |                         |
 
 ####1.3 目录操作
 
@@ -132,14 +132,40 @@ rz
 ```shell
 ps -aux | grep java | grep mail
 kill 命令用于杀死进程
-nohup command &
+
+nohup java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5354 -jar -Dspring.profiles.active=prod ./didi-km-mail/target/didi-km-mail-0.0.1-SNAPSHOT.jar & 
 ```
 
 说明：1. ps命令是Process Status
 
-1. nohup: no hang up
-2. nohup command & 使用nohup命令提交作业
-   如果使用nohup命令提交作业，那么在缺省情况下该作业的所有输出都被重定向到一个名为nohup.out的文件中
+2.nohup command &
+nohup: no hang up
+nohup command &   用途：不挂断地运行命令 语法：nohup Command  Arg & 
+如果使用nohup命令提交作业，那么在缺省情况下该作业的所有输出都被重定向到一个名为nohup.out的文件中
+
+3.java –jar 
+运行Jar包
+
+4.-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5354
+-Xdebug ：启用调试
+Xrunjdwp ：通知JVM使用(java debug wire protocol)来运行调试环境
+Xrunjdwp 调试选项
+
+| 选项        | 含义                       | 取值                                       |
+| :-------- | :----------------------- | ---------------------------------------- |
+| transport | 指定调试数据的传送方式              | dt_socket是指用SOCKET模式                               <br/> dt_shmem指用共享内存方式，dt_shmem只适用于Windows平台 |
+| server    | 是否支持在server模式的VM         |                                          |
+| suspend   | 是否在调试客户端建立起来后，再执行JVM     |                                          |
+| address   | 调试服务器的端口号，客户端用来连接服务器的端口号 |                                          |
+
+> 参考：[-Xdebug 启动命令](https://blog.csdn.net/benben683280/article/details/78716397)
+
+5.Dspring.profiles.active=prod
+-D<name>=<value> set a system property  设置系统属性
+
+
+
+
 
 ### 2. Linux 系统重启、关机命令
 
@@ -185,16 +211,16 @@ nohup command &
 
 ps[选项]
 
-| 选项 | 含义                                    |
-| ---- | --------------------------------------- |
-| -e   | 显示所有进程,环境变量                   |
-| -f   | 全格式                                  |
-| -h   | 不显示标题                              |
-| -l   | 长格式                                  |
-| -w   | 宽输出                                  |
+| 选项   | 含义                   |
+| ---- | -------------------- |
+| -e   | 显示所有进程,环境变量          |
+| -f   | 全格式                  |
+| -h   | 不显示标题                |
+| -l   | 长格式                  |
+| -w   | 宽输出                  |
 | -a   | 显示终端上地所有进程,包括其他用户地进程 |
-| -r   | 只显示正在运行地进程                    |
-| -x   | 显示没有控制终端地进程                  |
+| -r   | 只显示正在运行地进程           |
+| -x   | 显示没有控制终端地进程          |
 
 结果说明
 
