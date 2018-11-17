@@ -85,13 +85,78 @@
 
 #### 2.2 查看文件
 
+命令：cat/more/less/tail 文件
+示例：使用cat查看/etc/sudo.conf文件，只能显示最后一屏内容![查看文件](https://github.com/lennywang/Img/raw/master/linux-file-cat-1.png)
+
+示例：使用more查看/etc/sudo.conf文件，可以显示百分比，回车可以向下一行，    空格可以向下一页，q可以退出查看
+![more](https://github.com/lennywang/Img/raw/master/linux-file-cat-2.png)
+
+示例：使用less查看/etc/sudo.conf文件，可以使用键盘上的PgUp和PgDn向上 和向下翻页，q结束查看
+![less](https://github.com/lennywang/Img/raw/master/linux-file-cat-3.png)
+
+示例：使用tail -10 查看/etc/sudo.conf文件的后10行，Ctrl+C结束
+![tail](https://github.com/lennywang/Img/raw/master/linux-file-cat-4.png)
+
+**注意：命令 tail -f 文件 可以对某个文件进行动态监控，例如tomcat的日志文件，    会随着程序的运行，日志会变化，可以使用tail -f catalina-2016-11-11.log 监控文件的变化**
+
 #### 2.3 修改文件内容
+
+命令：vim 文件
+示例：编辑/test下的aaa.txt文件，使用vim aaa.txt
+![vim](https://github.com/lennywang/Img/raw/master/linux-file-modify-1.png)
+
+但此时并不能编辑，因为此时处于命令模式，点击键盘i/a/o进入编辑模式，可以编辑文件
+![i](https://github.com/lennywang/Img/raw/master/linux-file-modify-2.png)
+
+编辑完成后，按下Esc，退回命令模式
+![i](https://github.com/lennywang/Img/raw/master/linux-file-modify-3.png)
+
+此时文件虽然已经编辑完成，但是没有保存，需输入冒号：进入底行模式，在底行模    式下输入wq代表写入内容并退出，即保存；输入q!代表强制退出不保存。
+![wq](https://github.com/lennywang/Img/raw/master/linux-file-modify-4.png)
 
 #### 2.4 删除文件
 
+同目录删除：熟记 rm -rf 文件 即可
+
 #### 2.5 压缩文件 
 
+**(1)打包并压缩文件**
+
+Linux中的打包文件一般是以.tar结尾的，压缩的命令一般是以.gz结尾的。而一般情况下打包和压缩是一起进行的，打包并压缩后的文件的后缀名一般.tar.gz。
+
+命令：tar -zcvf 打包压缩后的文件名 要打包压缩的文件
+其中：z：调用gzip压缩命令进行压缩
+​	  c：打包文件
+​	  v：显示运行过程
+​	  f：指定文件名
+示例：打包并压缩/test下的所有文件 压缩后的压缩包指定名称为xxx.tar.gz
+​	  tar -zcvf xxx.tar.gz aaa.txt bbb.txt ccc.txt  	或：tar -zcvf xxx.tar.gz /test/*
+![tar](https://github.com/lennywang/Img/raw/master/linux-tar-1.png)
+
+**(2)解压压缩包（重点）**
+
+命令：tar [-xvf] 压缩文件
+其中：x：代表解压
+示例：将/test下的xxx.tar.gz解压到当前目录下
+​	  tar -xvf xxx.tar.gz
+![tar](https://github.com/lennywang/Img/raw/master/linux-tar-2.png)
+
+示例：将/test下的xxx.tar.gz解压到根目录/usr下
+![tar](https://github.com/lennywang/Img/raw/master/linux-tar-3.png)
+
+<font color="red">tar -xvf xxx.tar.gz -C /usr------C代表指定解压的位置</font>
+
 ### 3.其他命令
+
+#### 3.1 搜索命令
+
+#### 3.2 管道命令
+
+#### 3.3查看进程
+
+#### 3.4杀死进程
+
+####3.5网络通信命令
 
 ###4.权限命令
 

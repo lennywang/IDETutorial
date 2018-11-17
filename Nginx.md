@@ -307,3 +307,57 @@ https://blog.csdn.net/LJFPHP/article/details/78670459?utm_source=blogxgwz0
 
 **2.command not found**
 yum -y install wget
+
+### 2. 414 Request-URI Too Long
+
+错误描述：Failed to load resource: the server responded with a status of 414 (Request-URI Too Long)
+解决办法：
+
+```nginx
+http{
+      client_header_buffer_size 512k;
+      large_client_header_buffers 4 512k;	
+}
+```
+
+>[nginx 414 Request-URI Too Large](https://www.cnblogs.com/kaituorensheng/p/5282878.html)
+
+### 3.proxy_pass
+
+```nginx
+location ^~ /images/ {
+    proxy_pass_header User-Agent;
+    proxy_set_header Host $host;
+    proxy_pass http://xtest;
+}
+```
+
+**^~**
+“^~”中的“^”表示非，“~”表示正则，意思为不要继续匹配正则
+
+**proxy_pass**
+语法：proxy_pass URL;
+配置块：location、if
+此配置项将当前请求反向代理到URL参数指定的服务器上，URL可以是主机名或IP地址加端口的形式，例如：
+
+```nginx
+proxy_pass http://localhost:8000/uri/; 
+```
+
+默认情况下反向代理是不会转发请求中的Host头部的。如果需要转发，那么必须加上配置：
+
+```nginx
+proxy_set_header Host $host; 
+```
+
+**proxy_pass_header**
+语法：proxy_pass_header the_header;
+配置块：http、server、location
+与proxy_hide_header功能相反，proxy_pass_header会将原来禁止转发的header设置为允许转发。例如：
+
+```nginx
+proxy_pass_header X-Accel-Redirect;
+```
+
+> [Nginx基础入门之proxy反向代理常用配置项说明](http://blog.51cto.com/blief/1739178)
+
