@@ -53,3 +53,19 @@ mvn help:effective-settings
 
 默认地址为 ${user.home}/ .m2 /repository
 
+### 4.修改Maven镜像源
+
+1、maven安装目录下conf文件夹settings.xml
+2、把镜像源改为阿里云的
+
+```xml
+<mirror>  
+  <id>alimaven</id>  
+  <mirrorOf>central</mirrorOf>    
+  <name>aliyun maven</name>  
+  <url>http://maven.aliyun.com/nexus/content/groups/public/</url>        
+</mirror>
+```
+
+### 5.[Maven安装与配置](https://www.cnblogs.com/eagle6688/p/7838224.html)
+

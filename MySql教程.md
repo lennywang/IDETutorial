@@ -6,7 +6,9 @@ MySql
 
 select date_format(birthday,'%Y-%m-%d')  from score;
 
+SELECT SUBSTR('123' FROM 1 FOR 2);
 
+SELECT * FROM websites WHERE url REGEXP '[f]';
 
 ## 常用函数
 
@@ -16,7 +18,26 @@ IFNULL(expression_1,expression_2);
 
 expression_1不为NULL，则IFNULL函数返回expression_1; 否则返回expression_2的结果。
 
-IFNULL(NULL，'IFNULL function')		返回IFNULL
+SELECT IFNULL(NULL,'IFNULL function');	返回IFNULL function
+
+### DATE_FORMAT()
+
+DATE_FORMAT(date,format)
+
+*date* 参数是合法的日期。*format* 规定日期/时间的输出格式。
+
+| 格式 | 描述                |
+| ---- | ------------------- |
+| %Y   | 年，4位             |
+| %y   | 年，2位             |
+| %M   | 月名                |
+| %m   | 月，数值(00-12)     |
+| %D   | 月，数值(00-12)     |
+| %d   | 月的天，数值(00-31) |
+
+SELECT DATE_FORMAT(SYSDATE(),'%Y-%m-%d');     返回 2018-12-22
+
+> 参考：[MySQL DATE_FORMAT() 函数](http://www.w3school.com.cn/sql/func_date_format.asp)
 
 
 
