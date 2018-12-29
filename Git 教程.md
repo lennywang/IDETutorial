@@ -32,7 +32,15 @@ git diff branch1 branch2 --stat
 Git删除暂存区或版本库中的文件
 https://www.cnblogs.com/cposture/p/git.html
 
+## Git常用
 
+```
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/lennywang/JDBC.git
+git push -u origin master
+```
 
 ## Git 实战
 
