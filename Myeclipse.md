@@ -10,4 +10,5 @@ Myeclipse 常用快捷键
 | syst -> alt+/  | System.out.println("当前方法名");    |      |
 | F4             | 查看类的结构图                       |      |
 | Ctrl+D         | 删除光标所在行                       |      |
+| Ctrl+shift+r   | 查找文件                             |      |
 
