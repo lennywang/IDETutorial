@@ -12,3 +12,11 @@ Myeclipse 常用快捷键
 | Ctrl+D         | 删除光标所在行                       |      |
 | Ctrl+shift+r   | 查找文件                             |      |
 
+##实践
+
+**1.myEclipse10安装以及破解**
+https://blog.csdn.net/qq_41410358/article/details/79679130
+
+**2.myeclipse怎么开启自动提示功能？**
+https://jingyan.baidu.com/article/77b8dc7ffe127a6174eab6cc.html
+
