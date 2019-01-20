@@ -11,6 +11,13 @@ Myeclipse 常用快捷键
 | F4             | 查看类的结构图                       |      |
 | Ctrl+D         | 删除光标所在行                       |      |
 | Ctrl+shift+r   | 查找文件                             |      |
+| Alt+Enter      | 自动导入包                           |      |
+
+
+
+
+
+
 
 ##实践
 
