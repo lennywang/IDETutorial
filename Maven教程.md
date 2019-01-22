@@ -69,3 +69,11 @@ mvn help:effective-settings
 
 ### 5.[Maven安装与配置](https://www.cnblogs.com/eagle6688/p/7838224.html)
 
+### 6.查看Maven安装路径
+
+右键 →计算机属性 →高级系统设置 →高级 →环境变量
+
+![Maven安装路](https://github.com/lennywang/Img/raw/master/maven-install-location.png)
+
+
+
