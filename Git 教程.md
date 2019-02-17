@@ -111,11 +111,11 @@ Hello wolld！		# 冲突
 
 ### 9.git config
 
-| 命令                | 文件           | 备注 |
-| ------------------- | -------------- | ---- |
-| git config --system | /etc/gitconfig |      |
-| git config --global | ~/.gitconfig   |      |
-| git config          | .git/config    |      |
+| 命令                | 文件           | 备注                       |
+| ------------------- | -------------- | -------------------------- |
+| git config --system | /etc/gitconfig |                            |
+| git config --global | ~/.gitconfig   | 如：C:\Users\wll\gitconfig |
+| git config          | .git/config    |                            |
 
 修改git config配置文件 
 https://blog.csdn.net/themagickeyjianan/article/details/79683980
@@ -132,7 +132,13 @@ https://git-scm.com/book/zh/v1/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-%E9%85%8D%E7%BD%A
 git 推送出现 "fatal: The remote end hung up unexpectedly" 解决方案
 https://blog.csdn.net/zcmain/article/details/76855595
 
+### 10. 查看本地git安装位置
 
+1、win+R
+
+2、where git
+
+>  参考：[查看本地git安装位置](https://blog.csdn.net/weixin_42685022/article/details/84061043)
 
 ##Git 命令比较
 
