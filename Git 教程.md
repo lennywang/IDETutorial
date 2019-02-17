@@ -109,6 +109,29 @@ Hello wolld！		# 冲突
 >>>>>>> 77976da35a11db4580b80ae27e8d65caf5208086:file.txt
 ```
 
+### 9.git config
+
+| 命令                | 文件           | 备注 |
+| ------------------- | -------------- | ---- |
+| git config --system | /etc/gitconfig |      |
+| git config --global | ~/.gitconfig   |      |
+| git config          | .git/config    |      |
+
+修改git config配置文件 
+https://blog.csdn.net/themagickeyjianan/article/details/79683980
+git 配置文件位置；git配置文件设置
+https://blog.csdn.net/yuxin6866/article/details/74835735
+git config 查看配置信息
+https://blog.csdn.net/qwaszx523/article/details/79072276
+查看git安装目录
+https://www.cnblogs.com/qianqiu-1026/p/8556680.html
+The authenticity of host 'github.com (13.229.188.59)' can't be established.
+https://blog.csdn.net/qq_34446663/article/details/81106018
+自定义 Git - 配置 Git
+https://git-scm.com/book/zh/v1/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-%E9%85%8D%E7%BD%AE-Git
+git 推送出现 "fatal: The remote end hung up unexpectedly" 解决方案
+https://blog.csdn.net/zcmain/article/details/76855595
+
 
 
 ##Git 命令比较

@@ -1,26 +1,15 @@
 ## 常用Maven命令
 
-### 1. 编译源代码
+| 命令        | 作用                      | 备注                                             |
+| ----------- | ------------------------- | ------------------------------------------------ |
+| mvn compile | 编译源代码                |                                                  |
+| mvn package | 打包                      |                                                  |
+| mvn clean   | 清除产生的项目            |                                                  |
+| mvn compile | 编译源代码                |                                                  |
+| mvn install | 在本地Repository中安装jar | 包含mvn compile，mvn package，然后上传到本地仓库 |
+| mvn deploy  | 上传到私服                | 包含mvn install,然后，上传到私服                 |
 
-```java
-mvn compile
-```
-
-### 2.打包
-
-```
-mvn package
-```
-
-### 3.清除产生的项目 
-
-```
-mvn clean
-```
-
-
-
-> 参考：[Maven常用命令]((https://www.cnblogs.com/wkrbky/p/6352188.html))
+> 参考：[Maven常用命令](https://www.cnblogs.com/wkrbky/p/6352188.html)
 
 ## 实践
 

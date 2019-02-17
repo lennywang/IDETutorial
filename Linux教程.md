@@ -293,7 +293,97 @@ ps[选项]
 
 
 
+5.centos 界面切换
 
+| 命令                      | 作用                  | 备注 |
+| ------------------------- | --------------------- | ---- |
+| Ctr+Alt+Fn(n=1,2,3,4,5,6) | 图形界面到控制台      |      |
+| Alt+F7                    | 控制台到图形界面      |      |
+| Alt+Fn(n=1,2,3,4,5,6)     | Alt+Fn(n=1,2,3,4,5,6) |      |
+| startx                    | 控制台到图形界面      |      |
 
+### 5.centos 中搭建开发环境
 
+#### 5.1安装linux运行容器
 
+> [VMware下载与安装](https://www.baidu.com/s?wd=VMware&tn=24004469_oem_dg&rsv_dl=gh_pl_sl_csd)
+
+#### 5.2 安装linux
+
+>  [Linux环境搭建-在虚拟机中安装Centos7.0](https://www.cnblogs.com/lynn-li/p/6077944.html)
+
+#### 5.3 联网
+
+linux设置静态ip
+https://jingyan.baidu.com/album/39810a23baf9dab637fda64f.html?picindex=2
+
+VMware下Linux配置局域网和外网访问
+https://www.linuxidc.com/Linux/2017-11/148771.htm
+
+vmware下设置host-only方式上网
+https://jingyan.baidu.com/album/d8072ac497452aec95cefda5.html?picindex=1
+
+CentOS7使用firewalld打开关闭防火墙与端口
+https://www.cnblogs.com/moxiaoan/p/5683743.html
+
+VMware下Linux配置局域网和外网访问
+https://www.linuxidc.com/Linux/2017-11/148771.htm
+
+/etc/sysconfig/network-scripts
+
+systemctl restart network
+
+systemctl status network
+
+linux系统下怎么连接网络
+https://zhidao.baidu.com/question/498565331.html
+
+LINUX下网卡激活失败时解决方法（已实践）
+https://blog.csdn.net/grace_yoyo/article/details/46501685
+
+#### 5.4 安装JDK
+
+Linux安装JDK完整步骤
+https://www.cnblogs.com/Dylansuns/p/6974272.html
+
+#### 5.5 安装Tomcat
+
+[Linux下安装Tomcat服务器和部署Web应用](https://www.cnblogs.com/xdp-gacl/p/4097608.html)
+
+#### 5.6 安装Nginx
+
+[CentOS 7 下安装Nginx](https://www.cnblogs.com/zhoading/p/8514050.html)
+
+#### 5.7 安装XShell
+
+利用Xshell5从本机上向Linux（虚拟机中）上传文件
+https://www.cnblogs.com/xdjun/p/7115303.html
+
+#### 5.8 问题
+
+解决VMware主窗口中的虚拟机窗口太小的方法
+https://blog.csdn.net/u014337397/article/details/80753056
+
+Centos7更改默认启动桌面（或命令行）模式
+https://www.cnblogs.com/justuntil/p/7851604.html
+
+Linux 系统下用户之间的切换
+https://blog.csdn.net/u013118258/article/details/79300450
+
+name is not in the sudoers file. This incident will be reported. 不在sudoers文件中,此事将被报告.
+https://blog.csdn.net/liguangxianbin/article/details/80818231
+
+CentOS7设置终端快捷键一键打开终端
+https://jingyan.baidu.com/article/f7ff0bfc1e2a322e26bb13d5.html
+
+### 6.rpm -qa | grep java
+
+RPM：(RedHat Package Manger RedHat 软件管理工具)：是一种用于打包及安装工具
+qa：q代表query，a代表all
+grep(global search rgular expression(RE) and print out the line):是一种强大的文本搜索工具
+
+### 7.find  /etc -name  *init 
+
+模糊搜索，etc目录以 init 结尾的文件或目录名
+
+>  参考：[Linux常用命令之文件搜索命令](https://www.cnblogs.com/ysocean/p/7712417.html)
