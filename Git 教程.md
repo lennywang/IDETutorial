@@ -140,6 +140,14 @@ https://blog.csdn.net/zcmain/article/details/76855595
 
 >  参考：[查看本地git安装位置](https://blog.csdn.net/weixin_42685022/article/details/84061043)
 
+### 11.Idea整合Git
+
+> 参考：[IDEA配置GIT](https://www.cnblogs.com/hkgov/p/7694101.html)
+
+
+
+
+
 ##Git 命令比较
 
 ### 1.git commit -am "commit log"

@@ -64,5 +64,7 @@ mvn help:effective-settings
 
 ![Maven安装路](https://github.com/lennywang/Img/raw/master/maven-install-location.png)
 
+### 7.Idea配置Maven
 
+> 参考：[IntellIJ IDEA 配置 Maven 以及 修改 默认 Repository](https://www.cnblogs.com/phpdragon/p/7216626.html)
 
