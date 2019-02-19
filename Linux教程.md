@@ -323,17 +323,27 @@ https://www.linuxidc.com/Linux/2017-11/148771.htm
 vmware下设置host-only方式上网
 https://jingyan.baidu.com/album/d8072ac497452aec95cefda5.html?picindex=1
 
+
+
+| 命令                        | 作用     | 备注 |
+| --------------------------- | -------- | ---- |
+| systemctl start firewalld   | 启动     |      |
+| systemctl stop firewalld    | 关闭     |      |
+| systemctl status firewalld  | 查看状态 |      |
+| systemctl disable firewalld | 开机禁用 |      |
+| systemctl enable firewalld  | 开机启用 |      |
+
 CentOS7使用firewalld打开关闭防火墙与端口
 https://www.cnblogs.com/moxiaoan/p/5683743.html
+
+
 
 VMware下Linux配置局域网和外网访问
 https://www.linuxidc.com/Linux/2017-11/148771.htm
 
-/etc/sysconfig/network-scripts
+
 
 systemctl restart network
-
-systemctl status network
 
 linux系统下怎么连接网络
 https://zhidao.baidu.com/question/498565331.html
