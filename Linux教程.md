@@ -287,11 +287,29 @@ ps[选项]
 | -r   | 只显示正在运行地进程           |
 | -x   | 显示没有控制终端地进程          |
 
+grep [选项]
+
+| 选项 | 含义     | 备注 |
+| ---- | -------- | ---- |
+| -v   | 反转查找 |      |
+
+
+
 结果说明
 
 ![查询结果(网络配图)](https://github.com/lennywang/Img/raw/master/psparameterexplain.png)
 
+#### 4.1 ps
 
+在Linux中查看所有正在运行的进程
+https://www.cnblogs.com/zwgblog/p/5971455.html
+
+#### 4.2 grep
+
+设置grep高亮显示匹配项
+https://www.linuxidc.com/Linux/2014-09/106871.htm
+grep与egrep
+https://blog.csdn.net/qq_41201816/article/details/80767308
 
 5.centos 界面切换
 
@@ -397,3 +415,25 @@ grep(global search rgular expression(RE) and print out the line):是一种强大
 模糊搜索，etc目录以 init 结尾的文件或目录名
 
 >  参考：[Linux常用命令之文件搜索命令](https://www.cnblogs.com/ysocean/p/7712417.html)
+
+### 8.常用目录
+
+| 目录地址                       | 目录说明     | 备注 |
+| ------------------------------ | ------------ | ---- |
+| /etc/sysconfig/network-scripts | 网卡配置目录 |      |
+| /usr/local                     | 软件安装目录 |      |
+
+在Linux中查看所有正在运行的进程
+### 9. 其他
+chmod 775 文件名
+
+bash 命令
+
+！/bin/bash    
+/etc/sysconfig/network-scripts
+/usr/lib/jvm
+vim /etc/profile
+source /etc/profile
+
+Linux下查找进程id并强制停止进程的脚本
+https://www.cnblogs.com/zeng1994/p/13a2c5a28e55dd3abc2c75a4fb80371a.html

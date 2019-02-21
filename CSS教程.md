@@ -77,7 +77,7 @@ p.box:before {
 
 > 参考网址：http://www.w3cplus.com/css3/learning-to-use-the-before-and-after-pseudo-elements-in-css.html
 
- ***
+***
 
 #### div 居中
 
@@ -122,3 +122,13 @@ p.box:before {
 
 
  ![break-all与break-word区别](https://github.com/lennywang/Img/raw/master/wordbreak.png)
+
+#### 基础
+
+注释语法：
+/* 注解注释内容 */
+
+内嵌样式：
+
+`<style type="text/css">.div{color:#F00}</style>`
+
