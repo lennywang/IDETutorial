@@ -306,8 +306,52 @@ https://www.cnblogs.com/zwgblog/p/5971455.html
 
 #### 4.2 grep
 
-设置grep高亮显示匹配项
-https://www.linuxidc.com/Linux/2014-09/106871.htm
+##### grep高亮显示匹配项
+
+设置步骤：
+
+1. 编辑vi ~/.bashrc
+2. 添加如下一行内容：export GREP_OPTIONS='--color=always' GREP_COLOR='1;33'
+3. source ~/.bashrc //使配置生效
+
+参数说明：
+
+`export GREP_OPTIONS='--color=XXX'`
+
+color有三个值供选择: never always auto ;
+
+always和auto的区别: always会在任何情况下都给匹配字段加上颜色标记; auto 只给最后一个管道符匹配项加亮显示；
+
+`export GREP_COLOR='a;b'` #默认是1;31，即高亮的红色; 您可以根据自己的喜好设置不同的颜色； 
+
+a 可以选择：【0，1，4，5，7，8】
+
+| 选项 | 含义         |
+| ---- | ------------ |
+| 0    | 关闭所有属性 |
+| 1    | 设置高亮度   |
+| 4    | 下划线       |
+| 5    | 闪烁         |
+| 7    | 反显         |
+| 8    | 消隐         |
+
+b 可以选择：【30-37 或 40-47】
+
+| 选项  | 含义       |
+| ----- | ---------- |
+| 30    | black      |
+| 31    | red        |
+| 32    | green      |
+| 33    | yellow     |
+| 34    | blue       |
+| 35    | purple     |
+| 36    | cyan       |
+| 37    | white      |
+| 30-37 | 设置前景色 |
+| 40-47 | 设置背景色 |
+
+> 参考：[设置grep高亮显示匹配项](https://www.linuxidc.com/Linux/2014-09/106871.htm)
+
 grep与egrep
 https://blog.csdn.net/qq_41201816/article/details/80767308
 
@@ -423,7 +467,7 @@ grep(global search rgular expression(RE) and print out the line):是一种强大
 | /etc/sysconfig/network-scripts | 网卡配置目录 |      |
 | /usr/local                     | 软件安装目录 |      |
 
-在Linux中查看所有正在运行的进程
+
 ### 9. 其他
 chmod 775 文件名
 
