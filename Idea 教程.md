@@ -76,9 +76,10 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 **编码**
 
-| 快捷键        | 功能          | 说明   |
-| ---------- | ----------- | ---- |
+| 快捷键     | 功能            | 说明 |
+| ---------- | --------------- | ---- |
 | Alt+Insert | 生成set,get方法 |      |
+| Ctrl+D     | 复制            |      |
 
 
 
