@@ -31,6 +31,7 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 | Alt+6           | TODO           | [如何在idea中高效地使用和查找TODO标签](<br/>https://jingyan.baidu.com/album/ff42efa9c25811c19e2202ef.html?picindex=1) |
 | Ctrl+Shift+等号 | 展开           | Expand All                                                   |
 | Ctrl+Shift+减号 | 折叠           | Collapse All                                                 |
+| Alt + 拖动      | 选择列         |                                                              |
 
 **调试**
 
