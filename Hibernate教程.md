@@ -5,6 +5,10 @@
 **Hibernate主配置**
 
 ```xml
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
     <!-- 会话工厂 -->
@@ -145,3 +149,9 @@ public class HibernateUtils {
 
 
 # 实战
+
+1、No identifier specified for entity: DmCatalogContentnd
+https://www.cnblogs.com/kingsonfu/p/9869313.html
+
+
+

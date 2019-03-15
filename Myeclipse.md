@@ -28,3 +28,5 @@ https://blog.csdn.net/qq_41410358/article/details/79679130
 **2.myeclipse怎么开启自动提示功能？**
 https://jingyan.baidu.com/article/77b8dc7ffe127a6174eab6cc.html
 
+3.myeclipse中如何在整个工程中搜索字符串
+https://blog.csdn.net/u013905744/article/details/70839631
