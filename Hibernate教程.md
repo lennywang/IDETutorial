@@ -155,3 +155,14 @@ https://www.cnblogs.com/kingsonfu/p/9869313.html
 
 
 
+2、java.sql.BatchUpdateException
+
+错误描述：nested exception is org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update 
+
+解决办法：java.sql.BatchUpdateException问题处理
+https://blog.csdn.net/wan23333/article/details/78652665
+
+拓展：java.sql.BatchUpdateException: ORA-00932: inconsistent datatypes: expected NUMBER got BINARY
+java.sql.BatchUpdateException: ORA-01779: cannot modify a column which maps
+ORA-01779: cannot modify a column which maps to a non key-preserved table
+https://blog.csdn.net/nanaranran/article/details/19820425/
