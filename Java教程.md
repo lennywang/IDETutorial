@@ -4,6 +4,39 @@ final
 
 
 
+SimpleDateFormat
+
+```java
+SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd");
+Date birth =df.parse("1983-11-22");
+
+String strBirth =df.format(list.get(i).getBirth());
+```
+
+
+
+
+
+JAVA-null或空值的判断处理
+https://blog.csdn.net/qq_41214527/article/details/81145645
+
+JAVA学习(十)__MessageFormat用法
+https://blog.csdn.net/zhiweianran/article/details/8666992
+
+Java MessageFormat.format 特殊符号、单引号
+https://blog.csdn.net/a258831020/article/details/46820855
+
+EnumUtil根据值获取枚举对象
+https://blog.csdn.net/albertfly/article/details/77073039
+
+带你认识Java中的枚举对象—Enum
+https://baijiahao.baidu.com/s?id=1595377225273101054&wfr=spider&for=pc
+
+EnumUtil根据值获取枚举对象
+https://blog.csdn.net/albertfly/article/details/77073039
+
+
+
 
 
 Jackson快速入门
