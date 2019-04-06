@@ -11,6 +11,83 @@
 
 > 参考：[Maven常用命令](https://www.cnblogs.com/wkrbky/p/6352188.html)
 
+## 常用Maven标签
+
+### 1、build
+
+```xml
+<build>
+    <finalName>com_dubbo_config</finalName>
+
+    <resources>
+        <resource>
+            <!-- 指定resources插件处理哪个目录下的资源文件 -->
+            <directory>src/main/resources</directory>
+            <!-- 打包后放在什么位置 -->
+            <targetPath>${project.build.directory}/classes</targetPath>
+            <!-- 不包含directory指定目录下的以下文件 -->
+            <excludes>
+                <exclude>pro/*</exclude>
+                <exclude>dev/*</exclude>
+                <exclude>test/*</exclude>
+            </excludes>
+            <!-- 只（这个字很重要）包含directory指定目录下的以下文件 
+                 <include>和<exclude>都存在的话，那就发生冲突了，这时会以<exclude>为准 -->
+            <includes>
+                <include></include>
+            </includes>
+            <!-- filtering为true的时候，这时只会把过滤的文件（<excludes>）打到classpath下，
+                 filtering为false的时候，会把不需要过滤的文件（<includes>）打到classpath下 -->
+            <filtering>true</filtering>
+        </resource>
+
+        <resource>
+            <directory>src/main/resources/${profiles.active}</directory>
+            <targetPath>${project.build.directory}/classes</targetPath>
+        </resource>
+    </resources>
+  </build>
+```
+
+> 参考：[Maven中标签详解](<https://blog.csdn.net/newbie_907486852/article/details/81205532>)
+
+### 2、profiles
+
+```xml
+<profiles>
+    <profile>
+        <!-- 声明这个profile的id身份 -->
+        <id>dev</id>
+        <!-- 默认激活：比如当知心mvn package命令是，没有传入参数，默认使用这个
+                                    当使用mvn package -P dev 传入参数时，表示使用这个id的profile -->
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <!-- 该标签下配置对应的key  value -->
+        <properties>
+            <!-- 这里的标签名任意，在 项目的 properties、xml等配置文件中可以使用${profiles.active}取出dev这个值-->
+            <profiles.active>dev</profiles.active>
+        </properties>
+    </profile>
+    <profile>
+        <id>test</id>
+        <properties>
+            <profiles.active>test</profiles.active>
+        </properties>
+    </profile>
+    <profile>
+        <id>pro</id>
+        <properties>
+            <profiles.active>pro</profiles.active>
+        </properties>
+    </profile>
+  </profiles>
+```
+
+> 参考：[Maven中标签详解](<https://blog.csdn.net/newbie_907486852/article/details/81205532>)
+
+
+
 ## 实践
 
 ### 1.maven打包加时间戳
