@@ -237,3 +237,6 @@ https://blog.csdn.net/iefreer/article/details/7679631
 
 五、Error when changing to master branch: my local changes would be overwritten by checkout
 https://stackoverflow.com/questions/22424142/error-when-changing-to-master-branch-my-local-changes-would-be-overwritten-by-c
+
+六、Git提交时提示"fatal unable to get credential storage lock File exists"的解决办法
+https://www.jianshu.com/p/8a015684f3e1
