@@ -377,3 +377,133 @@ ApplicationContext applicationContext = new ClassPathXmlApplicationContext("appl
 二种:在一个配置文件中包含另一个配置文件： <import resource="applicationContext2.xml"></import>
 ```
 
+# SpringMVC
+
+## 1.1 Springmvc是什么
+
+Spring web mvc和Struts2都属于表现层的框架,它是Spring框架的一部分。
+
+
+![springmvc](<https://github.com/lennywang/Img/raw/master/spring.png>)
+
+## 1.2  Springmvc处理流程
+
+![springmvc处理流程](<https://github.com/lennywang/Img/raw/master/springmvc-strcture.png>)
+
+## 1.3 Springmvc架构
+
+**架构流程**
+
+1. 用户发送请求至前端控制器DispatcherServlet
+2. DispatcherServlet收到请求调用HandlerMapping处理器映射器。
+3. 处理器映射器根据请求url找到具体的处理器，生成处理器对象及处理器拦截器(如果有则生成)一并返回给DispatcherServlet。
+4. DispatcherServlet通过HandlerAdapter处理器适配器调用处理器
+5. 执行处理器(Controller，也叫后端控制器)。
+6. Controller执行完成返回ModelAndView
+7. HandlerAdapter将controller执行结果ModelAndView返回给DispatcherServlet
+8. DispatcherServlet将ModelAndView传给ViewReslover视图解析器
+9. ViewReslover解析后返回具体View
+10. DispatcherServlet对View进行渲染视图（即将模型数据填充至视图中）。
+11. DispatcherServlet响应用户
+
+**组件说明**
+
+以下组件通常使用框架提供实现：
+
+* DispatcherServlet：前端控制器
+  用户请求到达前端控制器，它就相当于mvc模式中的c，dispatcherServlet是整个流程控制的中心，由它调用其它组件处理用户的请求，dispatcherServlet的存在降低了组件之间的耦合性。
+
+* HandlerMapping：处理器映射器
+
+  HandlerMapping负责根据用户请求url找到Handler即处理器，springmvc提供了不同的映射器实现不同的映射方式，例如：配置文件方式，实现接口方式，注解方式等。
+
+  Handler：处理器
+  Handler 是继DispatcherServlet前端控制器的后端控制器，在DispatcherServlet的控制下Handler对具体的用户请求进行处理。
+
+  由于Handler涉及到具体的用户业务请求，所以一般情况需要程序员根据业务需求开发Handler。
+
+* HandlAdapter：处理器适配器
+
+  通过HandlerAdapter对处理器进行执行，这是适配器模式的应用，通过扩展适配器可以对更多类型的处理器进行执行。
+
+* ViewResolver：视图解析器
+
+  View Resolver负责将处理结果生成View视图，View Resolver首先根据逻辑视图名解析成物理视图名即具体的页面地址，再生成View视图对象，最后对View进行渲染将处理结果通过页面展示给用户。 
+
+* View：视图
+
+  springmvc框架提供了很多的View视图类型的支持，包括：jstlView、freemarkerView、pdfView等。我们最常用的视图就是jsp。
+
+  一般情况下需要通过页面标签或页面模版技术将模型数据通过页面展示给用户，需要由程序员根据业务需求开发具体的页面。
+
+  ```
+  说明：在springmvc的各个组件中，处理器映射器、处理器适配器、视图解析器称为springmvc的三大组件。
+  需要用户开发的组件有handler、view
+  ```
+
+  **默认加载的组件**
+
+  DispatcherServlet.properties
+
+  **组件扫描器**
+
+  使用组件扫描器省去在spring容器配置每个Controller类的繁琐。
+
+  使用`<context:component-scan>`自动扫描标记@Controller的控制器类，
+
+  在springmvc.xml配置文件中配置如下：
+
+  ```xml
+  <!-- 配置controller扫描包，多个包之间用,分隔 -->
+  <context:component-scan base-package="cn.itcast.springmvc.controller" />
+  ```
+
+  **注解映射器和适配器**
+
+  注解式处理器适配器，对标记@ResquestMapping的方法进行适配。 
+
+  从spring3.1版本开始，废除了AnnotationMethodHandlerAdapter的使用，推荐使用RequestMappingHandlerAdapter完成注解式处理器适配。 
+
+  在springmvc.xml配置文件中配置如下：
+
+  ```xml
+  <!-- 配置处理器适配器 --><beanclass="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+  ```
+
+  **注解驱动器**
+
+  直接配置处理器映射器和处理器适配器比较麻烦，可以使用注解驱动来加载。
+
+  SpringMVC使用`<mvc:annotation-driven>`自动加载RequestMappingHandlerMapping和RequestMappingHandlerAdapter        
+
+  可以在springmvc.xml配置文件中使用`<mvc:annotation-driven>`替代注解处理器和适配器的配置。
+
+  ```xml
+  <!-- 注解驱动 -->
+  <mvc:annotation-driven />
+  ```
+
+  **视图解析器**
+
+  视图解析器使用SpringMVC框架默认的InternalResourceViewResolver，这个视图解析器支持JSP视图解析
+
+  在springmvc.xml配置文件中配置如下：
+
+  ```xml
+  	<!-- Example: prefix="/WEB-INF/jsp/", suffix=".jsp", viewname="test" -> 
+  		"/WEB-INF/jsp/test.jsp" -->
+  	<!-- 配置视图解析器 -->
+  	<bean
+  		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+  		<!-- 配置逻辑视图的前缀 -->
+  		<property name="prefix" value="/WEB-INF/jsp/" />
+  		<!-- 配置逻辑视图的后缀 -->
+  		<property name="suffix" value=".jsp" />
+  	</bean>
+  ```
+
+  逻辑视图名需要在controller中返回ModelAndView指定，比如逻辑视图名为ItemList，则最终返回的jsp视图地址:
+
+  “WEB-INF/jsp/itemList.jsp” 
+
+  最终jsp物理地址：前缀+**逻辑视图名**+后缀
