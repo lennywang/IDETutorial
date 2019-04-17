@@ -231,7 +231,7 @@ ApplicationContext :在加载 applicationContext.xml(容器启动)时候就会�
 
 ```xml
 <!-- 方式一：无参数的构造方法的实例化 --> 
-bean id="bean1" class="cn.itcast.spring.demo3.Bean1"></bean> 
+<bean id="bean1" class="cn.itcast.spring.demo3.Bean1"></bean> 
 ```
 
 2、静态工厂实例化的方式
@@ -307,10 +307,10 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
 
 ```xml
 SpEL：Spring Expression Language. 语法:#{ SpEL } 
- 
+
  <!-- SpEL 的注入的方式 -->  
  <bean id="car2" class="cn.itcast.spring.demo4.Car2"> 
-      <property name="name" value="#{' 奔驰 '}"/>   
+      <property name="name" value="#{'奔驰'}"/>   
       <property name="price" value="#{800000}"/>  
  </bean> 
  
@@ -376,6 +376,139 @@ ApplicationContext applicationContext = new ClassPathXmlApplicationContext("appl
  
 二种:在一个配置文件中包含另一个配置文件： <import resource="applicationContext2.xml"></import>
 ```
+
+## 2.1 Spring 的 Bean 管理的中常用的注解
+
+**@Component:组件.(作用在类上) **
+
+Spring 中提供@Component 的三个衍生注解:(功能目前来讲是一致的)
+
+* @Controller :WEB 层
+* @Service  :业务层
+*  @Repository :持久层
+
+这三个注解是为了让标注类本身的用途清晰，Spring 在后续版本会对其增强
+
+**属性注入的注解:(使用注解注入的方式,可以不用提供 set 方法.) **
+
+* @Value  :用于注入普通类型. 
+* @Autowired :自动装配:  1、默认按类型进行装配. 2、按名称注入: @Qualifier:强制使用名称注入.
+* @Resource 相当于: @Autowired 和@Qualifier 一起使用. 
+
+**Bean 的作用范围的注解**
+
+@Scope:  singleton:单例 	prototype:多例
+
+**Bean 的生命周期的配置**
+
+* @PostConstruct :相当于 init-method 
+* @PreDestroy  :相当于 destroy-method
+
+**Spring 的 Bean 管理的方式的比较**
+
+![spring-bean](<https://github.com/lennywang/Img/raw/master/spring-bean.png>)
+
+
+
+XML 和注解: 
+
+* XML :结构清晰. 
+* 注解 :开发方便.(属性注入.) 
+
+实际开发中还有一种 XML 和注解整合开发:   Bean 有 XML 配置.但是使用的属性使用注解注入. 
+
+
+
+## 2.2 AOP的概述
+
+**什么是AOP**
+
+Spring 是解决实际开发中的一些问题。AOP 解决 OOP 中遇到的一些问题.是 OOP 的延续和扩展. 
+
+**为什么学习AOP**
+
+对程序进行增强:不修改源码的情况下. AOP 可以进行权限校验,日志记录,性能监控,事务控制. 
+
+**Spring 的 AOP 的由来**
+
+AOP 最早由 AOP 联盟的组织提出的,制定了一套规范.Spring 将 AOP 思想引入到框架中,必须遵守 AOP 联盟 的规范. 
+
+**底层实现**
+
+ Spring 的 AOP 的底层用到两种代理机制：1、JDK 的动态代理 :针对实现了接口的类产生代理。2、Cglib 的动态代理 :针对没有实现接口的类产生代理. 应用的是底层的字节码增强的技术 生成当前类 的子类对象. 
+
+**AOP 的开发中的相关术语**
+
+Joinpoint(连接点):所谓连接点是指那些被拦截到的点。在 spring 中,这些点指的是方法,因为 spring 只 支持方法类型的连接点. 
+Pointcut(切入点):所谓切入点是指我们要对哪些 Joinpoint 进行拦截的定义. 
+Advice(通知/增强):所谓通知是指拦截到 Joinpoint 之后所要做的事情就是通知.通知分为前置通知,后置 通知,异常通知,最终通知,环绕通知(切面要完成的功能) 
+Introduction(引介):引介是一种特殊的通知在不修改类代码的前提下, Introduction 可以在运行期为类 动态地添加一些方法或 Field. 
+Target(目标对象):代理的目标对象 
+Weaving(织入):是指把增强应用到目标对象来创建新的代理对象的过程.  spring 采用动态代理织入，而 AspectJ 采用编译期织入和类装在期织入 
+Proxy（代理）:一个类被 AOP 织入增强后，就产生一个结果代理类 
+Aspect(切面): 是切入点和通知（引介）的结合
+
+##3.1 Spring 使用 AspectJ 进行 AOP 的开发:注解的方式 
+**开启 aop 注解的自动代理**
+
+`< aop:aspectj-autoproxy/> `
+
+**AspectJ 的 AOP 的注解**
+
+```java
+@Aspect:定义切面类的注解
+
+通知类型:     
+@Before   :前置通知     
+@AfterReturing  :后置通知     
+@Around   :环绕通知     
+@After    :最终通知     
+@AfterThrowing  :异常抛出通知.
+
+@Pointcut:定义切入点的注解
+```
+
+## 3.2 事务
+
+**什么是事务**
+
+事务逻辑上的一组操作,组成这组操作的各个逻辑单元,要么一起成功,要么一起失败. 
+
+**事务特性**
+
+原子性 :强调事务的不可分割
+一致性 :事务的执行的前后数据的完整性保持一致
+隔离性 :一个事务执行的过程中,不应该受到其他事务的干扰
+持久性 :事务一旦结束,数据就持久到数据库
+
+**如果不考虑隔离性引发安全性问题**
+
+脏读  :一个事务读到了另一个事务的未提交的数据 
+不可重复读 :一个事务读到了另一个事务已经提交的 update 的数据导致多次查询结果不一致. 
+虚幻读  :一个事务读到了另一个事务已经提交的 insert 的数据导致多次查询结果不一致. 
+
+**解决读问题:设置事务隔离级别**
+
+未提交读 :脏读，不可重复读，虚读都有可能发生 
+已提交读 :避免脏读。但是不可重复读和虚读有可能发生 
+可重复读 :避免脏读和不可重复读.但是虚读有可能发生. 
+串行化的 :避免以上所有读问题. 
+
+**Spring 进行事务管理一组 API**
+
+PlatformTransactionManager:平台事务管理器. 
+org.springframework.jdbc.datasource.DataSourceTransactionManager 使用 Spring JDBC 或 iBatis 进行持久化数据时用 org.springframework.orm.hibernate3.HibernateTransactionManager  使用 Hibernate 版本进行持久化数据时用
+
+**TransactionDefinition:事务定义信息**
+
+* 隔离级别 
+* 传播行为 
+* 超时信息 
+*  是否只读 
+
+**TransactionStatus:事务的状态**
+
+
 
 # SpringMVC
 

@@ -112,3 +112,16 @@ BIGINT         8 字节        (-2^63，2^63-1) 		   (0，2^63-1)    极大整�
 ALTER TABLE table_name ENGINE = MyISAM;
 ```
 
+## 实践
+
+### 更新数据
+
+MySQL的ON DUPLICATE KEY UPDATE用法
+https://blog.csdn.net/plg17/article/details/78583692
+
+Oracle merge into的用法，以及MySQL的相同功能语句
+https://blog.csdn.net/zhijiesmile/article/details/74075267
+
+mysql 实现merge into
+https://blog.csdn.net/qq_22211217/article/details/81286311
+
