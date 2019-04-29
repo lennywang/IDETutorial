@@ -529,6 +529,40 @@ org.springframework.jdbc.datasource.DataSourceTransactionManager 使用 Spring J
 | PROPAGATION_NEVER         | 以非事务方式运行，如果有事务存在，抛出异常     |
 | PROPAGATION_NESTED        | 如果当前事务存在，则嵌套事务执行               |
 
+## 4.1 SSH 
+
+**Hibernate**
+
+| 目录                   | 包                                      | 说明 |
+| ---------------------- | --------------------------------------- | ---- |
+| hibernate/lib/required |                                         |      |
+| hibernate/lib/jpa      | java persist api java的持久化规范(接口) |      |
+| 数据库驱动             | mysql-connector-java-5.1.7-binl.jar     |      |
+
+**Struts2**
+
+| 目录                           | 包                               | 说明                                                         |
+| ------------------------------ | -------------------------------- | ------------------------------------------------------------ |
+| struts-blank.war/WEB-INF/lib/* |                                  | 注意:javassist-3.18.1-GA.jar包与hibernate中的重复            |
+| struts整合spring插件包         | struts2-spring-plugin-2.3.24.jar | 注意:这个包一旦导入,那么struts2在启动时就会寻找spring容器.找不到将会抛出异常 |
+
+**spring**
+
+| 目录                | 包                                                 | 说明 |
+| ------------------- | -------------------------------------------------- | ---- |
+| 4+2                 | core \| beans\|context\|expression\|logging\|log4j |      |
+| 整合web             | spring-web                                         |      |
+| 整合aop             | spring-aop\| spring-aspect\|aop联盟\|aopweaving    |      |
+| 整合hibernate和事务 | spring-jdbc \| spring-tx \| c3p0 \| spring-orm     |      |
+| junit4测试          | spring-test                                        |      |
+
+**标签库**
+
+| 目录 | 包           | 说明 |
+| ---- | ------------ | ---- |
+|      | standar.jar  |      |
+|      | jstl-1.2.jar |      |
+
 
 
 # SpringMVC

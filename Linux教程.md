@@ -253,6 +253,17 @@ Xrunjdwp 调试选项
 | shutdown -h now | 立刻关机(root用户使用) |      |
 | shutdown -h 10  | 10分钟后自动关机      |      |
 
+**常规**
+
+| 命令                       | 作用                 | 备注 |
+| -------------------------- | -------------------- | ---- |
+| date                       | 查看时间和日期       |      |
+| du -sh catalina-daemon.out | 查看文件占用空间大小 |      |
+
+
+
+
+
 ### 3. Vim 编辑器
 
 **插入**
@@ -467,8 +478,8 @@ grep(global search rgular expression(RE) and print out the line):是一种强大
 | /etc/sysconfig/network-scripts | 网卡配置目录 |      |
 | /usr/local                     | 软件安装目录 |      |
 
-
 ### 9. 其他
+
 chmod 775 文件名
 
 bash 命令

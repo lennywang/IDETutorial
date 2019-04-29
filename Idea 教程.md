@@ -128,6 +128,9 @@ View → Enter Distraction Free Mode
 
 
 
+使用Intellij IDEA的Bookmarks
+https://blog.csdn.net/qq_36376059/article/details/80277767
+
 IDEA的查询引用、调用关系图的功能
 https://www.cnblogs.com/ghj1976/p/5382455.html
 

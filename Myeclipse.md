@@ -17,7 +17,7 @@ Myeclipse 常用快捷键
 | ctrl+shift+y                         | 转为小写                             |      |
 | Alt+Shift+L                          | 自动生成相应对象接收返回值           |      |
 | 类名(不是文件名)→copy qualified name | myeclipse 复制完整类名               |      |
-|                                      |                                      |      |
+| Ctrl + shift + O                     | 删除所有未用到的包                   |      |
 
 
 

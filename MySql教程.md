@@ -125,3 +125,15 @@ https://blog.csdn.net/zhijiesmile/article/details/74075267
 mysql 实现merge into
 https://blog.csdn.net/qq_22211217/article/details/81286311
 
+
+
+# Oracle
+
+## 常用操作
+
+**取前2000条**
+
+```sql
+SELECT t.* FROM HR_STAFF_PRIMARY_INFO T WHERE rownum<2001 and t.id_number is not null;
+```
+
