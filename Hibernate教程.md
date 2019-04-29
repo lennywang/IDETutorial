@@ -423,7 +423,7 @@ XML 和注解:
 
 **什么是AOP**
 
-Spring 是解决实际开发中的一些问题。AOP 解决 OOP 中遇到的一些问题.是 OOP 的延续和扩展. 
+aop思想：纵向重复，横向抽取。filter、动态代理、interceptor
 
 **为什么学习AOP**
 
@@ -435,20 +435,60 @@ AOP 最早由 AOP 联盟的组织提出的,制定了一套规范.Spring 将 AOP 
 
 **底层实现**
 
- Spring 的 AOP 的底层用到两种代理机制：1、JDK 的动态代理 :针对实现了接口的类产生代理。2、Cglib 的动态代理 :针对没有实现接口的类产生代理. 应用的是底层的字节码增强的技术 生成当前类 的子类对象. 
+ Spring 的 AOP 的底层用到两种代理机制：1、JDK 的动态代理 :针对实现了接口的类产生代理。2、Cglib 的动态代理 :对目标对象继承代理.
 
 **AOP 的开发中的相关术语**
 
-Joinpoint(连接点):所谓连接点是指那些被拦截到的点。在 spring 中,这些点指的是方法,因为 spring 只 支持方法类型的连接点. 
-Pointcut(切入点):所谓切入点是指我们要对哪些 Joinpoint 进行拦截的定义. 
-Advice(通知/增强):所谓通知是指拦截到 Joinpoint 之后所要做的事情就是通知.通知分为前置通知,后置 通知,异常通知,最终通知,环绕通知(切面要完成的功能) 
-Introduction(引介):引介是一种特殊的通知在不修改类代码的前提下, Introduction 可以在运行期为类 动态地添加一些方法或 Field. 
-Target(目标对象):代理的目标对象 
-Weaving(织入):是指把增强应用到目标对象来创建新的代理对象的过程.  spring 采用动态代理织入，而 AspectJ 采用编译期织入和类装在期织入 
-Proxy（代理）:一个类被 AOP 织入增强后，就产生一个结果代理类 
-Aspect(切面): 是切入点和通知（引介）的结合
+Joinpoint:连接点.所有可以织入通知的方法.
+Pointcut:切入点.需要|已经织入通知的方法.
+Advice:需要增强的代码.
+Target:目标对象.
+Weaving:动词.将通知应用的切点的过程. 
+Proxy:代理对象
+Aspect: 切面. 切入点+通知
 
-##3.1 Spring 使用 AspectJ 进行 AOP 的开发:注解的方式 
+###3.2 AOP 的开发:XML的方式 
+
+**导包**
+
+```
+core|beans|context|expression|logging|log4j
+aop+aspect
+aop联盟+weaving
+```
+
+**准备目标对象**
+
+**准备通知类**
+
+	
+				 前置通知
+				 后置通知 方法正常结束
+				 环绕通知
+				 异常拦截通知
+				 后置通知 无论如何都执行
+		
+			4.配置文件中配置,导入aop约束
+				1>目标对象
+				2>通知对象
+				3><aop:config>
+						<aop:ponint-cut id="切点名称" expression="execution(切点表达式)" />
+						<aop:aspect ref="通知对象名称" >
+							<aop:before method="" ponintcut-ref=""  />
+							<aop:after-returning method="" ponintcut-ref=""  />
+							<aop:around method="" ponintcut-ref=""  />
+							<aop:after-throwing method="" ponintcut-ref=""  />
+							<aop:after method="" ponintcut-ref=""  />
+						</aop:aspect>
+
+
+3.1 Spring 使用 AspectJ 进行 AOP 的开发:注解的方式 
+
+**导包**
+
+	core|beans|context|expression|logging|log4j
+	aop+aspect
+	aop联盟+weaving
 **开启 aop 注解的自动代理**
 
 `< aop:aspectj-autoproxy/> `
@@ -528,6 +568,12 @@ org.springframework.jdbc.datasource.DataSourceTransactionManager 使用 Spring J
 | PROPAGATION_NOT_SUPPORTED | 以非事务方式运行，如果有事务存在，挂起当前事务 |
 | PROPAGATION_NEVER         | 以非事务方式运行，如果有事务存在，抛出异常     |
 | PROPAGATION_NESTED        | 如果当前事务存在，则嵌套事务执行               |
+
+**Spring AOP 开发**
+
+
+
+
 
 ## 4.1 SSH 
 
