@@ -255,12 +255,20 @@ Xrunjdwp 调试选项
 
 **常规**
 
-| 命令                       | 作用                 | 备注 |
-| -------------------------- | -------------------- | ---- |
-| date                       | 查看时间和日期       |      |
-| du -sh catalina-daemon.out | 查看文件占用空间大小 |      |
+| 命令                       | 作用                   | 备注                                                         |
+| -------------------------- | ---------------------- | ------------------------------------------------------------ |
+| date                       | 查看时间和日期         |                                                              |
+| du -sh catalina-daemon.out | 查看文件占用空间大小   | -h 表示「Human-readable」输出，使用 GB、MB 等格式            |
+| ls \| wc -w                | 查看当前目录有多少文件 |                                                              |
+| ll -rt                     | 按时间排序显示文件     | ll －t 是降序， ll －t ｜ tac 是升序                         |
+| ll -Sh                     | 按大小排序(单位：k,M)  | -r, --reverse   reverse order while sorting<br />-t                   sort by modification time<br />-S                  sort by file size<br />-h,                  --human-readable  <br />with -l, print sizes in human readable format |
+|                            |                        |                                                              |
 
+怎么查看linux文件夹下有多少个文件
+https://jingyan.baidu.com/article/77b8dc7fa4efc46174eab6b9.html
 
+LINUX中LS对文件进行按大小排序和按时间排序,设置LS时间格式
+https://www.cnblogs.com/sien6/p/8056315.html
 
 
 

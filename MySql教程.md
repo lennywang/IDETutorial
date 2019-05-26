@@ -137,3 +137,13 @@ https://blog.csdn.net/qq_22211217/article/details/81286311
 SELECT t.* FROM HR_STAFF_PRIMARY_INFO T WHERE rownum<2001 and t.id_number is not null;
 ```
 
+**分页**
+
+```sql
+SELECT * FROM  (SELECT A.*,ROWNUM RN FROM (SELECT * FROM TABLE_NAME) A WHERE ROWNUM <= 40)  
+WHERE RN >= 21  
+```
+
+Oracle中分页查询语句
+https://www.cnblogs.com/zhaotiancheng/p/6262635.html
+
