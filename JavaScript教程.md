@@ -154,6 +154,35 @@ boundGetX(); // 81
 
 > 参考： [JavaScript bind() 的用法](https://www.jianshu.com/p/ee175cade48b)
 
+## Number
+
+```javascript
+将一个值转换为字符串的3种方法
+1.value.toString()
+2."" + value		//可读性差
+3.String(value)		
+```
+
+
+
+
+| 描述              | 函数              |
+| --------------- | --------------- |
+| 丢弃小数部分,保留整数部分   | parseInt(5/2)   |
+| 向上取整,有小数就整数部分加1 | Math.ceil(5/2)  |
+| 四舍五入            | Math.round(5/2) |
+| 向下取整            | Math.floor(5/2) |
+
+
+
+
+
+
+
+
+
+
+
 
 
 
