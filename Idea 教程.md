@@ -18,26 +18,26 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 **快捷键**
 
-| 快捷键          | 功能           | 说明                                                         |
-| :-------------- | -------------- | ------------------------------------------------------------ |
-| Alt + 1         | Project        |                                                              |
-| Alt + 2         | Favorites      |                                                              |
-| Alt + 7         | Structure      | View \| Tool Windows \| Structure                            |
-| Ctrl + F11      | Bookmark       |                                                              |
-| Ctrl + Alt + H  | Call Hierarchy |                                                              |
-| Ctrl+Alt+L      | 格式化代码     |                                                              |
-| Shift+Click     | 关闭文件       |                                                              |
-| Alt+Home        | Navigation Bar |                                                              |
-| Alt+6           | TODO           | [如何在idea中高效地使用和查找TODO标签](<br/>https://jingyan.baidu.com/album/ff42efa9c25811c19e2202ef.html?picindex=1) |
-| Ctrl+Shift+等号 | 展开           | Expand All                                                   |
-| Ctrl+Shift+减号 | 折叠           | Collapse All                                                 |
-| Alt + 拖动      | 选择列         |                                                              |
+| 快捷键            | 功能              | 说明                                       |
+| :------------- | --------------- | ---------------------------------------- |
+| Alt + 1        | Project         |                                          |
+| Alt + 2        | Favorites       |                                          |
+| Alt + 7        | Structure       | View \| Tool Windows \| Structure        |
+| Ctrl + F11     | Bookmark        |                                          |
+| Ctrl + Alt + H | Call Hierarchy  |                                          |
+| Ctrl+Alt+L     | 格式化代码           |                                          |
+| Shift+Click    | 关闭文件            |                                          |
+| Alt+Home       | Navigation Bar  |                                          |
+| Alt+6          | TODO            | [如何在idea中高效地使用和查找TODO标签](<br/>https://jingyan.baidu.com/album/ff42efa9c25811c19e2202ef.html?picindex=1) |
+| Ctrl+Alt+B     | Implementations | 转到接口实现类                                  |
+|                |                 |                                          |
+|                |                 |                                          |
 
 **调试**
 
-| 快捷键    | 功能                     | 说明                          |
-| --------- | ------------------------ | ----------------------------- |
-| Shift+F8  | 跳出该方法               |                               |
+| 快捷键       | 功能           | 说明                |
+| --------- | ------------ | ----------------- |
+| Shift+F8  | 跳出该方法        |                   |
 | Alt+Click | 查看断点处的某个对象的值 | 按住alter，然后点击想看的变量 |
 
 > 参考：[Intellij IDEA 2017 debug断点调试技巧与总结详解篇](https://blog.csdn.net/qq_27093465/article/details/64124330)
@@ -56,9 +56,9 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 **定位**
 
-| 快捷键       | 功能             | 说明 |
-| ------------ | ---------------- | ---- |
-| Ctrl+Shift+E | 最近更改的文件   |      |
+| 快捷键          | 功能       | 说明   |
+| ------------ | -------- | ---- |
+| Ctrl+Shift+E | 最近更改的文件  |      |
 | Ctrl+E       | 最近浏览过的文件 |      |
 
 
@@ -66,23 +66,23 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 **搜索** 
 
-| 快捷键         | 功能                             | 说明 |
-| -------------- | -------------------------------- | ---- |
-| Ctrl＋Shift＋N | 快速搜索文件                     |      |
-| Ctrl+Shift+F   | 快速搜索字符串                   |      |
-| Alt+F3         | 逐个往下查找相同文本，并高亮显示 |      |
-| Shift, Shift   | Search Everywhere                |      |
+| 快捷键              | 功能                | 说明   |
+| ---------------- | ----------------- | ---- |
+| Ctrl＋Shift＋N     | 快速搜索文件            |      |
+| Ctrl+Shift+F     | 快速搜索字符串           |      |
+| Alt+F3           | 逐个往下查找相同文本，并高亮显示  |      |
+| Shift, Shift     | Search Everywhere |      |
+| Ctrl+Shift+Alt+N | 搜索类名              |      |
 
 
 
 **编码**
 
-| 快捷键     | 功能            | 说明 |
-| ---------- | --------------- | ---- |
-| Alt+Insert | 生成set,get方法 |      |
-| Ctrl+D     | 复制            |      |
-
-
+| 快捷键        | 功能             | 说明   |
+| ---------- | -------------- | ---- |
+| Alt+Insert | 生成set,get方法    |      |
+| Ctrl+D     | 复制             |      |
+| Ctrl+Alt+O | 删除类中无用的import包 |      |
 
 
 
