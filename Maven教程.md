@@ -121,8 +121,9 @@ mvn help:effective-settings
 
 ### 4.修改Maven镜像源
 
-1、maven安装目录下conf文件夹settings.xml
-2、把镜像源改为阿里云的
+1、修改Maven镜像源
+1）、maven安装目录下conf文件夹settings.xml
+2）、把镜像源改为阿里云的
 
 ```xml
 <mirror>  
@@ -132,6 +133,27 @@ mvn help:effective-settings
   <url>http://maven.aliyun.com/nexus/content/groups/public/</url>        
 </mirror>
 ```
+
+2、修改当前项目的maven仓库地址
+
+```xml
+    <repositories>
+            <repository>
+                <id>nexus-aliyun</id>
+                <name>Nexus aliyun</name>
+                <layout>default</layout>
+                <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+                <releases>
+                    <enabled>true</enabled>
+                </releases>
+            </repository>
+    </repositories>
+```
+
+
 
 ### 5.[Maven安装与配置](https://www.cnblogs.com/eagle6688/p/7838224.html)
 

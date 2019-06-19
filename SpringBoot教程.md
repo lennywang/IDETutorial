@@ -369,7 +369,7 @@ public static void main(String[] args) {
    | ${spring-boot.version}           | 这个是springboot的版本号     |
    | ${spring-boot.formatted-version} | 这个是springboot的版本号     |
 
-   ​
+   
 
    [佛祖保佑 永无bug 代码注释](https://www.cnblogs.com/wangjunwei/p/6995467.html)
 
@@ -423,7 +423,7 @@ spring.mvc.favicon.enabled=false
 
 ## SpringBoo实践
 
-###1、启动jar包
+### 1、jar启动
 
 1、打包
 
@@ -433,16 +433,21 @@ mvn package -Dmaven.test.skip=true
 
 ```
 
-2、启动jar包
+2、jar启动
 
 ```shell
-//java -jar启动jar包时携带参数
+//-jar启动jar包时携带参数
 java -Dspring.profiles.active=dev -jar ch6_springbootcore-0.0.1-SNAPSHOT.jar
+
+// -jar 启动修改端口
+java -jar data-structure-0.0.1-SNAPSHOT.jar --server.port=8081
 ```
 
 
 
-###2、non-compatible bean definition of same name  ...
+
+
+### 2、non-compatible bean definition of same name  ...
 
 **问题描述**：conflicts with existing, non-compatible bean definition of same name and class 
 
