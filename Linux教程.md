@@ -477,6 +477,8 @@ grep(global search rgular expression(RE) and print out the line):是一种强大
 
 模糊搜索，etc目录以 init 结尾的文件或目录名
 
+find . -name "mail*" 				在当前目录下查找mail开头文件
+
 >  参考：[Linux常用命令之文件搜索命令](https://www.cnblogs.com/ysocean/p/7712417.html)
 
 ### 8.常用目录

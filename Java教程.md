@@ -15,6 +15,13 @@ String strBirth =df.format(list.get(i).getBirth());
 
 
 
+将GB2312编码的字符串转换为ISO-8859-1编码的字符串
+
+```java
+String s1 = "你好";
+String s2 = newString(s1.getBytes("GB2312"), "ISO-8859-1");
+```
+
 
 
 JAVA-null或空值的判断处理
