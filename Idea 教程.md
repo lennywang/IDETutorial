@@ -151,7 +151,11 @@ intellij idea 提示不区分大小写
 ctrl+alt+s →  s: sensitive →  case sensitive completion: NONE
 参考：https://blog.csdn.net/assassinsshadow/article/details/73526667
 
+IntelliJ IDEA怎么设置字体大小
+https://jingyan.baidu.com/article/ff42efa9c46217c19e2202d9.html
 
+Intellij IDEA 修改项目的JDK版本
+https://blog.csdn.net/Axela30W/article/details/78920671
 
 
 
