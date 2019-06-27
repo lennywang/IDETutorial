@@ -369,7 +369,6 @@ public static void main(String[] args) {
    | ${spring-boot.version}           | 这个是springboot的版本号     |
    | ${spring-boot.formatted-version} | 这个是springboot的版本号     |
 
-   
 
    [佛祖保佑 永无bug 代码注释](https://www.cnblogs.com/wangjunwei/p/6995467.html)
 
@@ -557,4 +556,18 @@ $.ajax({
 ```
 
 > 參考：[前端人员必须会的jsonp!](https://blog.csdn.net/Summer_water/article/details/52740953)
+
+5、springboot+idea热部署(自动刷新)
+https://blog.csdn.net/qq_42685050/article/details/81588584
+
+```properties
+#热部署生效
+spring.devtools.restart.enabled: true
+#设置重启的目录
+spring.devtools.restart.additional-paths: src/main/java
+#classpath目录下的WEB-INF文件夹内容修改不重启
+spring.devtools.restart.exclude: WEB-INF/**xxxxxxxxxx
+#使用触发文件
+spring.devtools.restart.trigger-file=trigger.txt
+```
 

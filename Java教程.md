@@ -24,6 +24,19 @@ String s2 = newString(s1.getBytes("GB2312"), "ISO-8859-1");
 
 
 
+ 打印异常
+
+```java
+Exception e;
+e.printStackTrace(System.out);
+```
+
+
+
+
+
+
+
 JAVA-null或空值的判断处理
 https://blog.csdn.net/qq_41214527/article/details/81145645
 
