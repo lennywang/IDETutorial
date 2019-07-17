@@ -44,3 +44,6 @@ http://www.cnblogs.com/liuyp-ken/p/5693093.html
 
 6.TODO
 查看TODO：window — show View — Tasks
+
+7.myeclipse的debug调试，指定循环次数进入断点调试或者特定condition进入断点调试
+https://blog.csdn.net/xldmx/article/details/81324721
