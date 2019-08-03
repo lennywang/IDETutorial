@@ -19,7 +19,7 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 **快捷键**
 
 | 快捷键            | 功能              | 说明                                       |
-| :------------- | --------------- | ---------------------------------------- |
+| -------------- | --------------- | ---------------------------------------- |
 | Alt + 1        | Project         |                                          |
 | Alt + 2        | Favorites       |                                          |
 | Alt + 7        | Structure       | View \| Tool Windows \| Structure        |
@@ -30,8 +30,9 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 | Alt+Home       | Navigation Bar  |                                          |
 | Alt+6          | TODO            | [如何在idea中高效地使用和查找TODO标签](<br/>https://jingyan.baidu.com/album/ff42efa9c25811c19e2202ef.html?picindex=1) |
 | Ctrl+Alt+B     | Implementations | 转到接口实现类                                  |
-|                |                 |                                          |
-|                |                 |                                          |
+| Ctrl+Shift+U   | 大小写切换           |                                          |
+| Ctrl+Shift+↑/↓ | 上下移动代码          |                                          |
+| Ctrl+D         | 复制当前行           |                                          |
 
 **调试**
 
