@@ -93,8 +93,9 @@ JVM 最大分配的内存由**-Xmx** 指定，默认是物理内存的 1/4；
 JVM 使用**-XX:PermSize** 设置非堆内存初始值，默认是物理内存的 1/64；
 由 XX:MaxPermSize 设置最大非堆内存的大小，默认是物理内存的 1/4；
 -Xmn2G：设置年轻代大小为 2G；
+-XX：SurvivorRatio，设置年轻代中Eden区与Survivor区的比值。
 
-> 参考：[Java内存管理之类似-Xms、-Xmx 这些参数的含义是什么？](<https://blog.csdn.net/baidu_34122324/article/details/83472951>)
+参考：[Java内存管理之类似-Xms、-Xmx 这些参数的含义是什么？](<https://blog.csdn.net/baidu_34122324/article/details/83472951>)
 
 
 
