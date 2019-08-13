@@ -150,12 +150,31 @@ https://www.cnblogs.com/zhaotiancheng/p/6262635.html
 **为空**
 
 ```sql
+//语法
 Nvl(DATA_VALUE1,0)
-```
 
-**练习**
-
-```sql
+//练习
 DATA_VALUE1 = NVL(DECODE(TRIM(SRC_SUBJECT_NAME),'内部转入',-1 * DATA_VALUE1,DATA_VALUE1),0)
 ```
+
+**删除表**
+
+```sql
+//删除表中的所有数据，并不是删除表
+TRUNCATE TABLE tbale_name
+
+
+//删除表的结构
+DROP TABLE table_name 
+```
+
+**修改字段类型**
+
+```
+alter table tablename modify (fieldname varchar2(30))
+```
+
+> [oracle 如何修改 字段的长度](https://www.csdn.net/gather_2f/MtTaUgxsODUzNC1ibG9n.html)
+
+
 
