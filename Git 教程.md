@@ -195,9 +195,9 @@ git reset 是把HEAD向后移动了一下，而git revert是HEAD继续前进
 
 
 
-##原理
+## 原理
 
-###1.git  工作区、版本库
+### 1.git  工作区、版本库
 
 ![git  工作区、版本库](https://github.com/lennywang/Img/raw/master/git-theory-repository.jpg)
 
@@ -205,13 +205,13 @@ git reset 是把HEAD向后移动了一下，而git revert是HEAD继续前进
 第一步是用`git add`把文件添加进去，实际上就是把文件修改添加到暂存区；
 第二步是用`git commit`提交更改，实际上就是把暂存区的所有内容提交到当前分支。
 
-###2.git 常用操作图解
+### 2.git 常用操作图解
 
 > [git原理图解](https://www.cnblogs.com/cb0327/p/5066685.html)
 
 
 
-##Git 常见问题
+## Git 常见问题
 
 一、git提交异常 fatal: LF would be replaced by..
 
