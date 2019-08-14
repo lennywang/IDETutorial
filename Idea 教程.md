@@ -18,21 +18,21 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 **快捷键**
 
-| 快捷键            | 功能              | 说明                                       |
-| -------------- | --------------- | ---------------------------------------- |
-| Alt + 1        | Project         |                                          |
-| Alt + 2        | Favorites       |                                          |
-| Alt + 7        | Structure       | View \| Tool Windows \| Structure        |
-| Ctrl + F11     | Bookmark        |                                          |
-| Ctrl + Alt + H | Call Hierarchy  |                                          |
-| Ctrl+Alt+L     | 格式化代码           |                                          |
-| Shift+Click    | 关闭文件            |                                          |
-| Alt+Home       | Navigation Bar  |                                          |
+| 快捷键         | 功能            | 说明                                                         |
+| -------------- | --------------- | ------------------------------------------------------------ |
+| Alt + 1        | Project         |                                                              |
+| Alt + 2        | Favorites       |                                                              |
+| Alt + 7        | Structure       | 类的结构图：View \| Tool Windows \| Structure                |
+| Ctrl + F11     | Bookmark        |                                                              |
+| Ctrl + Alt + H | Call Hierarchy  |                                                              |
+| Ctrl+Alt+L     | 格式化代码      |                                                              |
+| Shift+Click    | 关闭文件        |                                                              |
+| Alt+Home       | Navigation Bar  |                                                              |
 | Alt+6          | TODO            | [如何在idea中高效地使用和查找TODO标签](<br/>https://jingyan.baidu.com/album/ff42efa9c25811c19e2202ef.html?picindex=1) |
-| Ctrl+Alt+B     | Implementations | 转到接口实现类                                  |
-| Ctrl+Shift+U   | 大小写切换           |                                          |
-| Ctrl+Shift+↑/↓ | 上下移动代码          |                                          |
-| Ctrl+D         | 复制当前行           |                                          |
+| Ctrl+Alt+B     | Implementations | 转到接口实现类                                               |
+| Ctrl+Shift+U   | 大小写切换      |                                                              |
+| Ctrl+Shift+↑/↓ | 上下移动代码    |                                                              |
+| Ctrl+D         | 复制当前行      |                                                              |
 
 **调试**
 
@@ -47,11 +47,12 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 **视图**
 
-| 快捷键              | 功能                      | 说明                         |
-| ---------------- | ----------------------- | -------------------------- |
-| Ctrl＋Alt+H       | 查看方法调用层次                | Navigate \| Call Hierarchy |
-| Ctrl+shift+Alt+U | 查看maven依赖类图             |                            |
-| Ctrl+F12         | 查看file，method结构图、类继承机构图 |                            |
+| 快捷键           | 功能                                 | 说明                        |
+| ---------------- | ------------------------------------ | --------------------------- |
+| Ctrl＋Alt+H      | 查看方法调用层次                     | Navigate \| Call Hierarchy  |
+| Ctrl+shift+Alt+U | 查看maven依赖类图                    | 右键-Diagrams-show Diagrams |
+| Ctrl+F12         | 查看file，method结构图、类继承机构图 |                             |
+|                  |                                      |                             |
 
 
 
@@ -176,7 +177,7 @@ https://www.cnblogs.com/caolei1108/p/6214091.html
 
 
 
-##Idea 实践
+## Idea 实践
 
 ### 1.调试 Mute Breakpoints
 
