@@ -111,11 +111,11 @@ Hello wolld！		# 冲突
 
 ### 9.git config
 
-| 命令                | 文件           | 备注                       |
-| ------------------- | -------------- | -------------------------- |
-| git config --system | /etc/gitconfig |                            |
+| 命令                  | 文件             | 备注                       |
+| ------------------- | -------------- | ------------------------ |
+| git config --system | /etc/gitconfig |                          |
 | git config --global | ~/.gitconfig   | 如：C:\Users\wll\gitconfig |
-| git config          | .git/config    |                            |
+| git config          | .git/config    |                          |
 
 修改git config配置文件 
 https://blog.csdn.net/themagickeyjianan/article/details/79683980
@@ -183,11 +183,11 @@ git reset 是把HEAD向后移动了一下，而git revert是HEAD继续前进
 
 ### 4.git add -A和git add .
 
-| 命令       | 作用                                                         | 备注                   |
-| ---------- | ------------------------------------------------------------ | ---------------------- |
-| git add -A | 提交所有变化                                                 | git add --all的缩写    |
+| 命令         | 作用                                       | 备注                  |
+| ---------- | ---------------------------------------- | ------------------- |
+| git add -A | 提交所有变化                                   | git add --all的缩写    |
 | git add -u | 提交被修改(modified)和被删除(deleted)文件，不包括新文件(new) | git add --update的缩写 |
-| git add .  | 提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件 |                        |
+| git add .  | 提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件 |                     |
 
 
 
@@ -221,7 +221,6 @@ git reset 是把HEAD向后移动了一下，而git revert是HEAD继续前进
 autocrlf = false   
 
 safecrlf = false
-
 ```
 
 附：CR(Carriage Return) 回车  LF(Line Feed) 换行
