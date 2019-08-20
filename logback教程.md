@@ -132,4 +132,3 @@ logback当前分成三个模块：logback-core,logback-classic和logback-access�
 private Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 ```
 
- 。
