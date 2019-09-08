@@ -75,6 +75,8 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 | Alt+F3           | 逐个往下查找相同文本，并高亮显示  |      |
 | Shift, Shift     | Search Everywhere |      |
 | Ctrl+Shift+Alt+N | 搜索类名              |      |
+| ctrl + alt +B    | 查找接口的实现类          |      |
+|                  |                   |      |
 
 
 
