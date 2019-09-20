@@ -162,7 +162,7 @@ Linux中的打包文件一般是以.tar结尾的，压缩的命令一般是以.g
 
 
 
-###4.权限命令
+### 4.权限命令
 
 权限是Linux中的重要概念，每个文件/目录等都具有权限，通过ls -l命令我们可以	查看某个目录下的文件或目录的权限
 示例：在随意某个目录下ls -l
@@ -319,7 +319,21 @@ https://www.cnblogs.com/sien6/p/8056315.html
 | ESC \| : \| q!                           | 不保存退出 |                  |
 | ESC \| : \| !                            | 强制退出  |                  |
 
-### 4.ps -ef | grep nginx
+### 4.查看文件
+
+
+
+| 命令    | 作用           | 备注                       |
+| ------- | -------------- | -------------------------- |
+| ls -Sl  | 按文件大小倒序 |                            |
+| ls -Slr | 按文件大小倒序 | -h，表示"--human-readable" |
+| ls -lt  | 按时间倒序     |                            |
+| ls -lrt | 按时间正序     |                            |
+| ll      | 按文件名正序   |                            |
+
+> [linux下ls -l命令（即ll命令）查看文件的显示结果分析](https://blog.csdn.net/LEON1741/article/details/82386520)
+
+### 5.ps -ef | grep nginx
 
 解释：ps -ef的意思是以长格式显示所有进程；“|”是管道，意思是前面ps的输出做为后面的输入，即—grep命令所检索的文本源；grep tomcat是在所有进程里查找与字符nginx有关的进程，并显示出来。
 <font face="微软雅黑" color="red" size="5">ps</font>命令：某个进程显示出来。ps 全称是 Process Status 。
@@ -350,14 +364,14 @@ grep [选项]
 
 ![查询结果(网络配图)](https://github.com/lennywang/Img/raw/master/psparameterexplain.png)
 
-#### 4.1 ps
+#### 5.1 ps
 
 在Linux中查看所有正在运行的进程
 https://www.cnblogs.com/zwgblog/p/5971455.html
 
-#### 4.2 grep
+#### 5.2 grep
 
-##### grep高亮显示匹配项
+grep高亮显示匹配项
 
 设置步骤：
 
@@ -415,17 +429,17 @@ https://blog.csdn.net/qq_41201816/article/details/80767308
 | Alt+Fn(n=1,2,3,4,5,6)     | Alt+Fn(n=1,2,3,4,5,6) |      |
 | startx                    | 控制台到图形界面              |      |
 
-### 5.centos 中搭建开发环境
+### 6.centos 中搭建开发环境
 
-#### 5.1安装linux运行容器
+#### 6.1安装linux运行容器
 
 > [VMware下载与安装](https://www.baidu.com/s?wd=VMware&tn=24004469_oem_dg&rsv_dl=gh_pl_sl_csd)
 
-#### 5.2 安装linux
+#### 6.2 安装linux
 
 >  [Linux环境搭建-在虚拟机中安装Centos7.0](https://www.cnblogs.com/lynn-li/p/6077944.html)
 
-#### 5.3 联网
+#### 6.3 联网
 
 linux设置静态ip
 https://jingyan.baidu.com/album/39810a23baf9dab637fda64f.html?picindex=2
@@ -464,25 +478,25 @@ https://zhidao.baidu.com/question/498565331.html
 LINUX下网卡激活失败时解决方法（已实践）
 https://blog.csdn.net/grace_yoyo/article/details/46501685
 
-#### 5.4 安装JDK
+#### 6.4 安装JDK
 
 Linux安装JDK完整步骤
 https://www.cnblogs.com/Dylansuns/p/6974272.html
 
-#### 5.5 安装Tomcat
+#### 6.5 安装Tomcat
 
 [Linux下安装Tomcat服务器和部署Web应用](https://www.cnblogs.com/xdp-gacl/p/4097608.html)
 
-#### 5.6 安装Nginx
+#### 6.6 安装Nginx
 
 [CentOS 7 下安装Nginx](https://www.cnblogs.com/zhoading/p/8514050.html)
 
-#### 5.7 安装XShell
+#### 6.7 安装XShell
 
 利用Xshell5从本机上向Linux（虚拟机中）上传文件
 https://www.cnblogs.com/xdjun/p/7115303.html
 
-#### 5.8 问题
+#### 6.8 问题
 
 解决VMware主窗口中的虚拟机窗口太小的方法
 https://blog.csdn.net/u014337397/article/details/80753056
@@ -499,13 +513,13 @@ https://blog.csdn.net/liguangxianbin/article/details/80818231
 CentOS7设置终端快捷键一键打开终端
 https://jingyan.baidu.com/article/f7ff0bfc1e2a322e26bb13d5.html
 
-### 6.rpm -qa | grep java
+### 7.rpm -qa | grep java
 
 RPM：(RedHat Package Manger RedHat 软件管理工具)：是一种用于打包及安装工具
 qa：q代表query，a代表all
 grep(global search rgular expression(RE) and print out the line):是一种强大的文本搜索工具
 
-### 7.find  /etc -name  *init 
+### 8.find  /etc -name  *init 
 
 模糊搜索，etc目录以 init 结尾的文件或目录名
 
@@ -513,14 +527,14 @@ find . -name "mail*" 				在当前目录下查找mail开头文件
 
 >  参考：[Linux常用命令之文件搜索命令](https://www.cnblogs.com/ysocean/p/7712417.html)
 
-### 8.常用目录
+### 9.常用目录
 
 | 目录地址                           | 目录说明   | 备注   |
 | ------------------------------ | ------ | ---- |
 | /etc/sysconfig/network-scripts | 网卡配置目录 |      |
 | /usr/local                     | 软件安装目录 |      |
 
-### 9. 其他
+### 10. 其他
 
 chmod 775 文件名
 
@@ -534,3 +548,21 @@ source /etc/profile
 
 Linux下查找进程id并强制停止进程的脚本
 https://www.cnblogs.com/zeng1994/p/13a2c5a28e55dd3abc2c75a4fb80371a.html
+
+指定日期显示格式
+
+临时更改显示格式
+
+```
+export TIME_STYLE='+%Y-%m-%d %H:%M:%S' 
+```
+
+永久改变日期显示格式
+
+```
+vi /etc/profile
+export TIME_STYLE='+%Y-%m-%d %H:%M:%S'
+```
+
+LINUX 设置LL的时候显示日期的格式
+https://www.jianshu.com/p/ba927b40a3fd
