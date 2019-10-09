@@ -56,7 +56,25 @@ mysql -h 主机地址 -u 用户名 -p 用户密码（注:u与root可以不用加
 mysql -h 10.96.238.10 -P 10349 -u user_kmtest -p odgbcalehdefplbo
 ```
 
+**查看MySQL配置**
 
+```
+select @@basedir;查看MySQL的安装目录，在mysql下执行
+select @@datadir;查看MySQL的数据存放目录，在mysql下执行
+mysql --help | grep 'my.cnf' linux 查看配置文件顺序
+mysql --help | findstr my.cnf windows 查看配置文件顺序
+```
+
+**MySQL启动、停止、重启**
+
+| 命令                  | 含义                        | 备注               |
+| --------------------- | --------------------------- | ------------------ |
+| service mysql start   | 启动                        |                    |
+| service mysql stop    | 停止                        |                    |
+| service mysql restart | 重启                        |                    |
+| chkconfig mysql on    | 设置开机时自动启动mysql服务 |                    |
+| chkconfig mysql off   | 关闭开机时自启              |                    |
+| ntsysv                | 查看开机自启动服务          | yum install ntsysv |
 
 
 

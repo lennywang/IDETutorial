@@ -15,7 +15,6 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 
 
-
 **快捷键**
 
 | 快捷键            | 功能              | 说明                                       |
@@ -33,6 +32,12 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 | Ctrl+Shift+U   | 大小写切换           |                                          |
 | Ctrl+Shift+↑/↓ | 上下移动代码          |                                          |
 | Ctrl+D         | 复制当前行           |                                          |
+
+
+
+
+
+
 
 **调试**
 
@@ -82,12 +87,16 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 **编码**
 
-| 快捷键        | 功能             | 说明   |
-| ---------- | -------------- | ---- |
-| Alt+Insert | 生成set,get方法    |      |
-| Ctrl+D     | 复制             |      |
+| 快捷键     | 功能                   | 说明 |
+| ---------- | ---------------------- | ---- |
+| Alt+Insert | 生成set,get方法        |      |
+| Ctrl+D     | 复制                   |      |
 | Ctrl+Alt+O | 删除类中无用的import包 |      |
-| Ctrl+I     | 实现接口           |      |
+| Ctrl+I     | 实现接口               |      |
+| Ctrl + O   | 重写父类方法           |      |
+|            |                        |      |
+|            |                        |      |
+|            |                        |      |
 
 
 

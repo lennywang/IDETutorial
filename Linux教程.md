@@ -323,15 +323,25 @@ https://www.cnblogs.com/sien6/p/8056315.html
 
 
 
-| 命令    | 作用           | 备注                       |
-| ------- | -------------- | -------------------------- |
-| ls -Sl  | 按文件大小倒序 |                            |
-| ls -Slr | 按文件大小倒序 | -h，表示"--human-readable" |
-| ls -lt  | 按时间倒序     |                            |
-| ls -lrt | 按时间正序     |                            |
-| ll      | 按文件名正序   |                            |
+| 命令                       | 作用                     | 备注                        |
+| -------------------------- | ------------------------ | --------------------------- |
+| ls -Sl                     | 按文件大小倒序           |                             |
+| ls -Slr                    | 按文件大小倒序           | -h，表示"--human-readable"  |
+| ls -lt                     | 按时间倒序               |                             |
+| ls -lrt                    | 按时间正序               |                             |
+| ll                         | 按文件名正序             |                             |
+| ll \| grep '^-'  \| wc -l  | 统计当前目录下文件总数   | wc：Word Count  -l 统计行数 |
+| \|\| \| grep '^d' \| wc -l | 统计当前目录下文件夹总数 |                             |
+|                            |                          |                             |
+|                            |                          |                             |
+
+
 
 > [linux下ls -l命令（即ll命令）查看文件的显示结果分析](https://blog.csdn.net/LEON1741/article/details/82386520)
+>
+> [linux中wc命令用法](https://www.cnblogs.com/newcaoguo/p/5896491.html)
+
+
 
 ### 5.ps -ef | grep nginx
 
