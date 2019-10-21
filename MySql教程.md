@@ -67,14 +67,14 @@ mysql --help | findstr my.cnf windows 查看配置文件顺序
 
 **MySQL启动、停止、重启**
 
-| 命令                  | 含义                        | 备注               |
-| --------------------- | --------------------------- | ------------------ |
-| service mysql start   | 启动                        |                    |
-| service mysql stop    | 停止                        |                    |
-| service mysql restart | 重启                        |                    |
+| 命令                    | 含义               | 备注                 |
+| --------------------- | ---------------- | ------------------ |
+| service mysql start   | 启动               |                    |
+| service mysql stop    | 停止               |                    |
+| service mysql restart | 重启               |                    |
 | chkconfig mysql on    | 设置开机时自动启动mysql服务 |                    |
-| chkconfig mysql off   | 关闭开机时自启              |                    |
-| ntsysv                | 查看开机自启动服务          | yum install ntsysv |
+| chkconfig mysql off   | 关闭开机时自启          |                    |
+| ntsysv                | 查看开机自启动服务        | yum install ntsysv |
 
 
 
@@ -93,6 +93,18 @@ datetime	占用8个字节		与时区无关		datetime类型适合用来记录数�
 
 timestmp	占用4个字节		时区转化 		
 ```
+
+time
+
+```sql
+CREATE TABLE `linkinframe`.`test` (
+  `id` INT NOT NULL,
+  `a` TIME NULL,
+PRIMARY KEY (`id`));
+INSERT INTO `linkinframe`.`test` (`id`, `a`) VALUES ('3', '50:05');
+```
+
+
 
 2、数字
 
@@ -129,6 +141,14 @@ BIGINT         8 字节        (-2^63，2^63-1) 		   (0，2^63-1)    极大整�
 ```mysql
 ALTER TABLE table_name ENGINE = MyISAM;
 ```
+
+修改表注释
+
+```sql
+ALTER TABLE table_name COMMENT='最近游戏列表';
+```
+
+[MySQL 建表时给表和字段加上注释](https://blog.csdn.net/ssssSFN/article/details/88318519)
 
 ## 实践
 
@@ -205,6 +225,12 @@ alter table tablename modify (fieldname varchar2(30))
 ```
 
 > [oracle 如何修改 字段的长度](https://www.csdn.net/gather_2f/MtTaUgxsODUzNC1ibG9n.html)
+
+两个日期相差天数
+
+```sql
+select TO_NUMBER(TO_DATE('2018-6-5','yyyy-mm-dd hh24:mi:ss')- TO_DATE('2018-5-31','yyyy-mm-dd hh24:mi:ss')) AS 相差天数 from dual;
+```
 
 
 

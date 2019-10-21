@@ -2,20 +2,20 @@ Myeclipse 常用快捷键
 
 ## 快捷键
 
-| 快捷键           | 功能                                 | 说明                     |
-| ---------------- | :----------------------------------- | :----------------------- |
-| Ctrl+Alt+H       | 选中方法名，查看所有调用此方法的位置 | Call Hierarchy(调用层级) |
-| ctrl+A->ctrl+i   | 对齐代码                             |                          |
-| syso -> alt+/    | System.out.println();                |                          |
-| syst -> alt+/    | System.out.println("当前方法名");    |                          |
-| F4               | 查看类的结构图                       |                          |
-| Ctrl+D           | 删除光标所在行                       |                          |
-| Ctrl+shift+r     | 查找文件                             |                          |
-| Alt+Enter        | 自动导入包                           |                          |
-| alt + shift + A  | 选择列                               |                          |
-| ctrl + alt + ↑/↓ | 复制的行插入在当前行上/下方          |                          |
-| alt + ↑/↓        | 快速向上/下移动                      |                          |
-| Alt+Shift+L      | 生成返回值                           |                          |
+| 快捷键              | 功能                           | 说明                   |
+| ---------------- | :--------------------------- | :------------------- |
+| Ctrl+Alt+H       | 选中方法名，查看所有调用此方法的位置           | Call Hierarchy(调用层级) |
+| ctrl+A->ctrl+i   | 对齐代码                         |                      |
+| syso -> alt+/    | System.out.println();        |                      |
+| syst -> alt+/    | System.out.println("当前方法名"); |                      |
+| F4               | 查看类的结构图                      |                      |
+| Ctrl+D           | 删除光标所在行                      |                      |
+| Ctrl+shift+r     | 查找文件                         |                      |
+| Alt+Enter        | 自动导入包                        |                      |
+| alt + shift + A  | 选择列                          |                      |
+| ctrl + alt + ↑/↓ | 复制的行插入在当前行上/下方               |                      |
+| alt + ↑/↓        | 快速向上/下移动                     |                      |
+| Alt+Shift+L      | 生成返回值                        |                      |
 
 
 
@@ -45,3 +45,7 @@ http://www.cnblogs.com/liuyp-ken/p/5693093.html
 
 7.myeclipse的debug调试，指定循环次数进入断点调试或者特定condition进入断点调试
 https://blog.csdn.net/xldmx/article/details/81324721
+
+8.myeclipse调试时变量过长无法完全显示解决办法
+https://blog.csdn.net/enjoy_waste_time/article/details/82664354
+
