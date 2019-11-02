@@ -62,6 +62,13 @@ git push -u origin master
 git branch –-set-upstream feature_v4-0_wll_1 origin/feature_v4-0_wanglulu_v_1
 ```
 
+3.创建本地分支并推送至远程仓库
+
+```
+git checkout -b feature_v1_wanglulu_1
+git push --set-upstream origin feature_v1_wanglulu_1
+```
+
 ### **3. 提交并创建CR**
 
     git push origin feature_v4-0_wanglulu_v_1:refs/for/feature_v4-0_wanglulu_v_1
@@ -95,6 +102,8 @@ git stash pop #重新应用储藏
 ```
 
 > 参考：[git-stash用法小结](https://www.cnblogs.com/tocy/p/git-stash-reference.html)
+>
+> [Your local changes to the following files would be overwritten by merge](https://www.jianshu.com/p/920ad324fe64)
 
 ### 8.git 解决冲突
 
