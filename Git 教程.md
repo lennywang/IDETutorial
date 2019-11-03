@@ -127,17 +127,18 @@ Hello wolld！		# 冲突
 | git config          | .git/config    |                          |
 
 修改git config配置文件 
-https://blog.csdn.net/themagickeyjianan/article/details/79683980
+https://blog.csdn.net/themagickeyjianan/article/details/79683980  
+
 git 配置文件位置；git配置文件设置
-https://blog.csdn.net/yuxin6866/article/details/74835735
+https://blog.csdn.net/yuxin6866/article/details/74835735  
 git config 查看配置信息
-https://blog.csdn.net/qwaszx523/article/details/79072276
+https://blog.csdn.net/qwaszx523/article/details/79072276  
 查看git安装目录
-https://www.cnblogs.com/qianqiu-1026/p/8556680.html
+https://www.cnblogs.com/qianqiu-1026/p/8556680.html  
 The authenticity of host 'github.com (13.229.188.59)' can't be established.
-https://blog.csdn.net/qq_34446663/article/details/81106018
+https://blog.csdn.net/qq_34446663/article/details/81106018  
 自定义 Git - 配置 Git
-https://git-scm.com/book/zh/v1/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-%E9%85%8D%E7%BD%AE-Git
+https://git-scm.com/book/zh/v1/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-%E9%85%8D%E7%BD%AE-Git  
 git 推送出现 "fatal: The remote end hung up unexpectedly" 解决方案
 https://blog.csdn.net/zcmain/article/details/76855595
 
