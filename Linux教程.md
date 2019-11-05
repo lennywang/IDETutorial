@@ -330,6 +330,22 @@ https://www.cnblogs.com/sien6/p/8056315.html
 
 ### 4.查看文件
 
+查看文件指定行信息 (前n行，后n行)
+
+* 查看文件所有内容（如果太长一般只显示后面一部分）  cat filename.txt
+
+* 查看文件前100行  cat filename.txt | head -n 100
+
+* 查看文件后50行   cat filename.txt | tail -n 50
+
+* 从1000行开始显示，也就是显示1000行以后的   tail -n +1000
+
+* 显示1000行到3000行内容   cat filename.txt |head -n 3000 | tail -n +1000
+
+* 从第3000行开始，显示1000行，也就是3000~3999   cat filename.txt | tail -n +3000 | head -n 1000
+
+* 直接用sed命令：  sed -n '5,10p' filename.txt   只查看文件的第5行到第10行
+
 
 
 | 命令                         | 作用           | 备注                      |
