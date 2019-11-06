@@ -163,7 +163,16 @@ https://blog.csdn.net/zhijiesmile/article/details/74075267
 mysql 实现merge into
 https://blog.csdn.net/qq_22211217/article/details/81286311
 
+### 更新字符集
 
+```sql
+-- 显示表的字符集
+SHOW CREATE TABLE tablename
+-- 修改表的字符集
+alter table tablename character  set GBK;
+-- 修改字段字符集
+ALTER TABLE tablename CHANGE c1 c1 VARCHAR(50) CHARACTER SET utf8; 
+```
 
 # Oracle
 
