@@ -1,3 +1,7 @@
+## Git 教程
+
+> [Git - 廖雪峰](https://www.liaoxuefeng.com/wiki/896043488029600/896067008724000)
+
 ## Git 基础
 
 **git add 文件名**
@@ -69,7 +73,13 @@ git checkout -b feature_v1_wanglulu_1
 git push --set-upstream origin feature_v1_wanglulu_1
 ```
 
-### **3. 提交并创建CR**
+删除分支
+
+```
+git branch -d feature_v1_wanglulu_1
+```
+
+### 3. 提交并创建CR
 
     git push origin feature_v4-0_wanglulu_v_1:refs/for/feature_v4-0_wanglulu_v_1
 
