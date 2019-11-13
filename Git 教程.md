@@ -87,12 +87,16 @@ git branch -d feature_v1_wanglulu_1
 
 ### **4. 使用git push**
 
-    1、git push -u origin master#如果当前分支和多个主机之间存在追踪关系，使用这个命令来设置默认的主机
-    2、git push
+```shell
+1、git push -u origin master #如果当前分支和多个主机之间存在追踪关系，使用这个命令来设置默认的主机
+2、git push
+```
 
 ### **5. git回滚到指定版本**
 
-    git reset --hard 版本号                                       # git log -3 看3次提交
+```shell
+git reset --hard 版本号                                       # git log -3 看3次提交
+```
 
 > [Git恢复之前版本的两种方法reset、revert](https://blog.csdn.net/yxlshk/article/details/79944535)
 
