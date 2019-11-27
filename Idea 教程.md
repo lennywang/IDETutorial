@@ -128,7 +128,7 @@ File | Settings | 搜索keymap | 搜索Split Vertically （水平分屏）或 Sp
 
 > 参考：[idea分屏](https://blog.csdn.net/sinat_32034679/article/details/72621671)
 
-**Console Font **
+**Console Font**
 
 Settings —>Console Font
 
@@ -143,6 +143,18 @@ View → Enter Distraction Free Mode
 **关闭重复代码检查**
 
 Settings→Inspections→General→Duplicated Code
+
+**Eclipse 切换package 与project 视图**
+
+Window→Show View→Others→Java→Package Explorer
+
+[https://blog.csdn.net/qq_20936333/article/details/81255010](https://blog.csdn.net/qq_20936333/article/details/81255010)
+
+
+
+
+
+
 
 
 
