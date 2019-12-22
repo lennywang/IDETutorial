@@ -241,5 +241,18 @@ alter table tablename modify (fieldname varchar2(30))
 select TO_NUMBER(TO_DATE('2018-6-5','yyyy-mm-dd hh24:mi:ss')- TO_DATE('2018-5-31','yyyy-mm-dd hh24:mi:ss')) AS 相差天数 from dual;
 ```
 
+**wm_concat**
+
+```sql
+SELECT T1.LOGIN_NAME 账号, T1.USER_NAME 姓名, wm_concat(T2.ROLE_NAME) 权限
+  FROM sys_user_role T
+  LEFT JOIN v_sys_user T1
+    ON T.USER_ID = T1.id
+  LEFT JOIN SYS_ROLE T2
+    ON T.ROLE_ID = T2.ID
+ where T1.LOGIN_NAME IS NOT NULL
+ group by T1.LOGIN_NAME, T1.USER_NAME
+```
+
 
 
