@@ -32,6 +32,9 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 | Ctrl+Shift+U   | 大小写切换           |                                          |
 | Ctrl+Shift+↑/↓ | 上下移动代码          |                                          |
 | Ctrl+D         | 复制当前行           |                                          |
+| ALT+INSERT     | 实现接口方法          |                                          |
+|                |                 |                                          |
+|                |                 |                                          |
 
 
 

@@ -613,3 +613,21 @@ export TIME_STYLE='+%Y-%m-%d %H:%M:%S'
 
 LINUX 设置LL的时候显示日期的格式
 https://www.jianshu.com/p/ba927b40a3fd
+
+lsof
+
+```
+显示特定端口并查找连接/进程
+lsof -i:port_number
+```
+
+> [linux怎样使用lsof查看被占用的文件](https://jingyan.baidu.com/album/6b182309fdd969ba59e1597e.html?picindex=2)
+
+netstat
+
+```
+列出所有监听和非监听状态的连接
+netstat -a|grep 6379
+```
+
+> [netstat](https://www.cnblogs.com/kcxg/p/11242567.html)
