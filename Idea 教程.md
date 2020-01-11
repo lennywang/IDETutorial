@@ -153,6 +153,9 @@ Window→Show View→Others→Java→Package Explorer
 
 [https://blog.csdn.net/qq_20936333/article/details/81255010](https://blog.csdn.net/qq_20936333/article/details/81255010)
 
+查看类的结构图
+https://blog.csdn.net/yueyang6019bo123/article/details/102678954
+
 
 
 

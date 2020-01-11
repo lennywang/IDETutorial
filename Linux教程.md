@@ -581,7 +581,30 @@ find . -name "mail*" 				在当前目录下查找mail开头文件
 | /etc/sysconfig/network-scripts | 网卡配置目录 |      |
 | /usr/local                     | 软件安装目录 |      |
 
-### 10. 其他
+### 10.crontab
+
+查看crontab服务状态：service crond status
+手动启动crontab服务：service crond start
+基础命令：
+-e 表示编辑当前的crontab
+-l  表示列表显示当前的crontab任务
+-r  表示删除当前用户的crontab
+-i  表示删除crontab时给予提示信息
+使用：crontab -l  * * * * * /usr/local/davecron.sh
+参考：https://blog.csdn.net/qq_37050329/article/details/89093960
+
+### 11.Linux统计文件夹中文件个数以及目录个数
+
+https://blog.csdn.net/sganchang/article/details/91432435
+ll | wc -l 
+wc [-lwm] 参数:-l 仅列出行数;
+
+### 12.lsof -i:port作用
+
+lsof -i :22 知道22端口被哪个进程占用
+netstat -lnp|grep 7000 查看7000端口被哪个进程占用
+
+### 13. 其他
 
 chmod 775 文件名
 
