@@ -173,7 +173,13 @@ https://blog.csdn.net/zcmain/article/details/76855595
 
 > 参考：[IDEA配置GIT](https://www.cnblogs.com/hkgov/p/7694101.html)
 
+### 12 查看本地添加了哪些远程地址
 
+```shell
+git remote -v
+#删除本地指定的远程地址
+git remote remove origin
+```
 
 
 
