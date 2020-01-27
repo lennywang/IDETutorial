@@ -152,7 +152,7 @@ ALTER TABLE table_name COMMENT='最近游戏列表';
 
 ## 实践
 
-### 更新数据
+### 1、更新数据
 
 MySQL的ON DUPLICATE KEY UPDATE用法
 https://blog.csdn.net/plg17/article/details/78583692
@@ -163,16 +163,50 @@ https://blog.csdn.net/zhijiesmile/article/details/74075267
 mysql 实现merge into
 https://blog.csdn.net/qq_22211217/article/details/81286311
 
-### 更新字符集
+### 2、更新字符集
 
 ```sql
 -- 显示表的字符集
 SHOW CREATE TABLE tablename
+-- 修改库的字符集编码
+ALTER DATABASE dbname DEFAULT CHARACTER SET utf8;
 -- 修改表的字符集
 alter table tablename character  set GBK;
 -- 修改字段字符集
 ALTER TABLE tablename CHANGE c1 c1 VARCHAR(50) CHARACTER SET utf8; 
 ```
+
+### 3、查看mysql版本
+
+```
+select version();
+```
+
+### 4、查看当前数据库
+
+```
+select database();
+```
+
+### 5、优化
+
+mysql 索引的建立原则
+https://blog.csdn.net/eaphyy/article/details/69259079
+
+浅谈索引对数据库性能的影响
+http://www.51testing.com/html/66/206966-814217.html
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Oracle
 
