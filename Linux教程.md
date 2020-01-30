@@ -389,9 +389,14 @@ ps[选项]
 
 grep [选项]
 
-| 选项   | 含义   | 备注   |
-| ---- | ---- | ---- |
-| -v   | 反转查找 |      |
+| 选项   | 含义         | 备注   |
+| ---- | ---------- | ---- |
+| -v   | 反转查找       |      |
+| -n   | 对提取的内容显示行号 |      |
+| -w   | 精确匹配       |      |
+| -i   | 忽略大小写      |      |
+| ^    | 匹配开头行首     |      |
+| -E   | 正则匹配       |      |
 
 
 
@@ -603,6 +608,15 @@ wc [-lwm] 参数:-l 仅列出行数;
 
 lsof -i :22 知道22端口被哪个进程占用
 netstat -lnp|grep 7000 查看7000端口被哪个进程占用
+lsof -p 10075 查看指定进程ID已打开的内容
+
+> [Linux 命令神器：lsof](https://www.jianshu.com/p/a3aa6b01b2e1)
+
+### 13. sudo su -
+
+sudo su -：切换到root登录，使用用户密码。
+
+[su;su -;sudo;sudo -i;sudo su;sudo su - 之间的区别](https://www.cnblogs.com/GaoYuan_cnblogs/p/9986036.html)
 
 
 
