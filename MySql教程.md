@@ -49,6 +49,68 @@ limit 0,20
 
 ## 常用操作
 
+**表结构维护与删除**
+
+- 修改表名
+
+  ```mysql
+  rename table 旧表名 to 新表名;
+  rename table student to user;
+  ```
+
+
+- 添加列
+
+  ```mysql
+  alter table 表名 add 列名 类型;
+  alter table user add addr varchar(50);
+  ```
+
+
+- 修改列类型
+
+  ```mysql
+  alter table 表名 modify 列名 新类型;
+  alter table user modify servnumber varchar(20);
+  ```
+
+
+- 修改列名
+
+  ```mysql
+  alter table 表名 change 旧列名 新列名 类型;
+  alter table user change servnumber telephone varchar(20);
+  ```
+
+
+- 删除列
+
+  ```mysql
+  alter table 表名 drop 列名;
+  alter table user drop famliy;
+  ```
+
+
+- 修改字符集
+
+  ```mysql
+  alter table 表名 character set 字符集;
+  alter table user character  set GBK;
+  ```
+
+
+- 删除表
+
+  ```mysql
+  drop table 表名；
+  drop table user;
+  -- 看表是否存在，若存在则删除表：
+  drop table if exists 表名;
+  drop table  if exists teacher;
+  ```
+
+  ​
+
 **cmd连接mysql连接**
 
 ```
@@ -152,7 +214,24 @@ ALTER TABLE table_name COMMENT='最近游戏列表';
 
 ## 实践
 
-### 1、更新数据
+### 1、安装MySQL
+
+> [【MySQL】在Windows 10上安装MySQL 5.7](https://www.jianshu.com/p/bc3a060923f6)
+
+问题：
+
+如何彻底的卸载和删除Windows service
+https://www.cnblogs.com/Wolfmanlq/p/5872043.html
+
+安装mysql Install/Remove of the Service Denied!错误的解决办法
+https://blog.csdn.net/lxpbs8851/article/details/14161935/
+注：此处注意用管理员身份打开cmd窗口
+
+MySQL出现：ERROR 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)问题解决
+https://blog.csdn.net/qq_38826019/article/details/88687664
+注：此处在bin目录执行`mysqld.exe -- install` 而不是 `mysql.exe -- install`
+
+### 2、更新数据
 
 MySQL的ON DUPLICATE KEY UPDATE用法
 https://blog.csdn.net/plg17/article/details/78583692
@@ -163,7 +242,7 @@ https://blog.csdn.net/zhijiesmile/article/details/74075267
 mysql 实现merge into
 https://blog.csdn.net/qq_22211217/article/details/81286311
 
-### 2、更新字符集
+### 3、更新字符集
 
 ```sql
 -- 显示表的字符集
@@ -176,19 +255,19 @@ alter table tablename character  set GBK;
 ALTER TABLE tablename CHANGE c1 c1 VARCHAR(50) CHARACTER SET utf8; 
 ```
 
-### 3、查看mysql版本
+### 4、查看mysql版本
 
 ```
 select version();
 ```
 
-### 4、查看当前数据库
+### 5、查看当前数据库
 
 ```
 select database();
 ```
 
-### 5、优化
+### 6、优化
 
 mysql 索引的建立原则
 https://blog.csdn.net/eaphyy/article/details/69259079
@@ -196,7 +275,10 @@ https://blog.csdn.net/eaphyy/article/details/69259079
 浅谈索引对数据库性能的影响
 http://www.51testing.com/html/66/206966-814217.html
 
+## 常见问题
 
+[Err] 1055 - Expression #1 of ORDER BY clause is not in GROUP BY clause and contains nonaggregated column 
+https://blog.csdn.net/u012187452/article/details/82120345
 
 
 
@@ -289,4 +371,46 @@ SELECT T1.LOGIN_NAME 账号, T1.USER_NAME 姓名, wm_concat(T2.ROLE_NAME) 权限
 ```
 
 
+
+## 常用函数
+
+**ROW_NUMBER()**
+
+```sql
+语法：ROW_NUMBER() OVER(ORDER BY COLUMN)
+
+select deptid,salary, row_number() OVER (PARTITION BY deptid ORDER BY salary) from employee
+```
+
+> [Oracle之ROW_NUMBER() OVER函数](https://blog.csdn.net/ericsson_liu/article/details/81391322)
+
+**substr()**
+
+```mysql
+substr函数格式
+　　格式1： substr(string string, int a, int b);
+　　格式2：substr(string string, int a) ;
+
+格式1
+1、string 需要截取的字符串 
+2、a 截取字符串的开始位置（注：当a等于0或1时，都是从第一位开始截取）
+3、b 要截取的字符串的长度
+
+格式2
+1、string 需要截取的字符串
+2、a 可以理解为从第a个字符开始截取后面所有的字符串。
+
+substr('HelloWorld',0,3); //返回结果：Hel，截取从“H”开始3个字符 
+substr('HelloWorld',0);  //返回结果：HelloWorld，截取所有字符
+```
+
+> [Oracle中的substr()函数](https://blog.csdn.net/yimixgg/article/details/89322437)
+
+**trim()**
+
+```mysql
+select trim(leading 'x' from 'xdylan') "test_trim" from dual; -- dylan
+```
+
+> [oracle 之 trim函数](https://blog.csdn.net/indexman/article/details/7748766)
 

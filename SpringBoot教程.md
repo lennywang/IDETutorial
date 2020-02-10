@@ -435,11 +435,14 @@ mvn package -Dmaven.test.skip=true
 2、jar启动
 
 ```shell
-//-jar启动jar包时携带参数
+# -jar启动jar包时携带参数
 java -Dspring.profiles.active=dev -jar ch6_springbootcore-0.0.1-SNAPSHOT.jar
 
-// -jar 启动修改端口
+# -jar 启动修改端口
 java -jar data-structure-0.0.1-SNAPSHOT.jar --server.port=8081
+
+# 以debug 模式启动
+java -jar happyliving-0.0.1-SNAPSHOT.jar --debug
 ```
 
 

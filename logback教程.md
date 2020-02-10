@@ -132,3 +132,29 @@ logback当前分成三个模块：logback-core,logback-classic和logback-access�
 private Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 ```
 
+
+
+# Log4net教程
+
+下面的例子以时间周期变换日志文件名，每分钟都改变日志的文件名，日志文件名为logfileyyyyMMdd-HHmm,这里补充说明下，如果要在这个文件名后面加上.log后缀，必须使用转义字符，比如<datePattern value="yyyyMMdd-HHmm&quot;.log&quot;" />
+
+```xml
+<appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+        <!--日志文件名开头-->
+    <file value="logfile" />
+    <!--是否追加到文件-->
+    <appendToFile value="true" />
+    <!--变换的形式为日期-->
+    <rollingStyle value="Date" />
+    <!--日期的格式-->
+    <datePattern value="yyyyMMdd-HHmm" />
+    <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+    </layout>
+</appender>
+```
+
+
+
+
+

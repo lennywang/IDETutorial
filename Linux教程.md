@@ -1,4 +1,6 @@
-![Linux目录结构](https://github.com/lennywang/Img/raw/master/linux.png)1. 目录操作
+## 常用操作
+
+### 1. 目录操作
 
 #### 1.1 目录结构
 
@@ -324,9 +326,14 @@ https://www.cnblogs.com/sien6/p/8056315.html
 |                                          |        |                  |
 |                                          |        |                  |
 
-[linux获取日志指定行数范围内的内容](https://www.cnblogs.com/xxiong1031/p/6884362.html)
+Linux获取日志指定行数范围内的内容
+https://www.cnblogs.com/xxiong1031/p/6884362.html
 
+Linux---vi/vim复制剪切粘贴以及常用命令小结
+https://blog.csdn.net/netdxy/article/details/50553543
 
+linux 下 vi 复制一行粘贴删除一行数据
+https://blog.csdn.net/xieganyu3460/article/details/82229091
 
 ### 4.查看文件
 
@@ -404,12 +411,12 @@ grep [选项]
 
 ![查询结果(网络配图)](https://github.com/lennywang/Img/raw/master/psparameterexplain.png)
 
-#### 5.1 ps
+5.1 ps
 
 在Linux中查看所有正在运行的进程
 https://www.cnblogs.com/zwgblog/p/5971455.html
 
-#### 5.2 grep
+5.2 grep
 
 grep应用场景：通常对数据进行 行的提取
 语法：grep [选项]...[内容]...[file]
@@ -483,15 +490,15 @@ https://blog.csdn.net/qq_41201816/article/details/80767308
 
 ### 6.centos 中搭建开发环境
 
-#### 6.1安装linux运行容器
+6.1安装linux运行容器
 
 > [VMware下载与安装](https://www.baidu.com/s?wd=VMware&tn=24004469_oem_dg&rsv_dl=gh_pl_sl_csd)
 
-#### 6.2 安装linux
+6.2 安装linux
 
 >  [Linux环境搭建-在虚拟机中安装Centos7.0](https://www.cnblogs.com/lynn-li/p/6077944.html)
 
-#### 6.3 联网
+6.3 联网
 
 linux设置静态ip
 https://jingyan.baidu.com/album/39810a23baf9dab637fda64f.html?picindex=2
@@ -530,25 +537,25 @@ https://zhidao.baidu.com/question/498565331.html
 LINUX下网卡激活失败时解决方法（已实践）
 https://blog.csdn.net/grace_yoyo/article/details/46501685
 
-#### 6.4 安装JDK
+6.4 安装JDK
 
 Linux安装JDK完整步骤
 https://www.cnblogs.com/Dylansuns/p/6974272.html
 
-#### 6.5 安装Tomcat
+6.5 安装Tomcat
 
 [Linux下安装Tomcat服务器和部署Web应用](https://www.cnblogs.com/xdp-gacl/p/4097608.html)
 
-#### 6.6 安装Nginx
+6.6 安装Nginx
 
 [CentOS 7 下安装Nginx](https://www.cnblogs.com/zhoading/p/8514050.html)
 
-#### 6.7 安装XShell
+6.7 安装XShell
 
 利用Xshell5从本机上向Linux（虚拟机中）上传文件
 https://www.cnblogs.com/xdjun/p/7115303.html
 
-#### 6.8 问题
+6.8 问题
 
 解决VMware主窗口中的虚拟机窗口太小的方法
 https://blog.csdn.net/u014337397/article/details/80753056
@@ -618,11 +625,18 @@ sudo su -：切换到root登录，使用用户密码。
 
 [su;su -;sudo;sudo -i;sudo su;sudo su - 之间的区别](https://www.cnblogs.com/GaoYuan_cnblogs/p/9986036.html)
 
+### 14、防火墙
+
+| 命令                                 | 含义      | 备注   |
+| ---------------------------------- | ------- | ---- |
+| systemctl restart iptables.service | 重启防火墙   |      |
+| systemctl start iptables.service   | 开启防火墙   |      |
+| systemctl stop iptables.service    | 关闭防火墙   |      |
+| systemctl status iptables.service  | 查看防火墙状态 |      |
 
 
 
-
-### 13. 其他
+### 15. 其他
 
 chmod 775 文件名
 
@@ -672,3 +686,17 @@ netstat -a|grep 6379
 ```
 
 > [netstat](https://www.cnblogs.com/kcxg/p/11242567.html)
+
+## Shell
+
+Shell：定义和使用变量
+https://www.cnblogs.com/xuejianbest/p/10285180.html
+
+Shell获取格式化日期
+https://www.cnblogs.com/zhzhang/p/7646443.html
+
+Shell中判断文件,目录是否存在
+https://www.cnblogs.com/DreamDrive/p/7706585.html
+
+shell脚本中判断上一个命令是否执行成功
+https://blog.csdn.net/laobai1015/article/details/94010186
