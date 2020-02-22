@@ -154,7 +154,7 @@ private Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupCla
 </appender>
 ```
 
-
+> [使用Log4j2实现日志输出](https://www.cnblogs.com/songxingzhu/p/8867817.html)
 
 
 

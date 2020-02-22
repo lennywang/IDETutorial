@@ -179,6 +179,32 @@ INT或INTEGER    4 字节       (-2^31，2^31-1) 		  (0，2^31-1) 	大整数值
 BIGINT         8 字节        (-2^63，2^63-1) 		   (0，2^63-1)    极大整数值
 ```
 
+
+
+3、字符串类型
+
+```
+类型           大小                用途
+ CHAR          0-2^8-1字节        定长字符串
+ VARCHAR       0-2^16-1字节       变长字符串
+ TINYTEXT      0-2^8-1字节        短文本字符串
+ TEXT          0-2^16-1字节       长文本数据
+ MEDIUMTEXT    0-2^24-1字节       中等长度文本数据
+ LONGTEXT      0-2^32-1字节       极大文本数据
+```
+
+
+ 类型          大小              用途
+ CHAR          0-255字节         定长字符串
+ VARCHAR       0-65535字节       变长字符串
+ TINYTEXT      0-255字节         短文本字符串
+ TEXT          0-65535字节       长文本数据
+ MEDIUMTEXT    0-16777215字节    中等长度文本数据
+ LONGTEXT      0-4294967295字节  极大文本数据
+
+ char的优缺点：存取速度比varchar更快，但是比varchar更占用空间
+ varchar的优缺点：比char省空间。但是存取速度没有char快
+
 ## 底层原理
 
 ### Mysql数据库引擎
@@ -267,7 +293,22 @@ select version();
 select database();
 ```
 
-### 6、优化
+### 6、备份
+
+```shell
+# 逻辑备份
+mysqldump -uroot -p xdclass-mysql account -F > xd_mysql_account_bak.sql
+# 逻辑备份还原
+mysql -uroot -p xdclass-mysql < /usr/local/mysqldump/xd_mysql_account_bak.sql
+
+# 物理备份还原
+mysqlbinlog mysql-bin.000002 | cat -n | grep -iw 'drop'
+mysqlbinlog --no-defaults --set-charset=utf8  --stop-position="52" /var/lib/log_bin/mysql-bin.000002 | mysql -uroot -p
+```
+
+
+
+### 7、优化
 
 mysql 索引的建立原则
 https://blog.csdn.net/eaphyy/article/details/69259079
