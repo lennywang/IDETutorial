@@ -625,6 +625,14 @@ sudo su -：切换到root登录，使用用户密码。
 
 [su;su -;sudo;sudo -i;sudo su;sudo su - 之间的区别](https://www.cnblogs.com/GaoYuan_cnblogs/p/9986036.html)
 
+| 操作        | 命令     | 描述   |
+| --------- | ------ | ---- |
+| 查看当前登录用户名 | whoami |      |
+
+
+
+
+
 ### 14、防火墙
 
 | 命令                                 | 含义      | 备注   |

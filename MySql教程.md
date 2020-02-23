@@ -244,7 +244,16 @@ ALTER TABLE table_name COMMENT='最近游戏列表';
 
 > [【MySQL】在Windows 10上安装MySQL 5.7](https://www.jianshu.com/p/bc3a060923f6)
 
+
+
+> [阿里云Centos7上安装MySQL教程](https://www.cnblogs.com/jepson6669/p/9013652.html)
+
+
+
 问题：
+
+mysqldump: Got error: 1146: Table 'dbname.tbname' doesn't exist when using LOCK TABLES
+http://www.edbiji.com/doccenter/showdoc/10/nav/295.html
 
 如何彻底的卸载和删除Windows service
 https://www.cnblogs.com/Wolfmanlq/p/5872043.html
@@ -256,6 +265,18 @@ https://blog.csdn.net/lxpbs8851/article/details/14161935/
 MySQL出现：ERROR 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)问题解决
 https://blog.csdn.net/qq_38826019/article/details/88687664
 注：此处在bin目录执行`mysqld.exe -- install` 而不是 `mysql.exe -- install`
+
+mysql5.7初始化密码报错 ERROR 1820 (HY000): You must reset your password using ALTER USER statement before
+https://blog.csdn.net/memory6364/article/details/82426052
+
+1130-host . is not allowed to connect to this MySql server,MySQL
+
+```
+grant all privileges on . to 'root'@'%%' identified by 'root' with grant option;
+FLUSH   PRIVILEGES;
+```
+
+
 
 ### 2、更新数据
 
@@ -283,15 +304,21 @@ ALTER TABLE tablename CHANGE c1 c1 VARCHAR(50) CHARACTER SET utf8;
 
 ### 4、查看mysql版本
 
-```
-select version();
-```
+| 操作        | 命令                 | 描述   |
+| --------- | ------------------ | ---- |
+| 查看mysql版本 | select version();  |      |
+| 查看当前数据库   | select database(); |      |
+| 查看当前登录用户  | select user();     |      |
+|           |                    |      |
 
-### 5、查看当前数据库
+### 5、查看当前所有的数据库
 
-```
-select database();
-```
+| 操作           | 命令              | 描述   |
+| ------------ | --------------- | ---- |
+| 查看当前有的数据库    | show databases; |      |
+| 查看指定数据库中的所有表 | show tables     |      |
+
+
 
 ### 6、备份
 
@@ -305,6 +332,16 @@ mysql -uroot -p xdclass-mysql < /usr/local/mysqldump/xd_mysql_account_bak.sql
 mysqlbinlog mysql-bin.000002 | cat -n | grep -iw 'drop'
 mysqlbinlog --no-defaults --set-charset=utf8  --stop-position="52" /var/lib/log_bin/mysql-bin.000002 | mysql -uroot -p
 ```
+
+物理备份
+
+reset master;
+1、删除binlog索引文件中列出的所有binlog文件   
+2、清空binlog索引文件   
+3、创建一个新的binlog文件
+
+mysqldump -uroot -proot -h112.126.63.69  lenny-personmanage  HandAccount_ThreeThings -F > /usr/local/mysqldump/backup/threethings2.sql
+生成binlog
 
 
 
