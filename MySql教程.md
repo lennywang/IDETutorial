@@ -109,7 +109,103 @@ limit 0,20
   drop table  if exists teacher;
   ```
 
-  ​
+
+
+
+**创建表**
+
+- 语法
+
+  ```mysql
+  CREATE TABLE 表名 (
+                    字段名1 字段类型1 约束条件1 说明1,
+                    字段名2 字段类型2 约束条件2 说明2,
+                    字段名3 字段类型3 约束条件3 说明3
+                    );
+
+  create table 新表名 as select * from 旧表名 where 1=2;(注意：建议这种创建表的方式用于日常测试，因  为可能索引什么的会复制不过来)
+
+  create table 新表名 like 旧表名;
+  ```
+
+
+- 约束条件
+
+  ```
+  comment         ----说明解释
+  not null        ----不为空
+  default         ----默认值
+  unsigned        ----无符号（即正数）
+  auto_increment  ----自增
+  zerofill        ----自动填充
+  unique key      ----唯一值
+  ```
+
+
+- 创建sql
+
+  ```sql
+  CREATE TABLE student (
+                      id tinyint(5) zerofill auto_increment  not null comment '学生学号',
+                      name varchar(20) default null comment '学生姓名',
+                      age  tinyint  default null comment '学生年龄',
+                      class varchar(20) default null comment '学生班级',
+                      sex char(5) not null comment '学生性别',
+                      unique key (id)
+                      )engine=innodb charset=utf8;
+  ```
+
+**创建普通索引或者唯一索引**
+
+- 创建表的时候创建
+
+  ```mysql
+  create table test (
+                          id int(7) zerofill auto_increment not null,
+                          username varchar(20),
+                          servnumber varchar(30),
+                          password varchar(20),
+                          createtime datetime,
+                          unique (id)
+                    )DEFAULT CHARSET=utf8;
+  ```
+
+
+- 直接为表添加索引
+
+  ```mysql
+  语法：alter table 表名 add index 索引名称 (字段名称);
+   eg: alter table test add unique unique_username (username);
+   
+  注意：假如没有指定索引名称时，会以默认的字段名为索引名称
+  ```
+
+
+- 直接创建索引
+
+  ```mysql
+  语法：create index 索引 on 表名 (字段名);
+  eg：create index index_createtime on test (createtime);
+  ```
+
+
+- 查看索引
+
+  ```mysql
+  语法：show index from 表名\G
+  eg: show index from test\G
+  ```
+
+
+- 删除索引
+
+  ```mysql
+  语法：drop index 索引名称 on 表名;
+  eg：drop index unique_username on test;
+
+  语法：alter table 表名 drop index 索引名;
+  eg：alter table test drop index createtime;
+  ```
 
 **cmd连接mysql连接**
 
