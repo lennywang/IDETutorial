@@ -207,6 +207,19 @@ limit 0,20
   eg：alter table test drop index createtime;
   ```
 
+
+
+**查看参数**
+
+```mysql
+SHOW VARIABLES LIKE 'wait_timeout'; -- 超时时间
+SELECT @@join_buffer_size ; -- join线程 join_buffer内存大小
+```
+
+
+
+
+
 **cmd连接mysql连接**
 
 ```
@@ -409,10 +422,14 @@ ALTER TABLE tablename CHANGE c1 c1 VARCHAR(50) CHARACTER SET utf8;
 
 ### 5、查看当前所有的数据库
 
-| 操作           | 命令              | 描述   |
-| ------------ | --------------- | ---- |
-| 查看当前有的数据库    | show databases; |      |
-| 查看指定数据库中的所有表 | show tables     |      |
+| 操作           | 命令                     | 描述   |
+| ------------ | ---------------------- | ---- |
+| 查看当前有的数据库    | show databases;        |      |
+| 查看指定数据库中的所有表 | show tables            |      |
+| 查看数据库支持的引擎   | show engines;          |      |
+| 查看当前数据的引擎    | show create table 表名\G |      |
+| 查看当前库所有表的引擎  | show table status\G    |      |
+| 有哪些线程在运行     | show processlist       |      |
 
 
 
