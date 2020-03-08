@@ -39,9 +39,14 @@ SELECT DATE_FORMAT(SYSDATE(),'%Y-%m-%d');     返回 2018-12-22
 
 > 参考：[MySQL DATE_FORMAT() 函数](http://www.w3school.com.cn/sql/func_date_format.asp)
 
+rand()函数
 
+```mysql
+# 生成≥a且≤b的随机数 x=a y=(b-a)+1
+select floor(x+rand()*y);
+```
 
-
+> [mysql函数 random()](https://blog.csdn.net/sr_www/article/details/81047385)
 
 REPLACE
 
@@ -194,6 +199,17 @@ limit 0,20
   ```mysql
   语法：show index from 表名\G
   eg: show index from test\G
+  ```
+
+
+- 修改索引名称（mysql）
+
+  ```mysql
+  # MySQL 5.7及以上版本
+  ALTER TABLE tbl_name RENAME INDEX old_index_name TO new_index_name
+  # MySQL 5.7以前的版本
+  ALTER TABLE tbl_name DROP INDEX old_index_name
+  ALTER TABLE tbl_name ADD INDEX new_index_name(column_name)
   ```
 
 
@@ -430,6 +446,15 @@ ALTER TABLE tablename CHANGE c1 c1 VARCHAR(50) CHARACTER SET utf8;
 | 查看当前数据的引擎    | show create table 表名\G |      |
 | 查看当前库所有表的引擎  | show table status\G    |      |
 | 有哪些线程在运行     | show processlist       |      |
+
+6、查询/关闭进程
+
+```mysql
+# 查询进程
+show processlist
+# 杀死进程id，id就是processlist中的id的值
+kill id;
+```
 
 
 
