@@ -70,6 +70,9 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 | ------------ | -------- | ---- |
 | Ctrl+Shift+E | 最近更改的文件  |      |
 | Ctrl+E       | 最近浏览过的文件 |      |
+| Ctrl+Alt+B   | 查找接口实现类  |      |
+|              |          |      |
+|              |          |      |
 
 
 
@@ -100,6 +103,11 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 |            |                |      |
 |            |                |      |
 |            |                |      |
+
+
+
+你们都在用IntelliJ IDEA吗？或许你们需要看一下这篇博文
+https://www.cnblogs.com/clwydjgs/p/9390488.html
 
 
 
@@ -169,9 +177,6 @@ https://blog.csdn.net/qq_36376059/article/details/80277767
 
 IDEA的查询引用、调用关系图的功能
 https://www.cnblogs.com/ghj1976/p/5382455.html
-
-你们都在用IntelliJ IDEA吗？或许你们需要看一下这篇博文
-https://www.cnblogs.com/clwydjgs/p/9390488.html
 
 idea在选中文本段中做替换 CTRL + R
 Ctrl + Shift + R：根据输入内容替换对应内容，范围为整个项目或指定目录内文件。
