@@ -262,7 +262,8 @@ Xrunjdwp 调试选项
 5.Dspring.profiles.active=prod
 -D<name>=<value> set a system property  设置系统属性
 
-
+6.修改启动端口
+nohup java -jar happyliving-0.0.1-SNAPSHOT.jar --server.port=8082 &
 
 
 

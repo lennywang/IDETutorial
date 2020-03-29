@@ -400,6 +400,9 @@ grant all privileges on . to 'root'@'%%' identified by 'root' with grant option;
 FLUSH   PRIVILEGES;
 ```
 
+本地计算机上的mysql服务启动停止后,某些服务在未由其他服务或程序使用时将自动停止
+[https://blog.csdn.net/fan_lulu/article/details/82011994](https://blog.csdn.net/fan_lulu/article/details/82011994)
+
 
 
 ### 2、更新数据
