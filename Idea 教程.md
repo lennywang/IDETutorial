@@ -8,6 +8,27 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 
 
 
+### IDEA代码模板
+
+| 简写      | 生成的模板                    |
+| ------- | ------------------------ |
+| psvm    | main                     |
+| sout    | System.out.println();    |
+| soutv   | 输出变量的值                   |
+| fori    | for(int i=0;i<n;i++){}   |
+| foreach | for( : ){}               |
+| psf     | public static final      |
+| psfi    | public static final inte |
+| 查看更多的模板 | ctrl+j                   |
+
+
+
+
+
+
+
+
+
 ###  Idea快捷键
 
 - Idea 调试时 跳到当前位置前面
@@ -110,6 +131,39 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 https://www.cnblogs.com/clwydjgs/p/9390488.html
 
 
+
+### Debug快捷键
+
+| 快捷键           | 功能                          | 说明   |
+| ------------- | --------------------------- | ---- |
+| Alt+F8        | 查看变量或表达式的值                  |      |
+| Ctrl+Shift+F8 | 查看所有断点                      |      |
+| F7            | 进入下一步,如果当前行是一个方法，则进入当前方法体内  |      |
+| F8            | 进入下一步,如果当前行是一个方法，则不进入当前方法体内 |      |
+| Alt+Shift+F7  | 进入下一步，如果当前行有子方法，则进入当前子方法体内  |      |
+| Shift+F8      | 跳出进入的方法体，回到上级代码处            |      |
+| Ctrl+F2       | 停止程序                        |      |
+| Ctrl+F5       | 重运行程序                       |      |
+| Alt+F9        | 进入光标所在行，光标必须停留在待运行的代码行      |      |
+
+
+
+### IDEA插件
+
+**插件安装步骤**
+
+File → Settings → Plugins → Browes repositories → 插件名(常用插件表Plugins) → Install
+
+**常用插件**
+
+| 插件名      | plugins                        | 说明                          |
+| -------- | ------------------------------ | --------------------------- |
+| setter   | generateAllSetter              |                             |
+| 提示插件     | key promoter                   |                             |
+| 翻译插件     | translation                    | 选中待翻译的文本，按ctrl+shift+y 进行翻译 |
+| 时序图插件    | sequenceDiagram                | 右键-->Sequence Diagram       |
+| 阿里巴巴代码规约 | Alibaba java Coding Guidelines | 右键项目，编码规约扫描进行扫描             |
+| lombok插件 | lombok                         | @Value                      |
 
 
 

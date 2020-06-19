@@ -34,6 +34,8 @@ logback当前分成三个模块：logback-core,logback-classic和logback-access�
 
 ```xml
 <configuration>
+    <!-- logging.level.root 是配置文件（application.properties）中定义的变量 ,可通过${LOG_LEVEL}来使用该变量。-->
+    <springProperty scope="context" name="LOG_LEVEL" source="logging.level.root"/>
     <!-- 上下文变量设置,用来定义变量值,其中name的值是变量的名称，value的值时变量定义的值。
         通过<property>定义的值会被插入到logger上下文中。定义变量后，可以使“${}”来使用变量。 -->    
     <property name="encoding" value="UTF-8"/>
