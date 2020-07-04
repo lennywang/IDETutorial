@@ -183,3 +183,7 @@ mvn help:effective-settings
 
 > 参考：[IntellIJ IDEA 配置 Maven 以及 修改 默认 Repository](https://www.cnblogs.com/phpdragon/p/7216626.html)
 
+### 8.IDEA 设置 MAVEN 默认仓库
+
+> 参考：https://blog.csdn.net/qq_36483951/article/details/105669474
+
