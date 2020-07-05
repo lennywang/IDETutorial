@@ -54,6 +54,9 @@ JetbrainsCrack.jar下载链接：[https://pan.baidu.com/s/1l1TcMlyQCCpw_6F3zb_qk
 | Ctrl+Shift+↑/↓ | 上下移动代码          |                                          |
 | Ctrl+D         | 复制当前行           |                                          |
 | ALT+INSERT     | 实现接口方法          |                                          |
+| Ctrl+C         | 复制              |                                          |
+| Ctrl+D         | 复制当前行到下一行       |                                          |
+|                |                 |                                          |
 |                |                 |                                          |
 |                |                 |                                          |
 
@@ -285,4 +288,10 @@ https://blog.csdn.net/xusheng_mr/article/details/74474619
 
 IDEA编译时出现 Information:java: javacTask: 源发行版 1.8 需要目标发行版 1.8
 https://www.cnblogs.com/wormday/p/8424855.html
+
+Idea设置快捷键为Eclipse模式
+https://blog.csdn.net/jingjing9823/article/details/92635127
+
+【IDEA】一个项目启用多个实例
+https://blog.csdn.net/zhou520yue520/article/details/81167841
 
