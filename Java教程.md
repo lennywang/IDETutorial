@@ -1,3 +1,10 @@
+win10配置jdk环境变量
+https://www.cnblogs.com/chenmingjun/p/9941191.html
+https://blog.csdn.net/anthony_ju/article/details/80445728
+https://www.cnblogs.com/Lemon-ZYJ/p/10245003.html
+
+
+
 final
 
 对于一个final变量，如果是基本数据类型的变量，则其数值一旦在初始化之后便不能更改；如果是引用类型的变量，则在对其初始化之后便不能再让其指向另一个对象。

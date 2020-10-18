@@ -361,7 +361,7 @@ https://blog.csdn.net/xieganyu3460/article/details/82229091
 | 命令                         | 作用           | 备注                      |
 | -------------------------- | ------------ | ----------------------- |
 | ls -Sl                     | 按文件大小倒序      |                         |
-| ls -Slr                    | 按文件大小倒序      | -h，表示"--human-readable" |
+| ls -Slr                    | 按文件大小正序      | -h，表示"--human-readable" |
 | ls -lt                     | 按时间倒序        |                         |
 | ls -lrt                    | 按时间正序        |                         |
 | ll                         | 按文件名正序       |                         |
