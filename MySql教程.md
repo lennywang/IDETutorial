@@ -37,7 +37,7 @@ DATE_FORMAT(date,format)
 
 SELECT DATE_FORMAT(SYSDATE(),'%Y-%m-%d');     返回 2018-12-22
 
-> 参考：[MySQL DATE_FORMAT() 函数](http://www.w3school.com.cn/sql/func_date_format.asp)
+> 参考：[MySQL 日期格式化](https://www.cnblogs.com/codecat/p/11770438.html)
 
 rand()函数
 

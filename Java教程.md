@@ -40,6 +40,39 @@ e.printStackTrace(System.out);
 
 
 
+jdk8
+
+将List对象中的属性转为以逗号分隔的字符串
+
+> 参考：https://blog.csdn.net/zhangbinlong/article/details/86218758
+
+```
+使用String.join()函数
+List<String> list= Arrays.asList("aaa",  "bbb", "ccc", "ddd");
+String str= String.join(",", list);
+System.out.println(str); // str = "aaa,bbb,ccc,ddd";
+
+
+采用流的方式来写
+List<String> list= Arrays.asList("aaa",  "bbb", "ccc", "ddd");
+String str= list.stream().collect(Collectors.joining(","));
+System.out.println(str); // str = "aaa,bbb,ccc,ddd";
+
+如果list集合中是一个对象，可以用下面的方式来处理
+List<TestDemo> testDemos = new ArrayList();
+TestDemo test1 = new TestDemo();
+test1.setId(1);
+test1.setName("aaa");
+testDemos.add(test1);
+//将集合中TestDemo 对象name值以逗号方式隔开转为字符串
+String names = testDemos.stream().map(TestDemo::getName).collect(Collectors.joining(","));
+System.out.println(names);  // names = "aaa,bbb,ccc,ddd";
+```
+
+
+
+
+
 
 
 
