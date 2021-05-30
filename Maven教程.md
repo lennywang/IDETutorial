@@ -104,6 +104,10 @@
 
 
 
+### 4、distributionManagement
+
+https://www.cnblogs.com/liu2-/p/9035181.html
+
 ## 实践
 
 ### 1.maven打包加时间戳
