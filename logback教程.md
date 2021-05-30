@@ -160,3 +160,24 @@ private Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupCla
 
 
 
+# log4j2 教程
+
+log4j2配置文件log4j2.xml详解（转载）
+https://www.cnblogs.com/new-life/p/9246143.html
+
+```xml
+ <?xml version="1.0" encoding="UTF-8"?>
+ <Configuration status="WARN">
+   <Appenders>
+     <Console name="Console" target="SYSTEM_OUT">
+       <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+     </Console>
+   </Appenders>
+   <Loggers>
+     <Root level="error">
+       <AppenderRef ref="Console"/>
+     </Root>
+   </Loggers>
+ </Configuration>
+```
+
