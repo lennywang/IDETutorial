@@ -91,7 +91,7 @@ time		HH:MM:SS
 
 datetime	占用8个字节		与时区无关		datetime类型适合用来记录数据的原始的创建时间	
 
-timestmp	占用4个字节		时区转化 		
+timestamp	占用4个字节		时区转化 		
 ```
 
 time
